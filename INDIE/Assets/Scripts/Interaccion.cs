@@ -14,6 +14,7 @@ public class Interaccion : MonoBehaviour
     public string descripcion;
     public GameObject interaccion;
     movimiento player;
+    
 
     private void Start()
     {
@@ -25,16 +26,28 @@ public class Interaccion : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         movimiento mov = other.gameObject.GetComponent<movimiento>();
-        if (mov!= null)
+        if (mov != null)
         {
-            trazo.GetComponent<SpriteRenderer>().color = Color.yellow;
+            if (interaccion.GetComponent<Coleccionable>())
+            {
+                trazo.GetComponent<SpriteRenderer>().color = Color.blue;
+                player = mov;
+                rangoInteraccion = true;
+                Debug.Log("A rango");
+                //Resetea la interacción
+                cargaInteraccion = 0;
+            }
+            else
+                trazo.GetComponent<SpriteRenderer>().color = Color.yellow;
             player = mov;
             rangoInteraccion = true;
             Debug.Log("A rango");
             //Resetea la interacción
             cargaInteraccion = 0;
+
         }
     }
+    
     //private void OnTriggerStay2D(Collider2D other)
     //{
         
