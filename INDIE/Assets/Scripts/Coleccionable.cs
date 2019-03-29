@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Coleccionable : MonoBehaviour {
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player")
+    public GameObject parent;
+
+    public void OnEnable()
         {
             Debug.Log("Coleccionable recogido");
             GameManager.instance.ColeccionableRecogido();
-            Destroy(this.gameObject);
+            Destroy(parent.gameObject);
         }
     }
-}
+
