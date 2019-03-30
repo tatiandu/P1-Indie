@@ -87,13 +87,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1417867891645660}
-  m_LocalRotation: {x: 0, y: 0, z: 0.010489661, w: -0.999945}
+  m_LocalRotation: {x: 0, y: 0, z: 0.04283495, w: 0.9990822}
   m_LocalPosition: {x: -7.37, y: -2.47, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4587765896451326}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -53.834003}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 4.91}
 --- !u!4 &4458086240332886
 Transform:
   m_ObjectHideFlags: 1
@@ -127,15 +127,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185872624743686}
-  m_LocalRotation: {x: -0, y: -0, z: -0.79621464, w: 0.6050143}
-  m_LocalPosition: {x: 1.59, y: 6.23, z: 0.22534567}
-  m_LocalScale: {x: 0.7375004, y: 0.7375004, z: 0.73749995}
+  m_LocalRotation: {x: 0, y: -0, z: 0.99932206, w: -0.036818076}
+  m_LocalPosition: {x: -28.66, y: -20.72, z: 0}
+  m_LocalScale: {x: 0.7375, y: 0.7375, z: 1}
   m_Children:
   - {fileID: 4458086240332886}
   - {fileID: 4587765896451326}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -105.54001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 184.22}
 --- !u!23 &23024104578494556
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -238,8 +238,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: 5, y: 1.9}
-      - {x: 5, y: -1.9}
+      - {x: 6.3, y: 2.4}
+      - {x: 6.3, y: -2.4}
 --- !u!114 &114224430761562356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -254,8 +254,6 @@ MonoBehaviour:
   velocidadEstandar: 8
   velocidadPersecucion: 6
   puntosPatrulla:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   playerGO: {fileID: 0}
   exclamationPrefab: {fileID: 1681563108595196, guid: 5b12bd3df568b744daa8d34434ac2cc6,
@@ -318,7 +316,7 @@ MonoBehaviour:
   light2DType: 0
   SortOrderID: -182
   strokeRender: 0
-  LightRadius: 5.861
+  LightRadius: 8
   Segments: 20
   Layer:
     serializedVersion: 2
@@ -332,7 +330,7 @@ MonoBehaviour:
   uv_Offset: {x: 0.5, y: 0.5}
   uv_Scale: {x: 0.03, y: 0.01}
   vertexWorking: 0
-  RangeAngle: 57
+  RangeAngle: 49
   staticScene: 1
   doNotRenderMesh: 0
   lastLight2DType: 0
