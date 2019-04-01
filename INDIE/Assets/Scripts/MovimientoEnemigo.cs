@@ -24,17 +24,20 @@ public class MovimientoEnemigo : MonoBehaviour {
 	
 	void Update () {
 		
-        switch (estado)     //Maquina de estados
+        if (puntosPatrulla.Length > 0)
         {
-            case Estados.patrulla:
-                EstadoPatrulla();
-                break;
-            case Estados.persecucion:
-                EstadoPersecucion();
-                break;
-            case Estados.volviendo:
-                EstadoVolviendo();
-                break;
+            switch (estado)     //Maquina de estados
+            {
+                case Estados.patrulla:
+                    EstadoPatrulla();
+                    break;
+                case Estados.persecucion:
+                    EstadoPersecucion();
+                    break;
+                case Estados.volviendo:
+                    EstadoVolviendo();
+                    break;
+            }
         }
 	}
 

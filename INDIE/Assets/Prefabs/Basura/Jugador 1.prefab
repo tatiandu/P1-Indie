@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4955995582854280}
   - component: {fileID: 114592313479494794}
   - component: {fileID: 58213844622144724}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ZonaVision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4092935542201774}
   - component: {fileID: 114951906908157784}
   - component: {fileID: 58248785567456100}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ZonaInteraccion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,6 +215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  cadenciaPasos: 0
 --- !u!114 &114926732349314266
 MonoBehaviour:
   m_ObjectHideFlags: 1

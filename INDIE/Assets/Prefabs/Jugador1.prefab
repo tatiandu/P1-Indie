@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4925836312318094}
   - component: {fileID: 114748351950842346}
   - component: {fileID: 58697487215779046}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ZonaInteraccion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 4687531242581952}
   - component: {fileID: 114174610903775366}
   - component: {fileID: 58089611524640638}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: ZonaVision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,12 +184,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miDisfraz: 0
-  artista: {fileID: 1961174382890576, guid: 40a7f4d8f405ae540988d25a0cd6e20c, type: 2}
-  programador: {fileID: 1550775641232484, guid: e05375c46d494b446830f9b4a9103d68,
-    type: 2}
-  personal: {fileID: 1249355197739188, guid: 1f8bf30bc12d82a4a948712ba7660f1d, type: 2}
-  "dise\xF1ador": {fileID: 1937751173405472, guid: dd0e8d88a46066f478accb1854178748,
-    type: 2}
+  artistaBoton: {fileID: 0}
+  programadorBoton: {fileID: 0}
+  personalBoton: {fileID: 0}
+  "dise\xF1adorBoton": {fileID: 0}
 --- !u!114 &114174610903775366
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -213,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
+  cadenciaPasos: 0
 --- !u!114 &114574710782242132
 MonoBehaviour:
   m_ObjectHideFlags: 1
