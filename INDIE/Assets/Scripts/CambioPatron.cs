@@ -26,7 +26,7 @@ public class CambioPatron : MonoBehaviour
 
         if (caos>=caosConelqueCambia && !cambio1Vez)
         {
-            zonas[0].SetActive(false);
+            if (zonas.Length > 0) zonas[0].SetActive(false);
             enemigo.CambioPatron(nuevoPuntos);
             cambio1Vez = true;
         }
