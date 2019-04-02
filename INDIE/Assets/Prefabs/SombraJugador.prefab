@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tiempoVida: 1
-  tiempoMaximoVida: 20
+  tiempoMaximoVida: 10
 --- !u!212 &212961181812384824
 SpriteRenderer:
   m_ObjectHideFlags: 1
