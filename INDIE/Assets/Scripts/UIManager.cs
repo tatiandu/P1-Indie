@@ -182,6 +182,18 @@ public class UIManager : MonoBehaviour
     public void Cambiaescena(int escena) {
         GameManager.instance.ActualizarEscena(escena);
         GameManager.instance.CargarEscena(escena);
+        switch (escena)
+        {
+            case 1:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
+                break;
+            case 2:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.programador);
+                break;
+            case 3:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.artista);
+                break;
+        }
         Time.timeScale = 1;
     }
     public void FinDemo()
@@ -197,5 +209,10 @@ public class UIManager : MonoBehaviour
     public void SigNivel()
     {
         GameManager.instance.SigNivel();
+    }
+    public void GuardarySalir()
+    {
+        GameManager.instance.GuardaPartida();
+        Cambiaescena(0);
     }
 }

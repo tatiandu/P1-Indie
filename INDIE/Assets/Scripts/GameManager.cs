@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
     AudioManager audioManager;
     int coleccionables;
     //Al pasar de escena se debe sumar 1 a esta variable
-    int CurrentScene = 1;
+   int CurrentScene;
 
     //Discutir solución
     MoveEnemy Lead;
@@ -180,5 +181,33 @@ public class GameManager : MonoBehaviour
     {
 
         audioManager.PlayRandomPitch(sonido);
+    }
+    public void GuardaPartida()
+    {
+        //guardamos la escena actual
+        StreamWriter guardado = new StreamWriter("partida.txt");
+        guardado.WriteLine(CurrentScene);
+        guardado.Close();
+    }
+    public void CargarPartida()
+    {
+        StreamReader cargar = new StreamReader("partida.txt");
+        //Leemos la escena que debemos cargar
+        CurrentScene = int.Parse(cargar.ReadLine());
+        cargar.Close();
+        CargarEscena(CurrentScene);
+        //asignamos el disfraz por defecto al inicio de cada escena
+        switch (CurrentScene)
+        {
+         case 1:
+                CambioDisfrazJugador(Disfraz.ninguno);
+                break;
+            case 2:
+                CambioDisfrazJugador(Disfraz.programador);
+                break;
+            case 3:
+                CambioDisfrazJugador(Disfraz.artista);
+                break;
+        }
     }
 }
