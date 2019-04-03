@@ -2,16 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using System.IO;
 
 public class Menuprincipal : MonoBehaviour {
     public GameObject botonesPrincipales;
     public GameObject niveles;
     public GameObject ajustes;
+    public GameObject continuar;
     public AudioMixer audioMixer;
 
     // Use this for initialization
     void Start () {
-        
+        if (!File.Exists("partida.txt"))
+        {
+            continuar.SetActive(false);
+        }
     }
 	
 	// Update is called once per frame
@@ -24,7 +29,20 @@ public class Menuprincipal : MonoBehaviour {
     public void CargarNivel(int escena)
     {
         GameManager.instance.CargarEscena(escena);
+        switch (escena)
+        {
+            case 1:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
+                break;
+            case 2:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.programador);
+                break;
+            case 3:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
+                break;
+        }
         GameManager.instance.ActualizarEscena(escena);
+
     }
     public void SelecciónNiveles()
     {
@@ -57,5 +75,8 @@ public class Menuprincipal : MonoBehaviour {
     {
         Screen.fullScreen = pantallaCompleta;
     }
-     
+     public void Continuar()
+    {
+        GameManager.instance.CargarPartida();
+    }
 }

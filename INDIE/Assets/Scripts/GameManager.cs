@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     float volumen;
-   public float Caos, maxCaos;
+    float Caos, maxCaos;
     bool subirAscensor;
     Disfraz disfrazActual;
     UIManager uIManager;
@@ -180,5 +181,33 @@ public class GameManager : MonoBehaviour
     {
 
         audioManager.PlayRandomPitch(sonido);
+    }
+    public void GuardaPartida()
+    {
+        //guardamos la escena actual
+        StreamWriter guardado = new StreamWriter("partida.txt");
+        guardado.WriteLine(CurrentScene);
+        guardado.Close();
+    }
+    public void CargarPartida()
+    {
+        StreamReader cargar = new StreamReader("partida.txt");
+        //Leemos la escena que debemos cargar
+        CurrentScene = int.Parse(cargar.ReadLine());
+        cargar.Close();
+        CargarEscena(CurrentScene);
+        //asignamos el disfraz por defecto al inicio de cada escena
+        switch (CurrentScene)
+        {
+         case 1:
+                CambioDisfrazJugador(Disfraz.ninguno);
+                break;
+            case 2:
+                CambioDisfrazJugador(Disfraz.programador);
+                break;
+            case 3:
+                CambioDisfrazJugador(Disfraz.artista);
+                break;
+        }
     }
 }
