@@ -64,15 +64,15 @@ public class ConoDeVision : MonoBehaviour {
         }
     }
 
-    // Activa el sprite
-    public void ActivarRender()
-    {
-        render.enabled = true;
-    }
+    //// Activa el sprite
+    //public void ActivarRender()
+    //{
+    //    render.enabled = true;
+    //}
 
-    // Desactiva el sprite
-    public void DesactivarRender()
-    {
-        render.enabled = false;
-    }
+    //// Desactiva el sprite
+    //public void DesactivarRender()
+    //{
+    //    render.enabled = false;
+    //}
 }
