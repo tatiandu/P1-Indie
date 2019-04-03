@@ -13,15 +13,6 @@ public class DeteccionCamara : MonoBehaviour {
         movEnemy = enemigo.GetComponent<MovimientoEnemigo>();
         enemigo.SetActive(false);
 	}
-	
-	void Update () {
-		if(enemigo.activeSelf && movEnemy.Hellegado())
-        {
-            GuardarVuelta(rutaPatrulla);
-            movEnemy.CambioPatron(rutaPatrulla);
-        }        
-        ComprobarNoNull(rutaPatrulla);        
-	}
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -31,17 +22,23 @@ public class DeteccionCamara : MonoBehaviour {
             Debug.DrawRay(transform.position, other.transform.position - transform.position, Color.red, 10f);
             Debug.Log(ray.transform.tag);
 
-            if (ray.transform.tag == "Player")
-            {
-                GameObject poolSombras = GameObject.Find("SombrasPool");
-                GameObject silueta = Instantiate<GameObject>(sombra, other.transform.position, other.transform.rotation, poolSombras.transform);
-                rutaPatrulla[rutaPatrulla.Length - 1] = silueta.transform;
-                if (!enemigo.activeSelf)
+                if (!enemigo.activeSelf && ray.transform.tag == "Player")
                 {
+                    GameObject poolSombras = GameObject.Find("SombrasPool");
+                    GameObject silueta = Instantiate<GameObject>(sombra, other.transform.position, other.transform.rotation, poolSombras.transform);
+                    Transform aux = silueta.transform;
+
+                    Transform[] rutaNueva = new Transform[rutaPatrulla.Length + 1];
+                    for (int i = 0; i < rutaPatrulla.Length; i++)
+                    {
+                        rutaNueva[i] = rutaPatrulla[i];
+                    }
+                    rutaNueva[rutaNueva.Length - 1] = aux;
+
                     enemigo.SetActive(true);
-                    movEnemy.CambioPatron(rutaPatrulla);
+                    movEnemy.CambioPatron(rutaNueva);
                 }
-            }
+   
         }
     }
     public void GuardarVuelta(Transform[] enemigo)

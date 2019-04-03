@@ -7,6 +7,8 @@ public class MovimientoEnemigo : MonoBehaviour {
     public int velocidadEstandar, velocidadPersecucion;
     public Transform[] puntosPatrulla;
     public GameObject playerGO, exclamationPrefab;
+    public bool esGuardia;
+    bool recorridoGuardiaRealizado;
     GameObject exclamationSprite;
     int i;
     Rigidbody2D rb;
@@ -17,6 +19,7 @@ public class MovimientoEnemigo : MonoBehaviour {
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
         estado = Estados.volviendo;
+        recorridoGuardiaRealizado = false;
         direccionInicial = transform.right;
         i = 0;
         Physics2D.queriesStartInColliders = false;
@@ -45,8 +48,21 @@ public class MovimientoEnemigo : MonoBehaviour {
     {
         if (puntosPatrulla.Length > 1)      //Si el NPC va a seguir un patron
         {
-            if (Vector2.Distance(puntosPatrulla[i % puntosPatrulla.Length].position, transform.position) > 0.4f)     //Movimiento hasta llegar al siguiente punto
+            if (puntosPatrulla[i % puntosPatrulla.Length] != null &&
+                Vector2.Distance(puntosPatrulla[i % puntosPatrulla.Length].position, transform.position) > 0.4f)     //Movimiento hasta llegar al siguiente punto
             {
+                if (esGuardia && i >= puntosPatrulla.Length && !recorridoGuardiaRealizado)
+                {
+                    InvierteCamino();
+                    i = 0;
+                    recorridoGuardiaRealizado = true;
+                }
+                if (esGuardia && i >= puntosPatrulla.Length && recorridoGuardiaRealizado)
+                {
+                    recorridoGuardiaRealizado = false;
+                    i = 0;
+                    gameObject.SetActive(false);
+                }
                 direccion = new Vector2(puntosPatrulla[i % puntosPatrulla.Length].position.x - transform.position.x, puntosPatrulla[i % puntosPatrulla.Length].position.y - transform.position.y).normalized;
                 transform.right = direccion;
                 rb.velocity = transform.right * velocidadEstandar;
@@ -130,5 +146,14 @@ public class MovimientoEnemigo : MonoBehaviour {
         return estado;
     }
     
-    
+    void InvierteCamino()
+    {
+        Transform aux;
+        for (int i = 0; i < puntosPatrulla.Length / 2; i++)
+        {
+            aux = puntosPatrulla[i];
+            puntosPatrulla[i] = puntosPatrulla[puntosPatrulla.Length - i - 1];
+            puntosPatrulla[puntosPatrulla.Length - i - 1] = aux;
+        }
+    }
 }
