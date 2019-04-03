@@ -28,6 +28,7 @@ public class Menuprincipal : MonoBehaviour {
 
     public void CargarNivel(int escena)
     {
+        GameManager.instance.ActualizarEscena(escena);
         GameManager.instance.CargarEscena(escena);
         switch (escena)
         {
@@ -41,8 +42,7 @@ public class Menuprincipal : MonoBehaviour {
                 GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
                 break;
         }
-        GameManager.instance.ActualizarEscena(escena);
-
+        
     }
     public void SelecciónNiveles()
     {

@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     AudioManager audioManager;
     int coleccionables;
     //Al pasar de escena se debe sumar 1 a esta variable
-    int CurrentScene = 1;
+   int CurrentScene;
 
     //Discutir solución
     MoveEnemy Lead;
