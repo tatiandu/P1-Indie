@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DeteccionCamara : MonoBehaviour {
-    public GameObject sombra;
 
+    public GameObject sombra;
     public GameObject enemigo;
     public Transform[]rutaPatrulla;
     MovimientoEnemigo movEnemy;
@@ -25,7 +25,9 @@ public class DeteccionCamara : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<movimiento>() != null)
+        RaycastHit2D ray = Physics2D.Raycast(transform.position, other.transform.position - transform.position);
+
+        if (other.tag == "Player" && ray.transform.tag == "Player")
         {
             GameObject poolSombras = GameObject.Find("SombrasPool");
             GameObject silueta = Instantiate<GameObject>(sombra, other.transform.position, other.transform.rotation,poolSombras.transform);                      

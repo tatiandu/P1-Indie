@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4087515420381820}
   - component: {fileID: 114878565734805904}
   - component: {fileID: 60325330252030204}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: ConoCamara
   m_TagString: Untagged
   m_Icon: {fileID: 0}

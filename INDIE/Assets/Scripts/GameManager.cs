@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     float volumen;
-   public float Caos, maxCaos;
+    float Caos, maxCaos;
     bool subirAscensor;
     Disfraz disfrazActual;
     UIManager uIManager;
