@@ -15,7 +15,7 @@ public class DeteccionCamara : MonoBehaviour {
 	}
 	
 	void Update () {
-		if(enemigo && movEnemy.Hellegado())
+		if(enemigo.activeSelf && movEnemy.Hellegado())
         {
             GuardarVuelta(rutaPatrulla);
             movEnemy.CambioPatron(rutaPatrulla);
@@ -25,17 +25,22 @@ public class DeteccionCamara : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        RaycastHit2D ray = Physics2D.Raycast(transform.position, other.transform.position - transform.position);
-
-        if (other.tag == "Player" && ray.transform.tag == "Player")
+        if (other.tag == "Player")
         {
-            GameObject poolSombras = GameObject.Find("SombrasPool");
-            GameObject silueta = Instantiate<GameObject>(sombra, other.transform.position, other.transform.rotation,poolSombras.transform);                      
-            rutaPatrulla[rutaPatrulla.Length - 1] = silueta.transform;
-            if (!enemigo.activeSelf)
+            RaycastHit2D ray = Physics2D.Raycast(transform.position, other.transform.position - transform.position);
+            Debug.DrawRay(transform.position, other.transform.position - transform.position, Color.red, 10f);
+            Debug.Log(ray.transform.tag);
+
+            if (ray.transform.tag == "Player")
             {
-                enemigo.SetActive(true);
-                movEnemy.CambioPatron(rutaPatrulla);
+                GameObject poolSombras = GameObject.Find("SombrasPool");
+                GameObject silueta = Instantiate<GameObject>(sombra, other.transform.position, other.transform.rotation, poolSombras.transform);
+                rutaPatrulla[rutaPatrulla.Length - 1] = silueta.transform;
+                if (!enemigo.activeSelf)
+                {
+                    enemigo.SetActive(true);
+                    movEnemy.CambioPatron(rutaPatrulla);
+                }
             }
         }
     }
