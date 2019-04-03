@@ -25,11 +25,10 @@ public class DeteccionCamara : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<movimiento>()!=null)
+        if (other.gameObject.GetComponent<movimiento>() != null)
         {
             GameObject poolSombras = GameObject.Find("SombrasPool");
-            GameObject silueta = Instantiate<GameObject>(sombra, other.transform.position, other.transform.rotation,poolSombras.transform);
-            Debug.Log("Sombra");                       
+            GameObject silueta = Instantiate<GameObject>(sombra, other.transform.position, other.transform.rotation,poolSombras.transform);                      
             rutaPatrulla[rutaPatrulla.Length - 1] = silueta.transform;
             if (!enemigo.activeSelf)
             {
