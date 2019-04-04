@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114224430761562356}
   - component: {fileID: 114349082032799652}
   - component: {fileID: 58014792691316316}
-  - component: {fileID: 114526956070918638}
+  - component: {fileID: 114166981068748156}
   m_Layer: 12
   m_Name: EnemyPrefab
   m_TagString: Enemy
@@ -128,15 +128,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185872624743686}
-  m_LocalRotation: {x: -0, y: -0, z: 0.77789, w: 0.62840044}
-  m_LocalPosition: {x: -94.8, y: -20.8, z: 0.22534567}
+  m_LocalRotation: {x: -0, y: -0, z: 0.5769208, w: 0.8168002}
+  m_LocalPosition: {x: -55.4, y: -25.2, z: 0.22534567}
   m_LocalScale: {x: 0.7374997, y: 0.7374997, z: 1}
   m_Children:
   - {fileID: 4458086240332886}
   - {fileID: 4587765896451326}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 102.136}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 70.469}
 --- !u!23 &23024104578494556
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -241,6 +241,29 @@ PolygonCollider2D:
     - - {x: 0, y: 0}
       - {x: 6.3, y: 2.4}
       - {x: 6.3, y: -2.4}
+--- !u!114 &114166981068748156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1185872624743686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 418b434201720b04a9516c19ef923994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nuevoPuntos:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  fin:
+  - {fileID: 0}
+  caosConelqueCambia: 0
+  zonas:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &114224430761562356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -283,28 +306,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tipo: 4
---- !u!114 &114526956070918638
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1185872624743686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 418b434201720b04a9516c19ef923994, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nuevoPuntos:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fin:
-  - {fileID: 0}
-  caosConelqueCambia: 50
-  zonas:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &114956293256169364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -334,7 +335,7 @@ MonoBehaviour:
   Version: 1.4.0
   SolidColor: 1
   LightColor: {r: 0.5283019, g: 0, b: 0, a: 1}
-  Intensity: 0.1
+  Intensity: 0.78
   LightMaterial: {fileID: 2100000, guid: 721fe554da1cfcc46abfb09fd18552a5, type: 2}
   light2DType: 0
   SortOrderID: -182
