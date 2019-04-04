@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DynamicLight2D;
 
 public class TipoEnemigo : MonoBehaviour {
-
+    public DynamicLight luz;
     public Disfraz tipo;
     SpriteRenderer rend;
 
@@ -15,18 +16,27 @@ public class TipoEnemigo : MonoBehaviour {
         {
             case Disfraz.artista:
                 rend.color = Color.red;
+                luz.LightColor = Color.red;
                 break;
             case Disfraz.programador:
                 rend.color = Color.cyan;
+                luz.LightColor = Color.cyan;
+
                 break;
             case Disfraz.diseñador:
                 rend.color = Color.green;
+                luz.LightColor = Color.green;
+
                 break;
             case Disfraz.personal:
                 rend.color = Color.gray;
+                luz.LightColor = Color.gray;
+
                 break;
             case Disfraz.lead:
                 rend.color = Color.yellow;
+                luz.LightColor = Color.yellow;
+
                 break;
         }
     }

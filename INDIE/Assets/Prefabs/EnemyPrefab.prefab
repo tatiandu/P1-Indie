@@ -127,9 +127,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185872624743686}
-  m_LocalRotation: {x: 0, y: -0, z: 0.99932206, w: -0.036818076}
-  m_LocalPosition: {x: -28.66, y: -20.72, z: 0}
-  m_LocalScale: {x: 0.7375, y: 0.7375, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9999985, w: -0.0017452018}
+  m_LocalPosition: {x: -32.4, y: 9.8, z: -4.28832}
+  m_LocalScale: {x: 0.73750067, y: 0.73750067, z: 0.73749995}
   m_Children:
   - {fileID: 4458086240332886}
   - {fileID: 4587765896451326}
@@ -255,10 +255,14 @@ MonoBehaviour:
   velocidadPersecucion: 6
   puntosPatrulla:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   playerGO: {fileID: 0}
   exclamationPrefab: {fileID: 1681563108595196, guid: 5b12bd3df568b744daa8d34434ac2cc6,
     type: 2}
-  estado: 3
+  esGuardia: 0
+  estado: 0
 --- !u!114 &114272937355212948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -281,7 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3088cdadbe4bd64697f72b99fd370fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tipo: 1
+  luz: {fileID: 114956293256169364}
+  tipo: 4
 --- !u!114 &114956293256169364
 MonoBehaviour:
   m_ObjectHideFlags: 1
