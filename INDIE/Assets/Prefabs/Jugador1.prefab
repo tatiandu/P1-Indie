@@ -184,10 +184,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miDisfraz: 0
-  artistaBoton: {fileID: 0}
-  programadorBoton: {fileID: 0}
-  personalBoton: {fileID: 0}
-  "dise\xF1adorBoton": {fileID: 0}
+  artistaBoton: {fileID: 1076635003202992, guid: 4bb2eef270081db4bb0826866c6292b6,
+    type: 2}
+  programadorBoton: {fileID: 1694676837360396, guid: 7abeb36e2aef7ec43b3c80314485879e,
+    type: 2}
+  personalBoton: {fileID: 1308846763808064, guid: 87eab9ebdfa4f0d43889174161003ce6,
+    type: 2}
+  "dise\xF1adorBoton": {fileID: 1235786995072588, guid: 708196210635a43479df3430ee3994bd,
+    type: 2}
 --- !u!114 &114174610903775366
 MonoBehaviour:
   m_ObjectHideFlags: 1

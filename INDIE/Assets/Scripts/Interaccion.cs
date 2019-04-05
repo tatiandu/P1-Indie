@@ -48,24 +48,7 @@ public class Interaccion : MonoBehaviour
         }
     }
     
-    //private void OnTriggerStay2D(Collider2D other)
-    //{
-        
-    //    movimiento mov = other.gameObject.GetComponent<movimiento>();
-    //    if (mov != null)
-    //    {
-    //        Debug.Log("dentro");
-    //        if (interactuando)
-    //        {
-    //            mov.ShouldMove(false);
-    //        }
-    //        else if (!interactuando)
-    //        {
-    //            mov.ShouldMove(true);
-    //        }
-    //    }
-    //}
-    //Al salir del trigger
+
     private void OnTriggerExit2D(Collider2D other)
     {
         //Se comprueba que es un jugador
@@ -137,12 +120,13 @@ public class Interaccion : MonoBehaviour
         if (!sePuedeInteractuarMasDeUnaVez)
         {
             interactuable = false;
+
+            //Quita el brillo
+            GameObject trazo = transform.GetChild(0).gameObject;
+            trazo.SetActive(false);
+            //Quita el texto
+            GameManager.instance.EsInteractuable(false, "");
         }
-        //Quita el brillo
-        GameObject trazo = transform.GetChild(0).gameObject;
-        trazo.SetActive(false);
-        //Quita el texto
-        GameManager.instance.EsInteractuable(false, "");
     }
 
     public void MarcaTrazo(bool activo)

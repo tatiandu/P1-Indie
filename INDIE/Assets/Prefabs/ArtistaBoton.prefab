@@ -180,7 +180,7 @@ MonoBehaviour:
   trazo: {fileID: 1939181657975482}
   tiempoInteraccion: 1
   sePuedeInteractuarMasDeUnaVez: 1
-  descripcion: Hace tal cosa
+  descripcion: Disfrazarse de Artista
   interaccion: {fileID: 1391137231015778}
 --- !u!212 &212739370743624148
 SpriteRenderer:

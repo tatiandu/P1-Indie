@@ -4,22 +4,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CambioDisfraz : MonoBehaviour {
-     public Disfraz miDisfraz;
-     Disfraz disfrazAnterior;
-    public GameObject artistaBoton;
-    public GameObject programadorBoton;
-    public GameObject personalBoton;
-    public GameObject diseñadorBoton;
+
+    public Disfraz miDisfraz;
+    Disfraz disfrazAnterior;
+    public GameObject artistaBoton, programadorBoton, personalBoton, diseñadorBoton;
     GameObject poolDisfraz;
+    SpriteRenderer rend;
     
 
     void Start() {
         //inicia el juego sin disfraz, asigna pooldisfraz (gameObject vacío)
         miDisfraz = GameManager.instance.DisfrazJugador();
         poolDisfraz = GameObject.Find("PoolDisfraz");
+        rend = GetComponent<SpriteRenderer>();
+
     }
 
- 
+
 
     public void MeCambio(Disfraz nuevoDisfraz)
     {
