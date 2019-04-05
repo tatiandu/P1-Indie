@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
 
     public void Perder()
     {
+        Debug.Log("Perdiste");
         uIManager.Perder();
     }
 
