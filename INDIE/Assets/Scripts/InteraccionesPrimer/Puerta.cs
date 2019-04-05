@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class Puerta : MonoBehaviour {
 
-    public GameObject Abierta, Cerrada;
+    public GameObject Abierta, Cerrada, Player;
+    public Disfraz necesario;
 
     public void OnEnable()
     {
-        Debug.Log("Pene");
-        Abierta.SetActive(true);
-        Cerrada.SetActive(false);
+        if (Player.GetComponent<CambioDisfraz>().miDisfraz == necesario)
+        {
+
+            Abierta.SetActive(true);
+            Cerrada.SetActive(false);
+        }
+        else this.gameObject.SetActive(false);
     }
 }
