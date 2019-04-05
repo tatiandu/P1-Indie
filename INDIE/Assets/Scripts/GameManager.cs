@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
         if (Input.GetButtonDown("Pause"))
         {
             uIManager.Pausar();
-            
         }
     }
     //Es llamado al comienzo de la escena por el AudioManager
