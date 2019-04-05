@@ -238,8 +238,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: 6.3, y: 2.4}
-      - {x: 6.3, y: -2.4}
+      - {x: 6.46, y: 2.54}
+      - {x: 6.46, y: -2.79}
 --- !u!114 &114224430761562356
 MonoBehaviour:
   m_ObjectHideFlags: 1
