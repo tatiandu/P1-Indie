@@ -167,7 +167,7 @@ MonoBehaviour:
   trazo: {fileID: 1303947236465174}
   tiempoInteraccion: 1
   sePuedeInteractuarMasDeUnaVez: 1
-  descripcion: Hace tal cosa
+  descripcion: Disfrazarse de Programador
   interaccion: {fileID: 1847060084395636}
 --- !u!114 &114621647720236576
 MonoBehaviour:

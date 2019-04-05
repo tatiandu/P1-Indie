@@ -73,7 +73,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1770727860983512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.8, y: 3.8, z: 0}
+  m_LocalPosition: {x: -27.2, y: -30.2, z: 0}
   m_LocalScale: {x: 0.7375, y: 0.7375, z: 0.5}
   m_Children:
   - {fileID: 4354991670416262}
@@ -184,10 +184,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   miDisfraz: 0
-  artistaBoton: {fileID: 0}
-  programadorBoton: {fileID: 0}
-  personalBoton: {fileID: 0}
-  "dise\xF1adorBoton": {fileID: 0}
+  artistaBoton: {fileID: 1076635003202992, guid: 4bb2eef270081db4bb0826866c6292b6,
+    type: 2}
+  programadorBoton: {fileID: 1694676837360396, guid: 7abeb36e2aef7ec43b3c80314485879e,
+    type: 2}
+  personalBoton: {fileID: 1308846763808064, guid: 87eab9ebdfa4f0d43889174161003ce6,
+    type: 2}
+  "dise\xF1adorBoton": {fileID: 1235786995072588, guid: 708196210635a43479df3430ee3994bd,
+    type: 2}
 --- !u!114 &114364118734008568
 MonoBehaviour:
   m_ObjectHideFlags: 1

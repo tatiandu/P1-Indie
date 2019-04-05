@@ -12,7 +12,7 @@ public class DisfrazJugador : MonoBehaviour
     
     public void OnEnable()
     {
-        player = GameObject.Find("Jugador");
+        player = GameObject.Find("Jugador1");
         //solo se cambia de disfraz el player
             cambioDisfraz = player.GetComponent<CambioDisfraz>();
             cambioDisfraz.MeCambio(disfrazNuevo);
