@@ -258,7 +258,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  playerGO: {fileID: 0}
+  playerGO: {fileID: 1335003159376778, guid: a330ecaf99fa279488ecc4270712e80b, type: 2}
   exclamationPrefab: {fileID: 1681563108595196, guid: 5b12bd3df568b744daa8d34434ac2cc6,
     type: 2}
   esGuardia: 0
