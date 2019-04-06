@@ -6,6 +6,8 @@ public class CambiarLienzo : MonoBehaviour {
 
     public GameObject lienzoQueCambio;
     public GameObject lienzoNuevo;
+    public float AumentaCaos;
+
     public void OnEnable()
     {
         lienzoQueCambio.SetActive(false);
