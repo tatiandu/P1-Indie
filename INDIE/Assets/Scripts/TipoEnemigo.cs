@@ -36,7 +36,7 @@ public class TipoEnemigo : MonoBehaviour {
             case Disfraz.lead:
                 rend.color = Color.yellow;
                 luz.LightColor = Color.yellow;
-
+                GameManager.instance.AvisoLead(this.gameObject.GetComponent<MoveEnemy>());
                 break;
         }
     }
@@ -45,12 +45,4 @@ public class TipoEnemigo : MonoBehaviour {
     {
         return tipo;
     }
-
-    /*private void Start()
-    {
-        if (Tipo==Disfraz.lead)
-        {
-            GameManager.instance.AvisoLead(this.gameObject.GetComponent<MoveEnemy>());
-        }
-    }*/
 }

@@ -37,7 +37,7 @@ public class CambioPatron : MonoBehaviour
 
             if (llegado)
             {
-                zonas[0].SetActive(true);
+                if (zonas.Length != 0) zonas[0].SetActive(true);
                 enemigo.CambioPatron(fin);
                 cambio2vez = true;
             }

@@ -49,12 +49,12 @@ TagManager:
   - name: Tiles
     uniqueID: 1204504677
     locked: 0
-  - name: Paredes
-    uniqueID: 2251529283
-    locked: 0
   - name: Items
     uniqueID: 2695923297
     locked: 0
   - name: Personajes
     uniqueID: 2576404927
+    locked: 0
+  - name: Paredes
+    uniqueID: 2251529283
     locked: 0
