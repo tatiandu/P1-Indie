@@ -86,7 +86,7 @@ public class MovimientoEnemigo : MonoBehaviour {
             if (exclamationSprite == null) exclamationSprite = Instantiate<GameObject>(exclamationPrefab);
             direccion = new Vector2(playerGO.transform.position.x - transform.position.x, playerGO.transform.position.y - transform.position.y).normalized;
             transform.right = direccion;
-            rb.velocity = transform.right * velocidadEstandar;
+            rb.velocity = transform.right * velocidadPersecucion;
         }
         else CambiaEstado(Estados.volviendo);
 

@@ -8,9 +8,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
     float volumen;
-    float Caos, maxCaos;
+   public float Caos, maxCaos;
     bool subirAscensor;
-    Disfraz disfrazActual;
+   public Disfraz disfrazActual;
     UIManager uIManager;
     AudioManager audioManager;
     int coleccionables;
