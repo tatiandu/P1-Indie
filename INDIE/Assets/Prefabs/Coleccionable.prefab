@@ -141,7 +141,7 @@ MonoBehaviour:
   trazo: {fileID: 1318580976978714}
   tiempoInteraccion: 1
   sePuedeInteractuarMasDeUnaVez: 0
-  descripcion: Coge coleccionale
+  descripcion: Recoger coleccionable
   interaccion: {fileID: 1090117284528002}
 --- !u!114 &114363527176888276
 MonoBehaviour:
