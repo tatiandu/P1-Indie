@@ -167,7 +167,7 @@ MonoBehaviour:
   trazo: {fileID: 1318580976978714}
   tiempoInteraccion: 1
   sePuedeInteractuarMasDeUnaVez: 0
-  descripcion: Coge coleccionale
+  descripcion: Recoger coleccionable
   interaccion: {fileID: 1090117284528002}
 --- !u!114 &114363527176888276
 MonoBehaviour:
@@ -214,7 +214,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1599043999
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 0898411d99605a74f870851988f602de, type: 3}
   m_Color: {r: 0, g: 0.071847916, b: 1, a: 1}
@@ -260,7 +260,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1599043999
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 057d8966c5c884d4b857daf2c8d3a349, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
