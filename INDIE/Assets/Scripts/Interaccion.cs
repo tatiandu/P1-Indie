@@ -28,7 +28,7 @@ public class Interaccion : MonoBehaviour
         movimiento mov = other.gameObject.GetComponent<movimiento>();
         if (mov != null)
         {
-            if (interaccion.GetComponent<Coleccionable>())
+            if (interactuable && interaccion.GetComponent<Coleccionable>())
             {
                 trazo.GetComponent<SpriteRenderer>().color = Color.blue;
                 player = mov;
