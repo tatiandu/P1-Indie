@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class VerConos : MonoBehaviour {
 
-    GameObject enemyGO;
-    DynamicLight2D.DynamicLight light;
+    Transform cono;
 
     // Si el cono de visión entra en el trigger se activa su renderer para que se vea el sprite
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.gameObject.GetComponent<MovimientoEnemigo>())
         {
-            light = other.gameObject.GetComponentInChildren<DynamicLight2D.DynamicLight>();
-            light.Intensity = 0.75f;
-            
+            cono = other.transform.GetChild(1);
+            cono.gameObject.SetActive(true);
         }
     }
 
@@ -23,8 +21,8 @@ public class VerConos : MonoBehaviour {
     {
         if (other.gameObject.GetComponent<MovimientoEnemigo>())
         {
-            light = other.gameObject.GetComponentInChildren<DynamicLight2D.DynamicLight>();
-            light.Intensity = 0.1f;
+            cono = other.transform.GetChild(1);
+            cono.gameObject.SetActive(false);
         }
     }
 }
