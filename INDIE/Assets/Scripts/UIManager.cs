@@ -5,17 +5,14 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject menuPerder;
-    public GameObject Pause;
-    public GameObject finDemo;
+    public GameObject menuPerder, Pause, finDemo, recuadroInstrucciones, objetivoCumplido, Caos;
+
     public Image[] RolesPausa;
     int tarjetasAdquiridas = 2;//debería ir en el GM
-    public Image Caos, fondoCaos, camara, artistas, diseñadores, programadores, personal, barraInteraccion;
-    public GameObject interaccion;
-    public GameObject recuadroInstrucciones;
+    public Image camara, artistas, diseñadores, programadores, personal, barraInteraccion, caosRelleno;
     public Text coleccionables;
  
-    public GameObject objetivoCumplido;
+    
     bool visualizarcaos = false;
     bool interactuando = false;
     bool objetivoCompletado = false;
@@ -32,8 +29,7 @@ public class UIManager : MonoBehaviour
         recuadroInstrucciones.SetActive(true);
         GameManager.instance.AvisoUI(this.gameObject.GetComponent<UIManager>());
         //objetivoCumplido.SetActive(false);
-        Caos.enabled = false;
-        fondoCaos.enabled = false;
+        Caos.SetActive(false);
     }
 
     /*Este método activa y desactiva los iconoc de aquellos npcs que te detectan t de los que no, lo hace teniendo en cuenta el disfraz que le llega como parámetro*/
@@ -90,8 +86,7 @@ public class UIManager : MonoBehaviour
         if (visualizarcaos && (vicaos + tiempovistacaos) < Time.time)  // si es true que hay que ver el caos pero ya se ha visualizado "X" segundos verlo pasa a ser false y escondemos la barra
         {
             visualizarcaos = false;
-            Caos.enabled = false;
-            fondoCaos.enabled = false;
+            Caos.SetActive(false);
 
         }
         if (objetivoCompletado && viObjetivoCumplido + tiempovistacaos < Time.time)  //si es true pero ya han pasado X segundos significa a que ya no hará falta ver más el panel de "Has completado el objetivo, vuelve al ascensor"
@@ -118,10 +113,9 @@ public class UIManager : MonoBehaviour
     public void AumentaCaos(float valorCaos)
     {
         visualizarcaos = true;
-        Caos.enabled = true;
-        fondoCaos.enabled = true;
+        Caos.SetActive(true);
 
-        Caos.fillAmount = valorCaos / 100;
+        caosRelleno.fillAmount = valorCaos / 100;
         vicaos = Time.time;
     }
 
