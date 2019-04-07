@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
    public Disfraz disfrazActual;
     UIManager uIManager;
     AudioManager audioManager;
-    int coleccionables;
+    int coleccionables,coleccionablesNivel;
     //Al pasar de escena se debe sumar 1 a esta variable
    int CurrentScene;
 
@@ -173,6 +173,7 @@ public class GameManager : MonoBehaviour
     }
     public void SigNivel()
     {
+        coleccionablesNivel = coleccionables;
         CurrentScene++;
         CargarEscena(CurrentScene);
         
@@ -185,8 +186,10 @@ public class GameManager : MonoBehaviour
     public void GuardaPartida()
     {
         //guardamos la escena actual
+        
         StreamWriter guardado = new StreamWriter("partida.txt");
         guardado.WriteLine(CurrentScene);
+        guardado.WriteLine(coleccionablesNivel);
         guardado.Close();
     }
     public void CargarPartida()
@@ -194,6 +197,7 @@ public class GameManager : MonoBehaviour
         StreamReader cargar = new StreamReader("partida.txt");
         //Leemos la escena que debemos cargar
         CurrentScene = int.Parse(cargar.ReadLine());
+        coleccionables = int.Parse(cargar.ReadLine());
         cargar.Close();
         CargarEscena(CurrentScene);
         //asignamos el disfraz por defecto al inicio de cada escena
