@@ -5480,11 +5480,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4995786240232214, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -97.04
+      value: -97.63
       objectReference: {fileID: 0}
     - target: {fileID: 4995786240232214, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -20.13
+      value: -20.3
       objectReference: {fileID: 0}
     - target: {fileID: 4995786240232214, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5617,7 +5617,7 @@ MonoBehaviour:
   - {fileID: 102975921}
   fin:
   - {fileID: 102975921}
-  caosConelqueCambia: 20
+  caosConelqueCambia: 15
   zonas:
   - {fileID: 1098154536}
   - {fileID: 2013506314}
@@ -30114,6 +30114,16 @@ Prefab:
       propertyPath: puntosPatrulla.Array.data[11]
       value: 
       objectReference: {fileID: 2080946379}
+    - target: {fileID: 114224430761562356, guid: 81a9dd2ea1596d140940f2328c32c76e,
+        type: 2}
+      propertyPath: velocidadEstandar
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114224430761562356, guid: 81a9dd2ea1596d140940f2328c32c76e,
+        type: 2}
+      propertyPath: velocidadPersecucion
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
@@ -30789,6 +30799,11 @@ Prefab:
         type: 2}
       propertyPath: tipo
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114224430761562356, guid: 81a9dd2ea1596d140940f2328c32c76e,
+        type: 2}
+      propertyPath: velocidadEstandar
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114222988647200918, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
@@ -31793,6 +31808,11 @@ Prefab:
         type: 2}
       propertyPath: tipo
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114224430761562356, guid: 81a9dd2ea1596d140940f2328c32c76e,
+        type: 2}
+      propertyPath: velocidadPersecucion
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -35381,6 +35401,11 @@ Prefab:
         type: 2}
       propertyPath: estado
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114224430761562356, guid: 81a9dd2ea1596d140940f2328c32c76e,
+        type: 2}
+      propertyPath: velocidadEstandar
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -122954,6 +122979,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114224430761562356, guid: 81a9dd2ea1596d140940f2328c32c76e,
+        type: 2}
+      propertyPath: velocidadEstandar
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114222988647200918, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
     - {fileID: 0}
@@ -123849,6 +123879,11 @@ Prefab:
         type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114224430761562356, guid: 81a9dd2ea1596d140940f2328c32c76e,
+        type: 2}
+      propertyPath: velocidadEstandar
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114222988647200918, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
@@ -125740,7 +125775,7 @@ Prefab:
     - target: {fileID: 114224430761562356, guid: 81a9dd2ea1596d140940f2328c32c76e,
         type: 2}
       propertyPath: velocidadEstandar
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
