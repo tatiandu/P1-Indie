@@ -30,6 +30,23 @@ public class CambioDisfraz : MonoBehaviour {
         GameManager.instance.CambioDisfrazJugador(miDisfraz);
         //si llevaba anteriormente algún disfraz, este se instancia al lado de player
 
+
+        switch (nuevoDisfraz)
+        {
+            case Disfraz.artista:
+                rend.color = Color.red;
+                break;
+            case Disfraz.diseñador:
+                rend.color = Color.green;
+                break;
+            case Disfraz.personal:
+                rend.color = Color.gray;
+                break;
+            case Disfraz.programador:
+                rend.color = Color.cyan;
+                break;
+
+        }
         switch (disfrazAnterior)
         {
             case Disfraz.artista:

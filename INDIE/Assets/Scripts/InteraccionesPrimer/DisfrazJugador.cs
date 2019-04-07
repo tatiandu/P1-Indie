@@ -9,6 +9,7 @@ public class DisfrazJugador : MonoBehaviour
     public GameObject parent;
     GameObject player;
 
+
     
     public void OnEnable()
     {
