@@ -112,6 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 4
+  cadenciaPasos: 0
 --- !u!212 &212413233887554508
 SpriteRenderer:
   m_ObjectHideFlags: 1
