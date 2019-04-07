@@ -14,9 +14,9 @@ public class ZonaClave : MonoBehaviour {
     // Si el enemigo se sale del trigger deja de perseguir al jugador
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject == enemy)
         {
-            other.GetComponent<MovimientoEnemigo>().AbandonoZona();
+            enemy.GetComponent<MovimientoEnemigo>().AbandonoZona();
         }
     }
 }
