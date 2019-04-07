@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CambiarMusica : MonoBehaviour {
+public class InteraccionSimple : MonoBehaviour {
 
     public string sonido;
     public float caos;
@@ -11,6 +11,6 @@ public class CambiarMusica : MonoBehaviour {
     {
         GameManager.instance.GenerarCaos(caos);
         GameManager.instance.ReproducirSonido(sonido);
-        Destroy(this.gameObject);
+        //Destroy(this.gameObject);
     }
 }
