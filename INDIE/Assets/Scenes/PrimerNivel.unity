@@ -662,7 +662,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1345398389605886, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
     type: 2}
   m_PrefabInternal: {fileID: 456930930}
---- !u!114 &73225538
+--- !u!114 &73225537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -670,11 +670,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 73225536}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbca1e45fd0ea264fbce14327f9fba52, type: 3}
+  m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: Teclear
-  caos: 8.33
+  caos: 10
 --- !u!1 &74239350
 GameObject:
   m_ObjectHideFlags: 0
@@ -4065,7 +4065,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1345398389605886, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
     type: 2}
   m_PrefabInternal: {fileID: 618791372}
---- !u!114 &189262976
+--- !u!114 &189262975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4073,11 +4073,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 189262974}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbca1e45fd0ea264fbce14327f9fba52, type: 3}
+  m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: Windows
-  caos: 8.33
+  caos: 10
 --- !u!1 &203528041
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,6 +4356,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1345398389605886, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
     type: 2}
   m_PrefabInternal: {fileID: 820099190}
+--- !u!114 &215752632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 215752631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonido: "V\xE1ter"
+  caos: 15
 --- !u!212 &215752633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4402,19 +4415,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &215752634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 215752631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bf633c657744d4429c525b73f9522cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sonido: "V\xE1ter"
-  Caos: 25
 --- !u!95 &215752635
 Animator:
   serializedVersion: 3
@@ -5332,7 +5332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: Tocadiscos
-  caos: 25
+  caos: 15
 --- !u!1 &284347458
 GameObject:
   m_ObjectHideFlags: 0
@@ -33587,7 +33587,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1345398389605886, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
     type: 2}
   m_PrefabInternal: {fileID: 1108914343}
---- !u!114 &802967674
+--- !u!114 &802967673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33595,11 +33595,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 802967672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbca1e45fd0ea264fbce14327f9fba52, type: 3}
+  m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: Error
-  caos: 8.5
+  caos: 10
 --- !u!1 &805029174
 GameObject:
   m_ObjectHideFlags: 0
@@ -120188,6 +120188,7 @@ Transform:
   - {fileID: 511900986}
   - {fileID: 1802389025}
   - {fileID: 273632376}
+  - {fileID: 1946424441}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -133545,11 +133546,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1491445597}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3786507f2ab25e44cb0cbfbe02cc201c, type: 3}
+  m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonido: CristalRoto
-  caos: 25
+  sonido: 
+  caos: 5
 --- !u!1 &1494452945
 GameObject:
   m_ObjectHideFlags: 0
@@ -135219,7 +135220,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4681829285888608, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 41.1
+      value: 39.92
       objectReference: {fileID: 0}
     - target: {fileID: 4681829285888608, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1, type: 2}
       propertyPath: m_LocalPosition.y
@@ -135267,7 +135268,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 92c3090ebe728be42a332430afd34d9d,
+      objectReference: {fileID: 21300000, guid: 579879ec014e3a5418c30691b04ee82d,
         type: 3}
     - target: {fileID: 4681829285888608, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1, type: 2}
       propertyPath: m_LocalScale.x
@@ -135284,52 +135285,52 @@ Prefab:
     - target: {fileID: 61635903607668634, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
         type: 2}
       propertyPath: m_Offset.x
-      value: -0.006289415
+      value: -0.009867191
       objectReference: {fileID: 0}
     - target: {fileID: 61635903607668634, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.4
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 61635903607668634, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.53
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 61635903607668634, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
         type: 2}
       propertyPath: m_Size.x
-      value: 0.45914072
+      value: 1.8966477
       objectReference: {fileID: 0}
     - target: {fileID: 61635903607668634, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
         type: 2}
       propertyPath: m_Size.y
-      value: 0.6932649
+      value: 0.8363002
       objectReference: {fileID: 0}
     - target: {fileID: 61325126071198052, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.4
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 61325126071198052, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
         type: 2}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.53
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 61325126071198052, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
         type: 2}
       propertyPath: m_Size.x
-      value: 2.2146597
+      value: 2.5579472
       objectReference: {fileID: 0}
     - target: {fileID: 61325126071198052, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
         type: 2}
       propertyPath: m_Size.y
-      value: 1.5480199
+      value: 1.4121361
       objectReference: {fileID: 0}
     - target: {fileID: 61325126071198052, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
         type: 2}
       propertyPath: m_Offset.y
-      value: -0.3333199
+      value: -0.15810013
       objectReference: {fileID: 0}
     - target: {fileID: 1992677895833916, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1, type: 2}
       propertyPath: m_IsActive
@@ -135346,6 +135347,16 @@ Prefab:
       propertyPath: trazo
       value: 
       objectReference: {fileID: 1611844066}
+    - target: {fileID: 61325126071198052, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.17164373
+      objectReference: {fileID: 0}
+    - target: {fileID: 61635903607668634, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.00000020861626
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1, type: 2}
   m_IsPrefabAsset: 0
@@ -135372,11 +135383,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1611844065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3786507f2ab25e44cb0cbfbe02cc201c, type: 3}
+  m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonido: CristalRoto
-  caos: 25
+  sonido: 
+  caos: 5
 --- !u!1 &1613510750
 GameObject:
   m_ObjectHideFlags: 0
@@ -138217,11 +138228,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1907285174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3786507f2ab25e44cb0cbfbe02cc201c, type: 3}
+  m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonido: CristalRoto
-  caos: 25
+  sonido: 
+  caos: 5
 --- !u!1001 &1908807866
 Prefab:
   m_ObjectHideFlags: 0
@@ -138454,11 +138465,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1908807868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bf633c657744d4429c525b73f9522cc, type: 3}
+  m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: "V\xE1ter"
-  Caos: 25
+  caos: 15
 --- !u!95 &1908807871
 Animator:
   serializedVersion: 3
@@ -138930,11 +138941,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1915625405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3786507f2ab25e44cb0cbfbe02cc201c, type: 3}
+  m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonido: CristalRoto
-  caos: 25
+  sonido: Error
+  caos: 5
 --- !u!1 &1921863295
 GameObject:
   m_ObjectHideFlags: 0
@@ -139202,6 +139213,111 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1946196896}
   m_CullTransparentMesh: 0
+--- !u!1 &1946424440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1865068163742824, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1946424441}
+  - component: {fileID: 1946424443}
+  - component: {fileID: 1946424442}
+  m_Layer: 11
+  m_Name: CarritoLimpieza
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1946424441
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4681829285888608, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1946424440}
+  m_LocalRotation: {x: -0, y: -0, z: -1, w: 0.000008726646}
+  m_LocalPosition: {x: -24.873, y: -8.332, z: 0}
+  m_LocalScale: {x: 1.0173357, y: 1.0173357, z: 1.0173361}
+  m_Children: []
+  m_Father: {fileID: 1113544966}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1946424442
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61635903607668634, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1946424440}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.009867191, y: 0.00000020861626}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.91, y: 1.11}
+    newSize: {x: 20, y: 19.17}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8966477, y: 0.8363002}
+  m_EdgeRadius: 0
+--- !u!212 &1946424443
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 212427347457039780, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1946424440}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1599043999
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 579879ec014e3a5418c30691b04ee82d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 20, y: 19.17}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1947565418
 GameObject:
   m_ObjectHideFlags: 0
@@ -140449,11 +140565,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2058891865}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbca1e45fd0ea264fbce14327f9fba52, type: 3}
+  m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: Error
-  caos: 8.5
+  caos: 10
 --- !u!1 &2060683714 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1185872624743686, guid: 81a9dd2ea1596d140940f2328c32c76e,
@@ -141320,7 +141436,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1345398389605886, guid: 4ae7e6f73abe6f64b93cc0fd7525edb1,
     type: 2}
   m_PrefabInternal: {fileID: 1911563278}
---- !u!114 &2096550252
+--- !u!114 &2096550251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141328,11 +141444,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2096550250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3786507f2ab25e44cb0cbfbe02cc201c, type: 3}
+  m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: CristalRoto
-  caos: 25
+  caos: 10
 --- !u!1 &2097049922
 GameObject:
   m_ObjectHideFlags: 0
