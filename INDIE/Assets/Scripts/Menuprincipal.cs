@@ -5,13 +5,9 @@ using UnityEngine.Audio;
 using System.IO;
 
 public class Menuprincipal : MonoBehaviour {
-    public GameObject botonesPrincipales;
-    public GameObject niveles;
-    public GameObject ajustes;
-    public GameObject continuar;
+    public GameObject botonesPrincipales, niveles, ajustes, continuar, fondo, fondoNiveles;
     public AudioMixer audioMixer;
 
-    // Use this for initialization
     void Start () {
         if (!File.Exists("partida.txt"))
         {
@@ -19,11 +15,7 @@ public class Menuprincipal : MonoBehaviour {
         }
     }
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
+	
 
 
     public void CargarNivel(int escena)
@@ -48,13 +40,20 @@ public class Menuprincipal : MonoBehaviour {
     {
         botonesPrincipales.SetActive(false);
         niveles.SetActive(true);
+
+        fondo.SetActive(false);
+        fondoNiveles.SetActive(true);
+        
     }
     public void VolverMenu()
     {
         niveles.SetActive(false);
         ajustes.SetActive(false);
         botonesPrincipales.SetActive(true);
-        
+        fondo.SetActive(true);
+        fondoNiveles.SetActive(false);
+
+
     }
     public void SalirJuego()
     {
