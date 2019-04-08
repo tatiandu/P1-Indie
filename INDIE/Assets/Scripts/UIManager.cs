@@ -37,7 +37,6 @@ public class UIManager : MonoBehaviour
     {
         if (disfrazActual == Disfraz.ninguno)
         {
-            camara.enabled = true;
             artistas.enabled = true;
             diseñadores.enabled = true;
             programadores.enabled = true;
@@ -45,7 +44,6 @@ public class UIManager : MonoBehaviour
         }
         else if (disfrazActual == Disfraz.programador)
         {
-            camara.enabled = true;
             artistas.enabled = false;
             diseñadores.enabled = true;
             programadores.enabled = true;
@@ -53,7 +51,7 @@ public class UIManager : MonoBehaviour
         }
         else if (disfrazActual == Disfraz.artista)
         {
-            camara.enabled = true;
+
             artistas.enabled = true;
             diseñadores.enabled = true;
             programadores.enabled = false;
@@ -61,7 +59,6 @@ public class UIManager : MonoBehaviour
         }
         else if (disfrazActual == Disfraz.diseñador)
         {
-            camara.enabled = true;
             artistas.enabled = true;
             diseñadores.enabled = true;
             programadores.enabled = false;
@@ -69,7 +66,6 @@ public class UIManager : MonoBehaviour
         }
         else if (disfrazActual == Disfraz.personal)
         {
-            camara.enabled = false;
             artistas.enabled = false;
             diseñadores.enabled = false;
             programadores.enabled = false;

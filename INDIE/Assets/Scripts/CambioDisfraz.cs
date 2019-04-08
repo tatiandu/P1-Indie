@@ -62,6 +62,9 @@ public class CambioDisfraz : MonoBehaviour {
                 Instantiate<GameObject>(programadorBoton, new Vector2(transform.position.x, transform.position.y), transform.rotation, poolDisfraz.transform);
                 break;
 
+            case Disfraz.ninguno:
+                break;
+
             }
 
         }

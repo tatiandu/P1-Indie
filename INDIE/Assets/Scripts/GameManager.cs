@@ -139,6 +139,9 @@ public class GameManager : MonoBehaviour
     public void CargarEscena(int escenaBuild)
     {
         SceneManager.LoadScene(escenaBuild);
+        ReproducirSonido("Ascensor");
+        subirAscensor = false;
+
     }
     public void ActualizarEscena(int escena)
     {
@@ -147,7 +150,7 @@ public class GameManager : MonoBehaviour
     }
     public void SubirPlanta()
     {
-        subirAscensor = !subirAscensor;
+        subirAscensor = true;
     }
     public bool HasGanado()
     {
@@ -155,7 +158,6 @@ public class GameManager : MonoBehaviour
     }
     public void MenuGanar()
     {
-        uIManager.FinDemo();
         ReproducirSonido("Ascensor");
         subirAscensor = false;
     }
@@ -178,6 +180,12 @@ public class GameManager : MonoBehaviour
         CurrentScene++;
         CargarEscena(CurrentScene);
         
+    }
+    public void SaltarEscena(int sig)
+    {
+        CurrentScene++;
+        CargarEscena(sig);
+
     }
     public void ReproducirPitchAleatorio(string sonido)
     {
