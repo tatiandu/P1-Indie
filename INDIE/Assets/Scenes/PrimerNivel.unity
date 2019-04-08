@@ -512,6 +512,7 @@ GameObject:
   - component: {fileID: 49290205}
   - component: {fileID: 49290204}
   - component: {fileID: 49290203}
+  - component: {fileID: 49290206}
   m_Layer: 5
   m_Name: Personal
   m_TagString: Untagged
@@ -571,6 +572,24 @@ RectTransform:
   m_AnchoredPosition: {x: 90, y: -90}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.1, y: 0.1}
+--- !u!95 &49290206
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 49290202}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: cdc1a2b8e18e15944b8130664ec41ca3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &56519898
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,7 +4805,7 @@ Prefab:
     - target: {fileID: 224399022092642398, guid: bd59e4074232b094b9009d611b957938,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 17
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 224399022092642398, guid: bd59e4074232b094b9009d611b957938,
         type: 2}
@@ -33914,6 +33933,24 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 224399022092642398, guid: bd59e4074232b094b9009d611b957938,
     type: 2}
   m_PrefabInternal: {fileID: 231510264}
+--- !u!95 &737199747
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 737199745}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: af529fed72e1550468c1f16bf84de642, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &752513504
 GameObject:
   m_ObjectHideFlags: 0
@@ -119751,6 +119788,7 @@ GameObject:
   - component: {fileID: 1065246390}
   - component: {fileID: 1065246391}
   - component: {fileID: 1065246392}
+  - component: {fileID: 1065246393}
   m_Layer: 5
   m_Name: Programadores
   m_TagString: Untagged
@@ -119810,6 +119848,24 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!95 &1065246393
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1065246389}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8bd60d7233d815747a2c6e2f4cef641e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1069446156
 Prefab:
   m_ObjectHideFlags: 0
@@ -121670,6 +121726,7 @@ GameObject:
   - component: {fileID: 1169289951}
   - component: {fileID: 1169289952}
   - component: {fileID: 1169289953}
+  - component: {fileID: 1169289954}
   m_Layer: 5
   m_Name: "Dise\xF1adores"
   m_TagString: Untagged
@@ -121729,6 +121786,24 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!95 &1169289954
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1169289950}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a04f0a7979dca14cafea2e49e276ceb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1175062535
 GameObject:
   m_ObjectHideFlags: 0
@@ -121975,6 +122050,7 @@ GameObject:
   - component: {fileID: 1193086765}
   - component: {fileID: 1193086766}
   - component: {fileID: 1193086767}
+  - component: {fileID: 1193086768}
   m_Layer: 5
   m_Name: Artistas
   m_TagString: Untagged
@@ -122034,6 +122110,24 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!95 &1193086768
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1193086764}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f864360c57be254c95dff117317f395, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1195592312
 GameObject:
   m_ObjectHideFlags: 0
@@ -124581,7 +124675,7 @@ Prefab:
     - target: {fileID: 114250240991711608, guid: a330ecaf99fa279488ecc4270712e80b,
         type: 2}
       propertyPath: cadenciaPasos
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a330ecaf99fa279488ecc4270712e80b, type: 2}
@@ -124739,8 +124833,8 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  pitchMaximo: 0
-  pitchMinimo: 0
+  pitchMaximo: 25
+  pitchMinimo: 15
 --- !u!4 &1350819533
 Transform:
   m_ObjectHideFlags: 0
