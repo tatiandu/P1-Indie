@@ -94,6 +94,7 @@ public class UIManager : MonoBehaviour
             objetivoCompletado = false;
             objetivoCumplido.SetActive(false);
         }
+
     }
 
     public void Interactuando(float tiempoInteraccion, bool interaccion)
@@ -136,11 +137,15 @@ public class UIManager : MonoBehaviour
 
     public void Pausar()
     {//se paran el tiempo, se activa el menú de pausa y se activan los disfraces que tiene el jugador
-        Time.timeScale = 0;
-        Pause.SetActive(true);
-        for (int i = 0; i < tarjetasAdquiridas; i++)
+        if (Pause.activeSelf) FinPausa();
+        else
         {
-            RolesPausa[i].gameObject.SetActive(true);
+            Time.timeScale = 0;
+            Pause.SetActive(true);
+            for (int i = 0; i < tarjetasAdquiridas; i++)
+            {
+                RolesPausa[i].gameObject.SetActive(true);
+            }
         }
     }
     public void Perder()

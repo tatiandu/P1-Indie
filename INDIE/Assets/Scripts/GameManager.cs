@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
         {
             uIManager.Pausar();
         }
+
+
     }
     //Es llamado al comienzo de la escena por el AudioManager
     public void AvisoAudioManager(AudioManager audio)
