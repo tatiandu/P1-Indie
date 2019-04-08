@@ -10,10 +10,7 @@ public class Menu : MonoBehaviour
     
     bool buttonSelected;
 
-    void Start()
-    {
 
-    }
 
     void Update()
     {
