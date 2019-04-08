@@ -17,6 +17,7 @@ public class Menu : MonoBehaviour
         //si se acciona el eje vertical y no hay ningún botón seleccionado selecciona el primer botón 
         if (Input.GetAxisRaw("Vertical") != 0 && !buttonSelected)
         {
+           
             eventSystem.SetSelectedGameObject(selectedObject);
             buttonSelected = true;
 
