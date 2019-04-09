@@ -2,12 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Animations;
 public class CambioDisfraz : MonoBehaviour {
 
     public Disfraz miDisfraz;
     Disfraz disfrazAnterior;
     public GameObject artistaBoton, programadorBoton, personalBoton, diseñadorBoton;
+    int disfraz;
+    Animator anim;
     GameObject poolDisfraz;
     SpriteRenderer rend;
     
@@ -15,6 +17,7 @@ public class CambioDisfraz : MonoBehaviour {
     void Start() {
         //inicia el juego sin disfraz, asigna pooldisfraz (gameObject vacío)
         miDisfraz = GameManager.instance.DisfrazJugador();
+        anim = GetComponent<Animator>();
         poolDisfraz = GameObject.Find("PoolDisfraz");
         rend = GetComponent<SpriteRenderer>();
 
@@ -33,17 +36,29 @@ public class CambioDisfraz : MonoBehaviour {
 
         switch (nuevoDisfraz)
         {
+            case Disfraz.ninguno:
+                rend.color = Color.white;
+                anim.SetInteger("Disfraz", 0);
+                break;
             case Disfraz.artista:
                 rend.color = Color.red;
+                anim.SetInteger("Disfraz", 1);
+
                 break;
             case Disfraz.diseñador:
                 rend.color = Color.green;
+                anim.SetInteger("Disfraz", 2);
+
                 break;
             case Disfraz.personal:
                 rend.color = Color.gray;
+                anim.SetInteger("Disfraz", 3);
+
                 break;
             case Disfraz.programador:
                 rend.color = Color.cyan;
+                anim.SetInteger("Disfraz", 4);
+
                 break;
 
         }
