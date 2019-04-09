@@ -221,4 +221,9 @@ public class GameManager : MonoBehaviour
                 break;
         }
     }
+
+    public int ColeccionablesTotales()
+    {
+        return coleccionables;
+    }
 }
