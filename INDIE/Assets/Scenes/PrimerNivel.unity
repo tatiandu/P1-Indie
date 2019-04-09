@@ -489,7 +489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: Teclear
-  caos: 10
+  caos: 15
 --- !u!1 &74239350
 GameObject:
   m_ObjectHideFlags: 0
@@ -3756,7 +3756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: Windows
-  caos: 10
+  caos: 15
 --- !u!1 &203528041
 GameObject:
   m_ObjectHideFlags: 0
@@ -32996,7 +32996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: Error
-  caos: 10
+  caos: 15
 --- !u!1 &805029174
 GameObject:
   m_ObjectHideFlags: 0
@@ -122685,19 +122685,19 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Windows
-    clip: {fileID: 8300000, guid: 7baed6da9c799de43b85a5b3ced37d83, type: 3}
+    clip: {fileID: 8300000, guid: 148f852d7f3497a4789e44202fb4a7a7, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Error
-    clip: {fileID: 8300000, guid: 368ae261f2f0fee49b8b4496dc38763f, type: 3}
+    clip: {fileID: 8300000, guid: 36f696fd15d1cdb4d85878d072d608c1, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Teclear
-    clip: {fileID: 8300000, guid: a28e64468cddb8a4d9121eb3108212e6, type: 3}
+    clip: {fileID: 8300000, guid: 037f84d6f02efdc4babb2a9a5b28886d, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -132153,8 +132153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonido: 
-  caos: 5
+  sonido: CristalRoto
+  caos: 15
 --- !u!1 &1494452945
 GameObject:
   m_ObjectHideFlags: 0
@@ -133793,8 +133793,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonido: 
-  caos: 5
+  sonido: CristalRoto
+  caos: 15
 --- !u!1 &1613510750
 GameObject:
   m_ObjectHideFlags: 0
@@ -136129,7 +136129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objetoQueCambio: {fileID: 1763649285}
   objetoNuevo: {fileID: 145026228}
-  caos: 5
+  caos: 15
 --- !u!1001 &1908807866
 Prefab:
   m_ObjectHideFlags: 0
@@ -136841,8 +136841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5cf09d0dfc4b024cba10be816932b10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sonido: Error
-  caos: 5
+  sonido: CristalRoto
+  caos: 15
 --- !u!1 &1923292821
 GameObject:
   m_ObjectHideFlags: 0
@@ -137979,7 +137979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: Error
-  caos: 10
+  caos: 15
 --- !u!1 &2060683714 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1185872624743686, guid: 81a9dd2ea1596d140940f2328c32c76e,
@@ -138735,7 +138735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: CristalRoto
-  caos: 10
+  caos: 15
 --- !u!1 &2097049922
 GameObject:
   m_ObjectHideFlags: 0
