@@ -28244,7 +28244,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 408404781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.9, y: 1.55, z: 0.3518184}
+  m_LocalPosition: {x: 3.93, y: 3.01, z: 0.3518184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 454402683}
@@ -28542,22 +28542,22 @@ Prefab:
     - target: {fileID: 224758180283837134, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -80.48001
+      value: -52.030243
       objectReference: {fileID: 0}
     - target: {fileID: 224494860244362810, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -80.48001
+      value: -52.030243
       objectReference: {fileID: 0}
     - target: {fileID: 224727880717186746, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -80.48001
+      value: -52.030243
       objectReference: {fileID: 0}
     - target: {fileID: 224059788220351896, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -80.48001
+      value: -52.030243
       objectReference: {fileID: 0}
     - target: {fileID: 1004340532946746, guid: 606b0c5ca78f21e469bd97b6eb47fa83, type: 2}
       propertyPath: m_IsActive
@@ -29415,7 +29415,7 @@ Prefab:
         type: 2}
       propertyPath: puntosPatrulla.Array.data[7]
       value: 
-      objectReference: {fileID: 1152287963}
+      objectReference: {fileID: 1403424008}
     - target: {fileID: 114224430761562356, guid: 81a9dd2ea1596d140940f2328c32c76e,
         type: 2}
       propertyPath: velocidadEstandar
