@@ -136,6 +136,7 @@ public class MovimientoEnemigo : MonoBehaviour {
     {
         CambiaEstado(Estados.volviendo);
         if (exclamationSprite != null) Destroy(exclamationSprite);
+        Debug.Log("zona");
     }
 
     public void CambioPatron(Transform[] puntosnuevos)
