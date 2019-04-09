@@ -34454,7 +34454,7 @@ MonoBehaviour:
   - {fileID: 2089628048}
   fin:
   - {fileID: 2089628048}
-  caosConelqueCambia: 5
+  caosConelqueCambia: 100
   zonas:
   - {fileID: 820706095}
   - {fileID: 1092449518}
