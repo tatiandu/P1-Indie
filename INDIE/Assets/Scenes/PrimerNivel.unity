@@ -5380,7 +5380,8 @@ Prefab:
       propertyPath: m_LocalScale.x
       value: 0.17364247
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114782982858026968, guid: 30d9243b7d655df4a9948e292110ffa8, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 30d9243b7d655df4a9948e292110ffa8, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &345405346
@@ -31223,7 +31224,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1492373655332852, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -34412,7 +34413,7 @@ MonoBehaviour:
   - {fileID: 2089628048}
   fin:
   - {fileID: 2089628048}
-  caosConelqueCambia: 99
+  caosConelqueCambia: 5
   zonas:
   - {fileID: 820706095}
   - {fileID: 1092449518}
@@ -123911,14 +123912,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nuevoPuntos:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 259424562}
+  - {fileID: 672049955}
+  - {fileID: 1180265714}
+  - {fileID: 1873969912}
+  - {fileID: 1146904675}
   fin:
-  - {fileID: 0}
-  caosConelqueCambia: 25
+  - {fileID: 1146904675}
+  caosConelqueCambia: 40
   zonas:
   - {fileID: 1208760769}
   - {fileID: 1249654561}
@@ -131772,7 +131773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: CristalRoto
-  caos: 15
+  caos: 10
 --- !u!1 &1494452945
 GameObject:
   m_ObjectHideFlags: 0
@@ -132791,7 +132792,7 @@ MonoBehaviour:
   - {fileID: 1104080868}
   fin:
   - {fileID: 1104080868}
-  caosConelqueCambia: 30
+  caosConelqueCambia: 40
   zonas:
   - {fileID: 629631769}
   - {fileID: 1608049379}
@@ -133560,7 +133561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: CristalRoto
-  caos: 15
+  caos: 10
 --- !u!1 &1613510750
 GameObject:
   m_ObjectHideFlags: 0
@@ -134335,7 +134336,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1492373655332852, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114222988647200918, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
@@ -135865,7 +135866,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objetoQueCambio: {fileID: 1763649285}
   objetoNuevo: {fileID: 145026228}
-  caos: 15
+  caos: 10
 --- !u!1001 &1908807866
 Prefab:
   m_ObjectHideFlags: 0
@@ -136578,7 +136579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: CristalRoto
-  caos: 15
+  caos: 10
 --- !u!1 &1923292821
 GameObject:
   m_ObjectHideFlags: 0
@@ -138515,7 +138516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sonido: CristalRoto
-  caos: 15
+  caos: 10
 --- !u!1 &2097049922
 GameObject:
   m_ObjectHideFlags: 0
