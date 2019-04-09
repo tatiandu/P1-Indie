@@ -6,7 +6,7 @@ public class ConoDeVision : MonoBehaviour {
 
     MovimientoEnemigo movEnemigo;
     TipoEnemigo tipoEnemigo;
-    SpriteRenderer render;
+
     RaycastHit2D ray;
     GameObject playerGO;
 
@@ -14,7 +14,6 @@ public class ConoDeVision : MonoBehaviour {
     {
         movEnemigo = GetComponentInParent<MovimientoEnemigo>();
         tipoEnemigo = GetComponentInParent<TipoEnemigo>();
-        render = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
