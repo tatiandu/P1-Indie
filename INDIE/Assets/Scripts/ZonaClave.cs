@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ZonaClave : MonoBehaviour {
 
     public GameObject enemy;
+    MovimientoEnemigo movimiento;
 
 	void Start ()
     {
@@ -14,10 +16,25 @@ public class ZonaClave : MonoBehaviour {
     // Si el enemigo se sale del trigger deja de perseguir al jugador
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject == enemy)
         {
             Debug.Log("abandono");
-            enemy.GetComponent<MovimientoEnemigo>().AbandonoZona();
+            movimiento = other.GetComponent<MovimientoEnemigo>();
+            movimiento.AbandonoZona();
+            movimiento.fueraZona = true;
+
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject == enemy)
+        {
+            for (float i = 0; i < 2; i = (i + (1 * Time.deltaTime))){ }
+
+            movimiento = other.GetComponent<MovimientoEnemigo>();
+            movimiento.fueraZona = false;
+
         }
     }
 }

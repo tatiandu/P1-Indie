@@ -6,7 +6,6 @@ public class ConoDeVision : MonoBehaviour {
 
     MovimientoEnemigo movEnemigo;
     TipoEnemigo tipoEnemigo;
-
     RaycastHit2D ray;
     GameObject playerGO;
 
@@ -24,7 +23,7 @@ public class ConoDeVision : MonoBehaviour {
             ray = Physics2D.Raycast(transform.position, playerGO.transform.position - transform.position, Vector2.Distance(playerGO.transform.position, transform.position));  //Raycast
             Debug.DrawRay(transform.position, playerGO.transform.position - transform.position, Color.red);    //Debug del raycast
 
-            if (ray.collider.tag == "Player" && CompruebaDeteccion())
+            if (ray.collider.tag == "Player" && CompruebaDeteccion()&& !movEnemigo.fueraZona)
             {
                 Debug.Log("Player detected");
                 movEnemigo.CambiaEstado(Estados.persecucion);

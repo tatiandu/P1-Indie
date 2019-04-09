@@ -16,6 +16,7 @@ public class MovimientoEnemigo : MonoBehaviour {
     RaycastHit2D ray;
     public Estados estado;
     Animator anim;
+    public bool fueraZona;
 
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
@@ -37,7 +38,8 @@ public class MovimientoEnemigo : MonoBehaviour {
                     EstadoPatrulla();
                     break;
                 case Estados.persecucion:
-                    EstadoPersecucion();
+                    if (!fueraZona) EstadoPersecucion();
+                    else EstadoVolviendo();
                     anim.SetBool("IsMoving", true);
                     break;
                 case Estados.volviendo:
