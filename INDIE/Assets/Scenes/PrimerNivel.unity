@@ -28609,22 +28609,22 @@ Prefab:
     - target: {fileID: 224758180283837134, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -52.030243
+      value: -80.48001
       objectReference: {fileID: 0}
     - target: {fileID: 224494860244362810, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -52.030243
+      value: -80.48001
       objectReference: {fileID: 0}
     - target: {fileID: 224727880717186746, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -52.030243
+      value: -80.48001
       objectReference: {fileID: 0}
     - target: {fileID: 224059788220351896, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -52.030243
+      value: -80.48001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 606b0c5ca78f21e469bd97b6eb47fa83, type: 2}
@@ -122568,7 +122568,7 @@ Prefab:
     - target: {fileID: 114250240991711608, guid: a330ecaf99fa279488ecc4270712e80b,
         type: 2}
       propertyPath: cadenciaPasos
-      value: 2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 114013853230293186, guid: a330ecaf99fa279488ecc4270712e80b,
         type: 2}
@@ -122709,9 +122709,9 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Pisada
-    clip: {fileID: 8300000, guid: fc829eeb48d69e64fa983acb8eea84f5, type: 3}
+    clip: {fileID: 8300000, guid: 999982fa5f726ac449e69c1bb9c00018, type: 3}
     volume: 1
-    pitch: 1
+    pitch: 0.1
     loop: 0
     source: {fileID: 0}
   - name: Tocadiscos
@@ -122732,8 +122732,8 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  pitchMaximo: 0
-  pitchMinimo: 0
+  pitchMaximo: 15
+  pitchMinimo: 10
 --- !u!4 &1350819533
 Transform:
   m_ObjectHideFlags: 0
