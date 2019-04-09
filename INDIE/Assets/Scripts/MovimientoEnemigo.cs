@@ -14,10 +14,12 @@ public class MovimientoEnemigo : MonoBehaviour {
     Rigidbody2D rb;
     Vector2 direccion, direccionInicial;
     RaycastHit2D ray;
-   public  Estados estado;
+    public Estados estado;
+    Animator anim;
 
 	void Start () {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         estado = Estados.volviendo;
         recorridoGuardiaRealizado = false;
         direccionInicial = transform.right;
@@ -36,9 +38,14 @@ public class MovimientoEnemigo : MonoBehaviour {
                     break;
                 case Estados.persecucion:
                     EstadoPersecucion();
+                    anim.SetBool("IsMoving", true);
                     break;
                 case Estados.volviendo:
                     EstadoVolviendo();
+                    anim.SetBool("IsMoving", true);
+                    break;
+                case Estados.finTrayecto:
+                    anim.SetBool("IsMoving", false);
                     break;
             }
         }
@@ -56,12 +63,16 @@ public class MovimientoEnemigo : MonoBehaviour {
                     InvierteCamino();
                     i = 0;
                     recorridoGuardiaRealizado = true;
+                    anim.SetBool("IsMoving", false);
+
                 }
                 if (esGuardia && i >= puntosPatrulla.Length && recorridoGuardiaRealizado)
                 {
                     recorridoGuardiaRealizado = false;
                     i = 0;
                     gameObject.SetActive(false);
+                    anim.SetBool("IsMoving", true);
+
                 }
                 direccion = new Vector2(puntosPatrulla[i % puntosPatrulla.Length].position.x - transform.position.x, puntosPatrulla[i % puntosPatrulla.Length].position.y - transform.position.y).normalized;
                 transform.right = direccion;
@@ -71,7 +82,8 @@ public class MovimientoEnemigo : MonoBehaviour {
         }
         else
         {
-            transform.right = direccionInicial;     //Se queda mirando a la posicion inicial
+            anim.SetBool("IsMoving", false);
+        transform.right = direccionInicial;     //Se queda mirando a la posicion inicial
             rb.velocity = Vector2.zero;
         }
     }

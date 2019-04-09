@@ -181,6 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 1441803187818118}
+  sonido: Ding
 --- !u!212 &212527373038856888
 SpriteRenderer:
   m_ObjectHideFlags: 1

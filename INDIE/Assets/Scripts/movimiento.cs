@@ -10,9 +10,12 @@ public class movimiento : MonoBehaviour
     Vector2 mov, direc;
     Rigidbody2D rb;
     public float cadenciaPasos;
+    Animator anim;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         move = true;
         
         paso = false;
@@ -42,21 +45,31 @@ public class movimiento : MonoBehaviour
         else
         {
             StopMovement();
+
         }
-        
+
     }
 
     //Mueve al jugador
     void Move()
     {
 
-        if (mov != new Vector2(0, 0))       // Se guarda la dirección anterior en direc si esta es distinta de 0,0
+        if (mov != new Vector2(0, 0))
+        {    // Se guarda la dirección anterior en direc si esta es distinta de 0,0
             direc = mov;
+            anim.SetBool("IsMoving", true);
+
+        }
 
         mov = new Vector2(horizontal, vertical) * speed;
+        mov = new Vector2(horizontal, vertical) * speed;
 
-        if (mov == new Vector2(0, 0))       // Si está quieto pone al jugador mirando a la dirección direc en lugar de a mov
+        if (mov == new Vector2(0, 0))
+        {     // Si está quieto pone al jugador mirando a la dirección direc en lugar de a mov
             transform.right = direc;
+            anim.SetBool("IsMoving", false);
+        }
+
         else
             transform.right = mov;
 

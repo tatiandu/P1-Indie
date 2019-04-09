@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114224430761562356}
   - component: {fileID: 114349082032799652}
   - component: {fileID: 58014792691316316}
+  - component: {fileID: 95687594117304526}
+  - component: {fileID: 114262540205130636}
   m_Layer: 12
   m_Name: EnemyPrefab
   m_TagString: Enemy
@@ -114,7 +116,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1687083727148484}
   m_LocalRotation: {x: -0, y: -0, z: -0.74455833, w: 0.6675574}
-  m_LocalPosition: {x: 2.753, y: -7.514, z: 0}
+  m_LocalPosition: {x: 2.27, y: -7.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4168447889218714}
@@ -128,8 +130,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185872624743686}
   m_LocalRotation: {x: -0, y: -0, z: 0.9999985, w: -0.0017452018}
-  m_LocalPosition: {x: -32.4, y: 9.8, z: -4.28832}
-  m_LocalScale: {x: 0.73750067, y: 0.73750067, z: 0.73749995}
+  m_LocalPosition: {x: 3.77, y: 0.92, z: 0.22534567}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_Children:
   - {fileID: 4458086240332886}
   - {fileID: 4587765896451326}
@@ -210,9 +212,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.22050844, y: -0.0028315682}
   serializedVersion: 2
-  m_Radius: 1.1000003
+  m_Radius: 0.57530135
 --- !u!60 &60860330120804736
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -238,8 +240,29 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0, y: 0}
-      - {x: 6.46, y: 2.54}
-      - {x: 6.46, y: -2.79}
+      - {x: 2.461298, y: 0.93526363}
+      - {x: 2.6187513, y: 0.5577668}
+      - {x: 2.6416981, y: -0.000889485}
+      - {x: 2.581316, y: -0.5347987}
+      - {x: 2.4029455, y: -0.9605366}
+--- !u!95 &95687594117304526
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1185872624743686}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e7572782076ad7147843e5d175ab9885, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114224430761562356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -255,14 +278,22 @@ MonoBehaviour:
   velocidadPersecucion: 6
   puntosPatrulla:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  playerGO: {fileID: 1335003159376778, guid: a330ecaf99fa279488ecc4270712e80b, type: 2}
+  playerGO: {fileID: 0}
   exclamationPrefab: {fileID: 1681563108595196, guid: 5b12bd3df568b744daa8d34434ac2cc6,
     type: 2}
   esGuardia: 0
-  estado: 0
+  estado: 3
+--- !u!114 &114262540205130636
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1185872624743686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 082a5d0edd8181942ae95f7dcd62552d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114272937355212948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -286,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   luz: {fileID: 114956293256169364}
-  tipo: 4
+  tipo: 1
 --- !u!114 &114956293256169364
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -374,7 +405,7 @@ SpriteRenderer:
   m_SortingLayerID: -1718562369
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3e9ea12639b846243968b583fe1ce74f, type: 3}
+  m_Sprite: {fileID: 21300096, guid: 20c2ed8756b999543af2db7c12516995, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
