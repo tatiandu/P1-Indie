@@ -185,6 +185,7 @@ public class GameManager : MonoBehaviour
     {
         CurrentScene++;
         CargarEscena(sig);
+        Caos = 0;
 
     }
     public void ReproducirPitchAleatorio(string sonido)
