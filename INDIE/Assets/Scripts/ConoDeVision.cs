@@ -17,7 +17,7 @@ public class ConoDeVision : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && collision.GetComponent<Perder>().enabled)
         {
             playerGO = collision.gameObject;
             ray = Physics2D.Raycast(transform.position, playerGO.transform.position - transform.position, Vector2.Distance(playerGO.transform.position, transform.position));  //Raycast
@@ -33,7 +33,7 @@ public class ConoDeVision : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && collision.GetComponent<Perder>().enabled)
         {
             playerGO = collision.gameObject;
             ray = Physics2D.Raycast(transform.position, playerGO.transform.position - transform.position, Vector2.Distance(playerGO.transform.position, transform.position));  //Raycast
@@ -49,7 +49,7 @@ public class ConoDeVision : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && collision.GetComponent<Perder>().enabled)
         {
             Debug.Log("Player lost");
             movEnemigo.PlayerPerdido();
