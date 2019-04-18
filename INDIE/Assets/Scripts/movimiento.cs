@@ -11,6 +11,7 @@ public class movimiento : MonoBehaviour
     Rigidbody2D rb;
     public float cadenciaPasos;
     Animator anim;
+   
 
     void Start()
     {
@@ -33,6 +34,8 @@ public class movimiento : MonoBehaviour
             GameManager.instance.ReproducirPitchAleatorio("Pisada");
             Invoke("CambioPaso", cadenciaPasos);
         }
+
+        
     }
 
     void FixedUpdate()

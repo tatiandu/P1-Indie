@@ -28206,7 +28206,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 439c3e6a09cc0f6488604c596ce1291d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animacion: {fileID: 273549172}
+  animacionInicial: {fileID: 511106195}
+  animacionCaos: {fileID: 273549172}
+  player: {fileID: 1167245180}
 --- !u!4 &407410575
 Transform:
   m_ObjectHideFlags: 0
@@ -28542,22 +28544,22 @@ Prefab:
     - target: {fileID: 224758180283837134, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -52.030243
+      value: -12.455856
       objectReference: {fileID: 0}
     - target: {fileID: 224494860244362810, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -52.030243
+      value: -12.455856
       objectReference: {fileID: 0}
     - target: {fileID: 224727880717186746, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -52.030243
+      value: -12.455856
       objectReference: {fileID: 0}
     - target: {fileID: 224059788220351896, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -52.030243
+      value: -12.455856
       objectReference: {fileID: 0}
     - target: {fileID: 1004340532946746, guid: 606b0c5ca78f21e469bd97b6eb47fa83, type: 2}
       propertyPath: m_IsActive
@@ -29810,7 +29812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &511106196
 Transform:
   m_ObjectHideFlags: 0
