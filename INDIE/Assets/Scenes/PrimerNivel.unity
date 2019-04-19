@@ -28209,6 +28209,8 @@ MonoBehaviour:
   animacionInicial: {fileID: 511106195}
   animacionCaos: {fileID: 273549172}
   player: {fileID: 1167245180}
+  tiempoPrimeraAnimacion: 4
+  tiempoSegundaAnimacion: 4
 --- !u!4 &407410575
 Transform:
   m_ObjectHideFlags: 0
