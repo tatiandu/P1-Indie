@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     UIManager uIManager;
     AudioManager audioManager;
     int coleccionables;
+    int coleccionablesConLosQueEmpezamos;
     //Al pasar de escena se debe sumar 1 a esta variable
    int CurrentScene;
 
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
         maxCaos = 100;
         subirAscensor = false;
         coleccionables = 0;
+        coleccionablesConLosQueEmpezamos = 0;
     }
 
     void Update()
@@ -105,6 +107,7 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(CurrentScene);
         Caos = 0;
+        coleccionables = coleccionablesConLosQueEmpezamos;
         subirAscensor = false;
     }
 
@@ -183,6 +186,7 @@ public class GameManager : MonoBehaviour
     }
     public void SaltarEscena(int sig)
     {
+        coleccionablesConLosQueEmpezamos = coleccionables;
         CurrentScene++;
         CargarEscena(sig);
         Caos = 0;

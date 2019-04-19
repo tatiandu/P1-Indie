@@ -27,7 +27,7 @@ public class ReproducirAnimación : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.instance.CaosActual() == 100 && !segundaAnimacion)
+        if (GameManager.instance.CaosActual() >= 100 && !segundaAnimacion)
         {
             segundaAnimacion = true;
             horaSegundaAnimacion = Time.time;
