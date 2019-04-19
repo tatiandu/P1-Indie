@@ -958,7 +958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &616644742
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1578,7 +1578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1009482435
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2908,7 +2908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1705879504
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3380,6 +3380,9 @@ MonoBehaviour:
   fondo: {fileID: 1463699550}
   fondoNiveles: {fileID: 1234208408}
   audioMixer: {fileID: 0}
+  nivel1: {fileID: 616644741}
+  nivel2: {fileID: 1009482434}
+  nivel3: {fileID: 1705879503}
 --- !u!1 &1863915898
 GameObject:
   m_ObjectHideFlags: 0
