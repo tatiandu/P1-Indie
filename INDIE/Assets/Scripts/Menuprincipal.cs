@@ -52,20 +52,7 @@ public class Menuprincipal : MonoBehaviour
     public void CargarNivel(int escena)
     {
         GameManager.instance.ActualizarEscena(escena);
-        GameManager.instance.CargarEscena(escena);
-        switch (escena)
-        {
-            case 1:
-                GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
-                break;
-            case 2:
-                GameManager.instance.CambioDisfrazJugador(Disfraz.programador);
-                break;
-            case 3:
-                GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
-                break;
-        }
-
+        GameManager.instance.CargarEscena(escena);       
     }
     public void SelecciónNiveles()
     {

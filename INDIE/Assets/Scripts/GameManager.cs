@@ -109,6 +109,18 @@ public class GameManager : MonoBehaviour
         Caos = 0;
         coleccionables = coleccionablesConLosQueEmpezamos;
         subirAscensor = false;
+        switch (CurrentScene)
+        {
+            case 1:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
+                break;
+            case 2:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.programador);
+                break;
+            case 3:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.artista);
+                break;
+        }
     }
 
     public Disfraz DisfrazJugador()   //Le da al jugador su disfraz actual. Útil para cuando cambias de escena y el jugador ya tenia un disfraz, el GameManager lo guarda entre escenas
@@ -140,10 +152,22 @@ public class GameManager : MonoBehaviour
     }
 
     public void CargarEscena(int escenaBuild)
-    {
+    {       
         SceneManager.LoadScene(escenaBuild);
-        ReproducirSonido("Ascensor");
-        subirAscensor = false;
+        //ReproducirSonido("Ascensor");
+        subirAscensor = false;        
+        switch (escenaBuild)
+        {
+            case 1:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
+                break;
+            case 2:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.programador);
+                break;
+            case 3:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.artista);
+                break;
+        }
 
     }
     public void ActualizarEscena(int escena)
