@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start()
-    {
+    {       
         Caos = 0;
         maxCaos = 100;
         subirAscensor = false;

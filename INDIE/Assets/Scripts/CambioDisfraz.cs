@@ -20,10 +20,43 @@ public class CambioDisfraz : MonoBehaviour {
         anim = GetComponent<Animator>();
         poolDisfraz = GameObject.Find("PoolDisfraz");
         rend = GetComponent<SpriteRenderer>();
+        DisfrazarmeInicioEscena();
 
     }
 
+    //Al principio de la escena o al reiniciar el nivel el jugador pregunta por el disfraz a gamemanager y se lo pone (para actualizar la skin)
+    void DisfrazarmeInicioEscena()
+    {
+        Disfraz nuevoDisfraz = GameManager.instance.DisfrazJugador() ;
+        switch (nuevoDisfraz)
+        {
+            case Disfraz.ninguno:
+                rend.color = Color.white;
+                anim.SetInteger("Disfraz", 0);
+                break;
+            case Disfraz.artista:
+                rend.color = Color.red;
+                anim.SetInteger("Disfraz", 1);
 
+                break;
+            case Disfraz.diseñador:
+                rend.color = Color.green;
+                anim.SetInteger("Disfraz", 2);
+
+                break;
+            case Disfraz.personal:
+                rend.color = Color.gray;
+                anim.SetInteger("Disfraz", 3);
+
+                break;
+            case Disfraz.programador:
+                rend.color = Color.cyan;
+                anim.SetInteger("Disfraz", 4);
+
+                break;
+
+        }
+    }
 
     public void MeCambio(Disfraz nuevoDisfraz)
     {
