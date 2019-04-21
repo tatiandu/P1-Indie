@@ -8,7 +8,7 @@ public class MovimientoEnemigo : MonoBehaviour {
     public Transform[] puntosPatrulla;
     public GameObject playerGO, exclamationPrefab;
     public bool esGuardia;
-    bool recorridoGuardiaRealizado;
+    public bool recorridoGuardiaRealizado;
     GameObject exclamationSprite;
     int i;
     Rigidbody2D rb;
@@ -75,6 +75,10 @@ public class MovimientoEnemigo : MonoBehaviour {
                     gameObject.SetActive(false);
                     anim.SetBool("IsMoving", true);
 
+                }
+                if(esGuardia && !this.gameObject.activeSelf)
+                {
+                    recorridoGuardiaRealizado = false;
                 }
                 direccion = new Vector2(puntosPatrulla[i % puntosPatrulla.Length].position.x - transform.position.x, puntosPatrulla[i % puntosPatrulla.Length].position.y - transform.position.y).normalized;
                 transform.right = direccion;
