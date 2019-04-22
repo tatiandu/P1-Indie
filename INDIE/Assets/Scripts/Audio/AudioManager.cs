@@ -25,7 +25,8 @@ public class AudioManager : MonoBehaviour {
 	void Start () {
         GameManager.instance.AvisoAudioManager(GetComponent<AudioManager>());
         AudioListener.volume = GameManager.instance.DameVolumen();
-        Play("Ascensor");        
+        Play("Ascensor");
+        Play("Liszt");
 	}
 	
 	

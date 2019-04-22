@@ -27,6 +27,7 @@ public class ConoDeVision : MonoBehaviour {
             {
                 Debug.Log("Player detected");
                 movEnemigo.CambiaEstado(Estados.persecucion);
+                GameManager.instance.ReproducirSonido("Huh");
             }
         }
     }
