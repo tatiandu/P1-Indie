@@ -18,7 +18,7 @@ public class movimiento : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         move = true;
-        
+      //  GameManager.instance.ReproducirSonido("Ascensor");
         paso = false;
         
     }

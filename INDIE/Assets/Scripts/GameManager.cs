@@ -135,8 +135,7 @@ public class GameManager : MonoBehaviour
 
     public void ReproducirSonido(string nombreSonido)
     {
-        audioManager.Play(nombreSonido);
-        Debug.Log(nombreSonido);
+        audioManager.Play(nombreSonido);        
     }
 
     /*Hay que avisar al UI de que muestre el panel de objetivo cumplido*/
