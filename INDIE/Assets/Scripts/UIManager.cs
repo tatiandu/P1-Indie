@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject menuPerder, Pause, finDemo, recuadroInstrucciones, objetivoCumplido, Caos;
+    public GameObject menuPerder, Pause, finDemo, recuadroInstrucciones, objetivoCumplido, Caos,avisoPuertas;
 
     public Image[] RolesPausa;
     int tarjetasAdquiridas = 2;//debería ir en el GM
     public Image camara, artistas, diseñadores, programadores, personal, barraInteraccion, caosRelleno;
     public Text coleccionables;
- 
-    
+    float activacionPuertas;
+    bool notifPuertas = false;
     bool visualizarcaos = false;
     bool interactuando = false;
     bool objetivoCompletado = false;
@@ -74,8 +74,13 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
+        if (Time.time>= activacionPuertas+2 &&avisoPuertas.activeInHierarchy==true)
+        {
+            avisoPuertas.SetActive(false);
+        }
         if (interactuando) //Si se interactúa la barra aumenta lo necesario para llegar al 100% en el tiempo de interaccion maximo
         {
+           
             procesoInteraccion += (1 / maxInteraccion) * Time.deltaTime;
             barraInteraccion.fillAmount = procesoInteraccion;
         }
@@ -209,5 +214,11 @@ public class UIManager : MonoBehaviour
     {
         GameManager.instance.GuardaPartida();
         Cambiaescena(0);
+    }
+    public void AvisoPuertas(bool activate)
+    {
+        avisoPuertas.SetActive(activate);
+        notifPuertas = !notifPuertas;
+        activacionPuertas = Time.time;
     }
 }

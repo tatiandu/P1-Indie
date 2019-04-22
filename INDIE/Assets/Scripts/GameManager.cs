@@ -254,4 +254,11 @@ public class GameManager : MonoBehaviour
     {
         return coleccionables;
     }
+    public void AvisoPuertas()
+    {
+        if (!subirAscensor)
+        {
+            uIManager.AvisoPuertas(true);
+        }
+    }
 }
