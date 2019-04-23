@@ -6,6 +6,8 @@ using System.IO;
 
 public class GameManager : MonoBehaviour
 {
+    //constante por si queremos añadir más niveles
+    const int TOTAL_NIVELES = 3;
     public static GameManager instance = null;
     float volumen;
    public float Caos, maxCaos;
@@ -16,7 +18,7 @@ public class GameManager : MonoBehaviour
     int coleccionables;
     int coleccionablesConLosQueEmpezamos;
     //Al pasar de escena se debe sumar 1 a esta variable
-   int CurrentScene;
+   int CurrentScene,totalNivelesDesbloqueados=1;
 
     //Discutir solución
     MoveEnemy Lead;
@@ -204,6 +206,10 @@ public class GameManager : MonoBehaviour
     public void SigNivel()
     {
         CurrentScene++;
+        if (CurrentScene<TOTAL_NIVELES+1)
+        {
+            totalNivelesDesbloqueados = CurrentScene;
+        }
         CargarEscena(CurrentScene);
         
     }
@@ -225,6 +231,7 @@ public class GameManager : MonoBehaviour
         //guardamos la escena actual
         StreamWriter guardado = new StreamWriter("partida.txt");
         guardado.WriteLine(CurrentScene);
+        guardado.WriteLine("Total " + totalNivelesDesbloqueados);
         guardado.Close();
     }
     public void CargarPartida()
@@ -232,6 +239,8 @@ public class GameManager : MonoBehaviour
         StreamReader cargar = new StreamReader("partida.txt");
         //Leemos la escena que debemos cargar
         CurrentScene = int.Parse(cargar.ReadLine());
+        //Leemos el número total de niveles desbloqueados, que es la segunda palabra de la segunda línea 
+        totalNivelesDesbloqueados = int.Parse(cargar.ReadLine().Split(' ')[1]);
         cargar.Close();
         CargarEscena(CurrentScene);
         //asignamos el disfraz por defecto al inicio de cada escena

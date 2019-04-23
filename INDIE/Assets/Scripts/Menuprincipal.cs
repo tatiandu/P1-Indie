@@ -10,39 +10,51 @@ public class Menuprincipal : MonoBehaviour
     public GameObject botonesPrincipales, niveles, ajustes, continuar, fondo, fondoNiveles;
     public AudioMixer audioMixer;
     public GameObject nivel1, nivel2, nivel3;
+    int numeroNiveles;
 
     void Start()
     {
+        
         if (!File.Exists("partida.txt"))     //Si no existe continuar no debe salir y activo el nivel 1
         {
+            numeroNiveles = 1;
             continuar.SetActive(false);
             nivel1.SetActive(true);
             StreamWriter archivo = new StreamWriter("partida.txt");  //Creo el archivo y pongo el nivel 1 pero sin activar el "continuar"
             archivo.WriteLine("1");
+            archivo.WriteLine("Total " + numeroNiveles);
             archivo.Close();
         }
         else
-        {            
+        {
             StreamReader cargar = new StreamReader("partida.txt");  // si existe leo la primera linea para ver cuántos niveles tengo que mostrar
             //Leemos la escena que debemos cargar
-            int numeroNiveles = int.Parse(cargar.ReadLine());
-            cargar.Close();
-            switch (numeroNiveles)
+            string[] lectura = new string[0];
+            while (lectura[0] != "Total")
             {
-                case 1:
-                    nivel1.SetActive(true);
+                lectura = cargar.ReadLine().Split(' ');
 
-                    break;
-                case 2:
-                    nivel1.SetActive(true);
-                    nivel2.SetActive(true);
-                    break;
-                case 3:
-                    nivel1.SetActive(true);
-                    nivel2.SetActive(true);
-                    nivel3.SetActive(true);
-                    break;
             }
+            numeroNiveles = int.Parse(lectura[1]);
+            print(numeroNiveles);
+            cargar.Close();
+           
+        }
+        switch (numeroNiveles)
+        {
+            case 1:
+                nivel1.SetActive(true);
+
+                break;
+            case 2:
+                nivel1.SetActive(true);
+                nivel2.SetActive(true);
+                break;
+            case 3:
+                nivel1.SetActive(true);
+                nivel2.SetActive(true);
+                nivel3.SetActive(true);
+                break;
         }
     }
 
@@ -52,7 +64,7 @@ public class Menuprincipal : MonoBehaviour
     public void CargarNivel(int escena)
     {
         GameManager.instance.ActualizarEscena(escena);
-        GameManager.instance.CargarEscena(escena);       
+        GameManager.instance.CargarEscena(escena);
     }
     public void SelecciónNiveles()
     {
