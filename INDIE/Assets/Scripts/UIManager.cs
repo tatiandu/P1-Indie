@@ -18,6 +18,11 @@ public class UIManager : MonoBehaviour
     bool objetivoCompletado = false;
     float vicaos,viObjetivoCumplido;
     public float tiempovistacaos;
+
+    public Image recuadroTextos;
+    public Text textos;
+    public Animator animadorRecuadroTextos;
+    public Animator animadorTextos;
     //AJ
     public Text Interactuar, Descripcion;
     //FinAJ
@@ -30,6 +35,8 @@ public class UIManager : MonoBehaviour
         GameManager.instance.AvisoUI(this.gameObject.GetComponent<UIManager>());
         //objetivoCumplido.SetActive(false);
         Caos.SetActive(false);
+        MostrarTexto(1f, "ugbadfcaiphfipuwhsaipfuhwSUHFIPWUHipfuhpuqwehfpuwHPFUHWpiuhwfipuehfwuehefunDSAOIJNFIOUwhufhWUHFUwhe");
+        
     }
 
     /*Este método activa y desactiva los iconoc de aquellos npcs que te detectan t de los que no, lo hace teniendo en cuenta el disfraz que le llega como parámetro*/
@@ -220,5 +227,27 @@ public class UIManager : MonoBehaviour
         avisoPuertas.SetActive(activate);
         notifPuertas = !notifPuertas;
         activacionPuertas = Time.time;
+    }
+
+    public void MostrarTexto(float delay, string text)
+    {
+        animadorRecuadroTextos.SetBool("Mostrar", true);
+        animadorTextos.SetBool("Mostrar", true);
+        textos.text = text;
+        Invoke("Escondertexto", delay);
+    }
+    public void Escondertexto()
+    {        
+        animadorRecuadroTextos.SetBool("Esconder", true);
+        animadorTextos.SetBool("Esconder", true);
+        Invoke("PrepararParaNuevoTexto",1f);          //Para que pueda terminar la animación 
+
+    }
+    public void PrepararParaNuevoTexto()
+    {
+        animadorRecuadroTextos.SetBool("Esconder", false);
+        animadorTextos.SetBool("Esconder", false);
+        animadorRecuadroTextos.SetBool("Mostrar", false);
+        animadorTextos.SetBool("Mostrar", false);
     }
 }

@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
         subirAscensor = false;
         coleccionables = 0;
         coleccionablesConLosQueEmpezamos = 0;
+      
     }
 
     void Update()
@@ -268,5 +269,9 @@ public class GameManager : MonoBehaviour
         {
             uIManager.AvisoPuertas(true);
         }
+    }
+   public void MostrarTextoEnPantalla(float delay,string texto)
+    {
+        uIManager.MostrarTexto(delay,texto);
     }
 }
