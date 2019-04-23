@@ -83,7 +83,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4168447889218714
 Transform:
   m_ObjectHideFlags: 1
@@ -308,6 +308,7 @@ MonoBehaviour:
   exclamationPrefab: {fileID: 1681563108595196, guid: 5b12bd3df568b744daa8d34434ac2cc6,
     type: 2}
   esGuardia: 0
+  recorridoGuardiaRealizado: 0
   estado: 3
   fueraZona: 0
 --- !u!114 &114262540205130636
