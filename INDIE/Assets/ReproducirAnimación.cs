@@ -16,12 +16,22 @@ public class ReproducirAnimación : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        animacionInicial.gameObject.SetActive(true);
-        primeraAnimacion = true;
-        horaPrimeraAnimacion = Time.time;
-        segundaAnimacion = false;
-        player.GetComponent<Perder>().enabled = false;
-        player.GetComponent<movimiento>().enabled = false;
+        if (GameManager.instance.ReproducirAnimacionPrincipio() ==true)
+        {
+            animacionInicial.gameObject.SetActive(true);
+            primeraAnimacion = true;
+            horaPrimeraAnimacion = Time.time;
+            segundaAnimacion = false;
+            player.GetComponent<Perder>().enabled = false;
+            player.GetComponent<movimiento>().enabled = false;
+        }
+        else
+        {            
+            primeraAnimacion = true;
+            horaPrimeraAnimacion = Time.time;
+            segundaAnimacion = false;
+           
+        }
     }
 
     // Update is called once per frame

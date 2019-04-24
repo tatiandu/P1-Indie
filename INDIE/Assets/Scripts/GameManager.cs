@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     float volumen;
     public float Caos, maxCaos;
     bool subirAscensor;
+    public bool reproducirAnimacionTarjeta;
     public Disfraz disfrazActual;
     UIManager uIManager;
     AudioManager audioManager;
@@ -43,6 +44,7 @@ public class GameManager : MonoBehaviour
         Caos = 0;
         maxCaos = 100;
         subirAscensor = false;
+        reproducirAnimacionTarjeta = true;
         coleccionables = 0;
         coleccionablesConLosQueEmpezamos = 0;
 
@@ -157,6 +159,7 @@ public class GameManager : MonoBehaviour
     {   SceneManager.LoadScene(escenaBuild);
         //ReproducirSonido("Ascensor");
         subirAscensor = false;
+        reproducirAnimacionTarjeta = true;
         switch (escenaBuild)
         {
             case 1:
@@ -268,6 +271,18 @@ public class GameManager : MonoBehaviour
         if (!subirAscensor)
         {
             uIManager.AvisoPuertas(true);
+        }
+    }
+    public bool ReproducirAnimacionPrincipio()
+    {
+        if (reproducirAnimacionTarjeta)
+        {
+            reproducirAnimacionTarjeta = false;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
     public void MostrarTextoEnPantalla(float delay, string texto)
