@@ -100,10 +100,6 @@ public class Menuprincipal : MonoBehaviour
         Debug.Log(volumen);
         GameManager.instance.AjustarVolumen(volumen);
     }
-    public void PantallaCompleta(bool pantallaCompleta)
-    {
-        Screen.fullScreen = pantallaCompleta;
-    }
     public void Continuar()
     {
         GameManager.instance.CargarPartida();
