@@ -29,7 +29,7 @@ public class Menuprincipal : MonoBehaviour
         {
             StreamReader cargar = new StreamReader("partida.txt");  // si existe leo la primera linea para ver cuántos niveles tengo que mostrar
             //Leemos la escena que debemos cargar
-            string[] lectura = new string[0];
+            string[] lectura = new string[1];
             while (lectura[0] != "Total")
             {
                 lectura = cargar.ReadLine().Split(' ');
