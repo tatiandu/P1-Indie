@@ -9,7 +9,7 @@ public class SiguienteNivel : MonoBehaviour {
     {
         if (other.gameObject.tag == "Player" && GameManager.instance.HasGanado())
         {
-            GameManager.instance.SaltarEscena(sigEscena);
+            GameManager.instance.SigNivel();
         }
     }
 }
