@@ -10,15 +10,15 @@ public class GameManager : MonoBehaviour
     const int TOTAL_NIVELES = 3;
     public static GameManager instance = null;
     float volumen;
-   public float Caos, maxCaos;
+    public float Caos, maxCaos;
     bool subirAscensor;
-   public Disfraz disfrazActual;
+    public Disfraz disfrazActual;
     UIManager uIManager;
     AudioManager audioManager;
     int coleccionables;
     int coleccionablesConLosQueEmpezamos;
     //Al pasar de escena se debe sumar 1 a esta variable
-   int CurrentScene,totalNivelesDesbloqueados=1;
+    int CurrentScene, totalNivelesDesbloqueados = 1;
 
     //Discutir solución
     MoveEnemy Lead;
@@ -39,13 +39,13 @@ public class GameManager : MonoBehaviour
     }
 
     private void Start()
-    {       
+    {
         Caos = 0;
         maxCaos = 100;
         subirAscensor = false;
         coleccionables = 0;
         coleccionablesConLosQueEmpezamos = 0;
-      
+
     }
 
     void Update()
@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
 
     public void ReproducirSonido(string nombreSonido)
     {
-        audioManager.Play(nombreSonido);        
+        audioManager.Play(nombreSonido);
     }
 
     /*Hay que avisar al UI de que muestre el panel de objetivo cumplido*/
@@ -154,10 +154,9 @@ public class GameManager : MonoBehaviour
     }
 
     public void CargarEscena(int escenaBuild)
-    {       
-        SceneManager.LoadScene(escenaBuild);
+    {   SceneManager.LoadScene(escenaBuild);
         //ReproducirSonido("Ascensor");
-        subirAscensor = false;        
+        subirAscensor = false;
         switch (escenaBuild)
         {
             case 1:
@@ -206,13 +205,14 @@ public class GameManager : MonoBehaviour
     }
     public void SigNivel()
     {
+        
         CurrentScene++;
-        if (CurrentScene<TOTAL_NIVELES+1)
+        if (CurrentScene < TOTAL_NIVELES + 1 && totalNivelesDesbloqueados <= CurrentScene)
         {
             totalNivelesDesbloqueados = CurrentScene;
         }
         CargarEscena(CurrentScene);
-        
+
     }
     public void SaltarEscena(int sig)
     {
@@ -247,7 +247,7 @@ public class GameManager : MonoBehaviour
         //asignamos el disfraz por defecto al inicio de cada escena
         switch (CurrentScene)
         {
-         case 1:
+            case 1:
                 CambioDisfrazJugador(Disfraz.ninguno);
                 break;
             case 2:
@@ -270,8 +270,8 @@ public class GameManager : MonoBehaviour
             uIManager.AvisoPuertas(true);
         }
     }
-   public void MostrarTextoEnPantalla(float delay,string texto)
+    public void MostrarTextoEnPantalla(float delay, string texto)
     {
-        uIManager.MostrarTexto(delay,texto);
+        uIManager.MostrarTexto(delay, texto);
     }
 }
