@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
         GameManager.instance.AvisoUI(this.gameObject.GetComponent<UIManager>());
         //objetivoCumplido.SetActive(false);
         Caos.SetActive(false);
-        MostrarTexto(1f, "ugbadfcaiphfipuwhsaipfuhwSUHFIPWUHipfuhpuqwehfpuwHPFUHWpiuhwfipuehfwuehefunDSAOIJNFIOUwhufhWUHFUwhe");
+       
         
     }
 
