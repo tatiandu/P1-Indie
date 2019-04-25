@@ -29019,7 +29019,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 408404781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.93, y: 3.01, z: 0.3518184}
+  m_LocalPosition: {x: 4.5, y: 1.97, z: 0.3518184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 454402683}
@@ -32778,13 +32778,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4233692405207146, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114129833472516368, guid: ddbee072874e6874d89649b1c3db127e,
         type: 2}
       propertyPath: texto
       value: "Consigue tantos coleccionables como puedas para mejorar tu pitch. Mant\xE9n
         pulsado el bot\xF3n de interactuar para recogerlo."
+      objectReference: {fileID: 0}
+    - target: {fileID: 61405895588201754, guid: ddbee072874e6874d89649b1c3db127e,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.43975067
+      objectReference: {fileID: 0}
+    - target: {fileID: 61405895588201754, guid: ddbee072874e6874d89649b1c3db127e,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 4.138405
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
@@ -33097,11 +33107,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4995786240232214, guid: 81a9dd2ea1596d140940f2328c32c76e,
     type: 2}
   m_PrefabInternal: {fileID: 2060915152}
---- !u!4 &684624891 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4233692405207146, guid: ddbee072874e6874d89649b1c3db127e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1001990681}
 --- !u!1 &690581328
 GameObject:
   m_ObjectHideFlags: 0
@@ -34037,13 +34042,33 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4233692405207146, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114129833472516368, guid: ddbee072874e6874d89649b1c3db127e,
         type: 2}
       propertyPath: texto
       value: "Al generar caos algunos enemigos cambiaran de posici\xF3n o comenzar\xE1n
         a moverse. Mant\xE9n pulsado el bot\xF3n de interactuar."
+      objectReference: {fileID: 0}
+    - target: {fileID: 61405895588201754, guid: ddbee072874e6874d89649b1c3db127e,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 1.1045969
+      objectReference: {fileID: 0}
+    - target: {fileID: 61405895588201754, guid: ddbee072874e6874d89649b1c3db127e,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 6.2175174
+      objectReference: {fileID: 0}
+    - target: {fileID: 61405895588201754, guid: ddbee072874e6874d89649b1c3db127e,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.39268667
+      objectReference: {fileID: 0}
+    - target: {fileID: 61405895588201754, guid: ddbee072874e6874d89649b1c3db127e,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 3.2913175
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
@@ -36181,7 +36206,7 @@ Prefab:
         type: 2}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: e7572782076ad7147843e5d175ab9885, type: 2}
+      objectReference: {fileID: 9100000, guid: a080b9291546b9244adcf82f4cc8ca14, type: 2}
     - target: {fileID: 50857639919448278, guid: 81a9dd2ea1596d140940f2328c32c76e,
         type: 2}
       propertyPath: m_BodyType
@@ -36657,48 +36682,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1001990681
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1354825599}
-    m_Modifications:
-    - target: {fileID: 4233692405207146, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -32.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233692405207146, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -4.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233692405207146, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233692405207146, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233692405207146, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233692405207146, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0.000008726646
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233692405207146, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4233692405207146, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ddbee072874e6874d89649b1c3db127e, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1006081717
 GameObject:
   m_ObjectHideFlags: 0
@@ -124710,7 +124693,6 @@ Transform:
   m_LocalPosition: {x: -10.307608, y: -39.509537, z: 5.5598288}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 684624891}
   - {fileID: 1938124167}
   - {fileID: 1542040879}
   m_Father: {fileID: 0}
