@@ -160,6 +160,7 @@ public class GameManager : MonoBehaviour
     public void CargarEscena(int escenaBuild)
     {   SceneManager.LoadScene(escenaBuild);
         //ReproducirSonido("Ascensor");
+        
         subirAscensor = false;
         reproducirAnimacionTarjeta = true;
         switch (escenaBuild)
@@ -174,6 +175,7 @@ public class GameManager : MonoBehaviour
                 GameManager.instance.CambioDisfrazJugador(Disfraz.artista);
                 break;
         }
+        Caos = 0;
 
     }
     public void ActualizarEscena(int escena)
