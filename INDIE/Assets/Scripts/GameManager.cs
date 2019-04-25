@@ -81,12 +81,14 @@ public class GameManager : MonoBehaviour
     //Llega una nueva cantidad de caos generado, guardamos el valor actual lo mandamos al UIManager para que lo muestre
     public void GenerarCaos(float nuevocaosgenerado)
     {
+        
         Caos = Caos + nuevocaosgenerado;
         uIManager.AumentaCaos(Caos);
         //AJ
         if (Caos >= maxCaos)
         {
             Lead.enabled = true;
+           
         }
     }
 

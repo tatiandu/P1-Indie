@@ -44,6 +44,7 @@ public class ReproducirAnimación : MonoBehaviour
             animacionCaos.gameObject.SetActive(true);
             player.GetComponent<Perder>().enabled = false;
             player.GetComponent<movimiento>().enabled = false;
+            GameManager.instance.MostrarTextoEnPantalla(4f, "Coje la tarjeta y vuelve al ascensor para subir al siguiente piso");
 
 
 
