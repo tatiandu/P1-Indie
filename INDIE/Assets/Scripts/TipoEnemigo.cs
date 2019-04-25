@@ -35,6 +35,10 @@ public class TipoEnemigo : MonoBehaviour {
                 luz.LightColor = Color.yellow;
                 GameManager.instance.AvisoLead(this.gameObject.GetComponent<MoveEnemy>());
                 break;
+            case Disfraz.guardia:
+                //rend.color = Color.gray;
+                luz.LightColor = Color.blue;
+                break;
         }
     }
 
