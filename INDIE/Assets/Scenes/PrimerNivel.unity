@@ -4691,7 +4691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -3.619995, y: 0}
+  m_AnchoredPosition: {x: -3.6199875, y: 0}
   m_SizeDelta: {x: -86.61, y: -6.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &234831370
@@ -32166,7 +32166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 906.7, y: -32.030243}
+  m_AnchoredPosition: {x: 906.7, y: -60.48001}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.1, y: 0.1}
 --- !u!95 &610447522
@@ -121754,7 +121754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 617.8, y: -32.030243}
+  m_AnchoredPosition: {x: 617.8, y: -60.48001}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.1, y: 0.1}
 --- !u!95 &1165128574
@@ -124655,6 +124655,12 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: PerderCorriente
     clip: {fileID: 8300000, guid: 6b91409028d18e24d9ed848df4266543, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Exclamacion
+    clip: {fileID: 8300000, guid: 4e2e28bcf24621f48b8f82eb47ac641c, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -135088,7 +135094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 40, y: -32.030243}
+  m_AnchoredPosition: {x: 40, y: -60.48001}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.1, y: 0.1}
 --- !u!95 &1511560088
@@ -138984,7 +138990,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 328.9, y: -32.030243}
+  m_AnchoredPosition: {x: 328.9, y: -60.48001}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.1, y: 0.1}
 --- !u!1001 &1850593009
