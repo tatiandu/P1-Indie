@@ -11,7 +11,7 @@ public class CambioDisfraz : MonoBehaviour {
     int disfraz;
     Animator anim;
     GameObject poolDisfraz;
-    SpriteRenderer rend;
+    //SpriteRenderer rend;
     
 
     void Start() {
@@ -19,7 +19,7 @@ public class CambioDisfraz : MonoBehaviour {
         miDisfraz = GameManager.instance.DisfrazJugador();
         anim = GetComponent<Animator>();
         poolDisfraz = GameObject.Find("PoolDisfraz");
-        rend = GetComponent<SpriteRenderer>();
+        //rend = GetComponent<SpriteRenderer>();
         DisfrazarmeInicioEscena();
 
     }
@@ -31,26 +31,26 @@ public class CambioDisfraz : MonoBehaviour {
         switch (nuevoDisfraz)
         {
             case Disfraz.ninguno:
-                rend.color = Color.white;
+                //rend.color = Color.white;
                 anim.SetInteger("Disfraz", 0);
                 break;
             case Disfraz.artista:
-                rend.color = Color.red;
+                //rend.color = Color.red;
                 anim.SetInteger("Disfraz", 1);
 
                 break;
             case Disfraz.diseñador:
-                rend.color = Color.green;
+                //rend.color = Color.green;
                 anim.SetInteger("Disfraz", 2);
 
                 break;
             case Disfraz.personal:
-                rend.color = Color.gray;
+                //rend.color = Color.gray;
                 anim.SetInteger("Disfraz", 3);
 
                 break;
             case Disfraz.programador:
-                rend.color = Color.cyan;
+                //rend.color = Color.cyan;
                 anim.SetInteger("Disfraz", 4);
 
                 break;
@@ -70,26 +70,26 @@ public class CambioDisfraz : MonoBehaviour {
         switch (nuevoDisfraz)
         {
             case Disfraz.ninguno:
-                rend.color = Color.white;
+                //rend.color = Color.white;
                 anim.SetInteger("Disfraz", 0);
                 break;
             case Disfraz.artista:
-                rend.color = Color.red;
+                //rend.color = Color.red;
                 anim.SetInteger("Disfraz", 1);
 
                 break;
             case Disfraz.diseñador:
-                rend.color = Color.green;
+                //rend.color = Color.green;
                 anim.SetInteger("Disfraz", 2);
 
                 break;
             case Disfraz.personal:
-                rend.color = Color.gray;
+                //rend.color = Color.gray;
                 anim.SetInteger("Disfraz", 3);
 
                 break;
             case Disfraz.programador:
-                rend.color = Color.cyan;
+                //rend.color = Color.cyan;
                 anim.SetInteger("Disfraz", 4);
 
                 break;
