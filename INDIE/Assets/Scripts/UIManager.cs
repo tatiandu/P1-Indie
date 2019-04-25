@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
 
     public Image[] RolesPausa;
     int tarjetasAdquiridas = 2;//debería ir en el GM
-    public Image camara, artistas, diseñadores, programadores, personal, barraInteraccion, caosRelleno;
+    public Image camara, artistas, diseñadores, programadores, personal, barraInteraccion, caosRelleno, x;
     public Text coleccionables;
     float activacionPuertas;
     bool notifPuertas = false;
@@ -35,8 +35,7 @@ public class UIManager : MonoBehaviour
         GameManager.instance.AvisoUI(this.gameObject.GetComponent<UIManager>());
         //objetivoCumplido.SetActive(false);
         Caos.SetActive(false);
-       
-        
+        x.gameObject.SetActive(false);
     }
 
     /*Este método activa y desactiva los iconoc de aquellos npcs que te detectan t de los que no, lo hace teniendo en cuenta el disfraz que le llega como parámetro*/
@@ -141,6 +140,8 @@ public class UIManager : MonoBehaviour
             Interactuar.color = Color.grey;
             Descripcion.text = " ";
         }
+
+        x.gameObject.SetActive(activarODesactivar);
     }
 
     public void Pausar()
