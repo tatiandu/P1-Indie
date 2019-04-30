@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
     public void CambioDisfrazJugador(Disfraz jugador)
     {
         disfrazActual = jugador;
-        uIManager.Detección(disfrazActual);
+        uIManager.Detección(jugador);
     }
     //Muestra el trazo, resalta la palabra interactuar y muestra una descripción de lo que hace el objeto
     public void EsInteractuable(bool activarODesactivar, string descripción)
@@ -159,8 +159,6 @@ public class GameManager : MonoBehaviour
 
     public void CargarEscena(int escenaBuild)
     {   SceneManager.LoadScene(escenaBuild);
-        //ReproducirSonido("Ascensor");
-        
         subirAscensor = false;
         reproducirAnimacionTarjeta = true;
         switch (escenaBuild)
@@ -176,6 +174,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
         Caos = 0;
+        
 
     }
     public void ActualizarEscena(int escena)
@@ -219,6 +218,7 @@ public class GameManager : MonoBehaviour
             totalNivelesDesbloqueados = CurrentScene;
         }
         CargarEscena(CurrentScene);
+        
 
     }
     public void SaltarEscena(int sig)

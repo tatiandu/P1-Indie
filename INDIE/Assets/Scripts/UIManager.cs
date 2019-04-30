@@ -34,7 +34,6 @@ public class UIManager : MonoBehaviour
         recuadroInstrucciones.SetActive(true);
         GameManager.instance.AvisoUI(this.gameObject.GetComponent<UIManager>());
         //objetivoCumplido.SetActive(false);
-        Caos.SetActive(false);
         x.gameObject.SetActive(false);
     }
 
@@ -90,12 +89,7 @@ public class UIManager : MonoBehaviour
             procesoInteraccion += (1 / maxInteraccion) * Time.deltaTime;
             barraInteraccion.fillAmount = procesoInteraccion;
         }
-        if (visualizarcaos && (vicaos + tiempovistacaos) < Time.time)  // si es true que hay que ver el caos pero ya se ha visualizado "X" segundos verlo pasa a ser false y escondemos la barra
-        {
-            visualizarcaos = false;
-            Caos.SetActive(false);
-
-        }
+       
         if (objetivoCompletado && viObjetivoCumplido + tiempovistacaos < Time.time)  //si es true pero ya han pasado X segundos significa a que ya no hará falta ver más el panel de "Has completado el objetivo, vuelve al ascensor"
         {
             objetivoCompletado = false;
