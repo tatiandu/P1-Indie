@@ -57,11 +57,11 @@ public class ConoDeVision : MonoBehaviour {
         }
     }
 
-    private bool CompruebaDeteccion()
+    public bool CompruebaDeteccion()
     {
         return tipoEnemigo.TipoDeEnemigo() == Disfraz.programador && (GameManager.instance.DisfrazJugador() == Disfraz.programador || GameManager.instance.DisfrazJugador() == Disfraz.ninguno)
             || tipoEnemigo.TipoDeEnemigo() == Disfraz.artista && (GameManager.instance.DisfrazJugador() == Disfraz.artista || GameManager.instance.DisfrazJugador() == Disfraz.diseñador || GameManager.instance.DisfrazJugador() == Disfraz.ninguno)
             || tipoEnemigo.TipoDeEnemigo() == Disfraz.diseñador && (GameManager.instance.DisfrazJugador() == Disfraz.diseñador || GameManager.instance.DisfrazJugador() == Disfraz.programador || GameManager.instance.DisfrazJugador() == Disfraz.artista || GameManager.instance.DisfrazJugador() == Disfraz.ninguno)
-            || tipoEnemigo.TipoDeEnemigo() == Disfraz.personal || tipoEnemigo.TipoDeEnemigo() == Disfraz.lead;
+            || tipoEnemigo.TipoDeEnemigo() == Disfraz.personal || tipoEnemigo.TipoDeEnemigo() == Disfraz.lead || tipoEnemigo.TipoDeEnemigo() == Disfraz.guardia;
     }
 }
