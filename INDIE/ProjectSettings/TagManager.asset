@@ -58,3 +58,6 @@ TagManager:
   - name: Paredes
     uniqueID: 2251529283
     locked: 0
+  - name: Camaras
+    uniqueID: 1481292257
+    locked: 0
