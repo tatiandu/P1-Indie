@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     int coleccionables;
     int coleccionablesConLosQueEmpezamos;
     //Al pasar de escena se debe sumar 1 a esta variable
-    int CurrentScene, totalNivelesDesbloqueados = 1;
+    int CurrentScene;
 
     //Discutir solución
     MoveEnemy Lead;
@@ -212,12 +212,8 @@ public class GameManager : MonoBehaviour
     }
     public void SigNivel()
     {
-        
+        coleccionablesConLosQueEmpezamos = coleccionables;
         CurrentScene++;
-        if (CurrentScene < TOTAL_NIVELES + 1 && totalNivelesDesbloqueados <= CurrentScene)
-        {
-            totalNivelesDesbloqueados = CurrentScene;
-        }
         CargarEscena(CurrentScene);
         
 
@@ -240,7 +236,7 @@ public class GameManager : MonoBehaviour
         //guardamos la escena actual
         StreamWriter guardado = new StreamWriter("partida.txt");
         guardado.WriteLine(CurrentScene);
-        guardado.WriteLine("Total " + totalNivelesDesbloqueados);
+        guardado.WriteLine(coleccionablesConLosQueEmpezamos);
         guardado.Close();
     }
     public void CargarPartida()
@@ -248,8 +244,7 @@ public class GameManager : MonoBehaviour
         StreamReader cargar = new StreamReader("partida.txt");
         //Leemos la escena que debemos cargar
         CurrentScene = int.Parse(cargar.ReadLine());
-        //Leemos el número total de niveles desbloqueados, que es la segunda palabra de la segunda línea 
-        totalNivelesDesbloqueados = int.Parse(cargar.ReadLine().Split(' ')[1]);
+        coleccionables = coleccionablesConLosQueEmpezamos = int.Parse(cargar.ReadLine());
         cargar.Close();
         CargarEscena(CurrentScene);
         //asignamos el disfraz por defecto al inicio de cada escena
