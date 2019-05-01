@@ -53,8 +53,9 @@ public class Menuprincipal : MonoBehaviour
 
     public void CargarNivel(int escena)
     {
-        GameManager.instance.ActualizarEscena(escena);
+        
         GameManager.instance.CargarEscena(escena);
+        GameManager.instance.ActualizarEscena(escena);
     }
     public void SelecciónNiveles()
     {

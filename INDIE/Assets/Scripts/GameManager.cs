@@ -171,6 +171,7 @@ public class GameManager : MonoBehaviour
                 break;
             case 3:
                 GameManager.instance.CambioDisfrazJugador(Disfraz.artista);
+            
                 break;
         }
         Caos = 0;
