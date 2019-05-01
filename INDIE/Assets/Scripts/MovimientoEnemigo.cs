@@ -92,6 +92,8 @@ public class MovimientoEnemigo : MonoBehaviour {
         transform.right = direccionInicial;     //Se queda mirando a la posicion inicial
             rb.velocity = Vector2.zero;
         }
+
+        rb.angularVelocity = 0;
     }
 
     void EstadoPersecucion()
@@ -109,6 +111,8 @@ public class MovimientoEnemigo : MonoBehaviour {
         else CambiaEstado(Estados.volviendo);
 
         if (exclamationSprite != null)  exclamationSprite.transform.position = transform.position + new Vector3(0f, 2f, 0f);
+
+        rb.angularVelocity = 0;
     }
 
     void EstadoVolviendo()
@@ -125,6 +129,8 @@ public class MovimientoEnemigo : MonoBehaviour {
             rb.velocity = transform.right * velocidadEstandar;
         }
         else CambiaEstado(Estados.patrulla);
+
+        rb.angularVelocity = 0;
     }
 
     public void CambiaEstado(Estados nuevoEstado)
