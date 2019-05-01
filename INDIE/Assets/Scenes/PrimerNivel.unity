@@ -30166,6 +30166,8 @@ MonoBehaviour:
   player: {fileID: 1167245180}
   tiempoPrimeraAnimacion: 4
   tiempoSegundaAnimacion: 4
+  tiempoInvulnerabilidad: 2
+  alpha: 0.5
 --- !u!4 &407410575
 Transform:
   m_ObjectHideFlags: 0
@@ -129314,7 +129316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Caos: 0
   maxCaos: 0
-  reproducirAnimacionTarjeta: 0
+  reproducirAnimacionTarjeta: 1
   disfrazActual: 0
 --- !u!4 &1454241231
 Transform:

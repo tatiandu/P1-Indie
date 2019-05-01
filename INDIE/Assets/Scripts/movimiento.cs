@@ -24,8 +24,7 @@ public class movimiento : MonoBehaviour
     }
 
     void Update()
-    {
-        
+    {       
         vertical = Input.GetAxis("Vertical");
         horizontal = Input.GetAxis("Horizontal");
         if (!paso&&( Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f))
@@ -33,22 +32,18 @@ public class movimiento : MonoBehaviour
             paso = true;
             GameManager.instance.ReproducirPitchAleatorio("Pisada");
             Invoke("CambioPaso", cadenciaPasos);
-        }
-
-        
+        }        
     }
 
     void FixedUpdate()
     {
         if (move)
         {
-            Move();
-            
+            Move();           
         }
         else
         {
             StopMovement();
-
         }
 
     }
