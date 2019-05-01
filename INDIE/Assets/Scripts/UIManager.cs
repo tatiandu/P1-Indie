@@ -36,6 +36,7 @@ public class UIManager : MonoBehaviour
         //objetivoCumplido.SetActive(false);
         x.gameObject.SetActive(false);
         Detección(GameManager.instance.DisfrazJugador());
+        ColeccionableRecogido(GameManager.instance.ColeccionablesTotales());
     }
 
     /*Este método activa y desactiva los iconoc de aquellos npcs que te detectan t de los que no, lo hace teniendo en cuenta el disfraz que le llega como parámetro*/
