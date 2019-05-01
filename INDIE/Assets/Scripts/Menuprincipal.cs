@@ -40,22 +40,12 @@ public class Menuprincipal : MonoBehaviour
             cargar.Close();
            
         }
-        switch (numeroNiveles)
-        {
-            case 1:
-                nivel1.SetActive(true);
-
-                break;
-            case 2:
-                nivel1.SetActive(true);
-                nivel2.SetActive(true);
-                break;
-            case 3:
+        
                 nivel1.SetActive(true);
                 nivel2.SetActive(true);
                 nivel3.SetActive(true);
-                break;
-        }
+               
+        
     }
 
 
