@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject menuPerder, Pause, finDemo, recuadroInstrucciones, objetivoCumplido, Caos,avisoPuertas;
+    public GameObject menuPerder, Pause, finDemo, recuadroInstrucciones, objetivoCumplido, Caos,avisoPuertas, panelDesc;
 
     public Image[] RolesPausa;
     int tarjetasAdquiridas = 2;//debería ir en el GM
@@ -128,13 +128,13 @@ public class UIManager : MonoBehaviour
     {
         if (activarODesactivar)
         {
-            Interactuar.color = new Color(0.840034f, 0.9528302f, 0.3011303f, 0.9215686f);
             Descripcion.text = descripción;
+            panelDesc.SetActive(true);
         }
         else
         {
-            Interactuar.color = Color.grey;
             Descripcion.text = " ";
+            panelDesc.SetActive(false);
         }
 
         x.gameObject.SetActive(activarODesactivar);
