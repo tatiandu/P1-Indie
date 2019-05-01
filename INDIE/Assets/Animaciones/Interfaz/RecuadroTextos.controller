@@ -77,8 +77,8 @@ AnimatorStateTransition:
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0
-  m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_TransitionOffset: 0.50293267
+  m_ExitTime: 2.0190904
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -199,7 +199,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: 1102208796996493438}
-    m_Position: {x: 228, y: -48, z: 0}
+    m_Position: {x: 180, y: -108, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102130113887876454}
     m_Position: {x: 492, y: 0, z: 0}
