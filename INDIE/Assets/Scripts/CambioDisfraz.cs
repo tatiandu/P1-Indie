@@ -8,8 +8,8 @@ public class CambioDisfraz : MonoBehaviour {
     public Disfraz miDisfraz;
     Disfraz disfrazAnterior;
     public GameObject artistaBoton, programadorBoton, personalBoton, diseñadorBoton;
+    int disfraz;
     Animator anim;
-    SpriteRenderer rend;
     GameObject poolDisfraz;
     //SpriteRenderer rend;
     
@@ -19,7 +19,7 @@ public class CambioDisfraz : MonoBehaviour {
         miDisfraz = GameManager.instance.DisfrazJugador();
         anim = GetComponent<Animator>();
         poolDisfraz = GameObject.Find("PoolDisfraz");
-        rend = GetComponent<SpriteRenderer>();
+        //rend = GetComponent<SpriteRenderer>();
         DisfrazarmeInicioEscena();
 
     }
@@ -31,26 +31,26 @@ public class CambioDisfraz : MonoBehaviour {
         switch (nuevoDisfraz)
         {
             case Disfraz.ninguno:
-                rend.color = Color.white;
+                //rend.color = Color.white;
                 anim.SetInteger("Disfraz", 0);
                 break;
             case Disfraz.artista:
-                rend.color = Color.red;
+                //rend.color = Color.red;
                 anim.SetInteger("Disfraz", 1);
 
                 break;
             case Disfraz.diseñador:
-                rend.color = Color.green;
+                //rend.color = Color.green;
                 anim.SetInteger("Disfraz", 2);
 
                 break;
             case Disfraz.personal:
-                rend.color = Color.gray;
+                //rend.color = Color.gray;
                 anim.SetInteger("Disfraz", 3);
 
                 break;
             case Disfraz.programador:
-                rend.color = Color.cyan;
+                //rend.color = Color.cyan;
                 anim.SetInteger("Disfraz", 4);
 
                 break;
@@ -61,36 +61,43 @@ public class CambioDisfraz : MonoBehaviour {
 
     public void MeCambio(Disfraz nuevoDisfraz)
     {
+        //el disfraz que llevaba puesto pasa a ser el anterior, el del suelo pasa a ser el actual(ahora lo lleva puesto)
+        disfrazAnterior = miDisfraz;
+        miDisfraz = nuevoDisfraz;
+        GameManager.instance.CambioDisfrazJugador(miDisfraz);
+        //si llevaba anteriormente algún disfraz, este se instancia al lado de player
+
+
         switch (nuevoDisfraz)
         {
             case Disfraz.ninguno:
-                rend.color = Color.white;
+                //rend.color = Color.white;
                 anim.SetInteger("Disfraz", 0);
                 Debug.Log("ni");
                 break;
             case Disfraz.artista:
-                rend.color = Color.red;
+                //rend.color = Color.red;
                 anim.SetInteger("Disfraz", 1);
                 Debug.Log("art");
 
 
                 break;
             case Disfraz.diseñador:
-                rend.color = Color.green;
+                //rend.color = Color.green;
                 anim.SetInteger("Disfraz", 2);
                 Debug.Log("dis");
 
 
                 break;
             case Disfraz.personal:
-                rend.color = Color.gray;
+                //rend.color = Color.gray;
                 anim.SetInteger("Disfraz", 3);
                 Debug.Log("per");
 
 
                 break;
             case Disfraz.programador:
-                rend.color = Color.cyan;
+                //rend.color = Color.cyan;
                 anim.SetInteger("Disfraz", 4);
                 Debug.Log("pro");
 
@@ -99,14 +106,6 @@ public class CambioDisfraz : MonoBehaviour {
 
 
         }
-        //el disfraz que llevaba puesto pasa a ser el anterior, el del suelo pasa a ser el actual(ahora lo lleva puesto)
-        disfrazAnterior = miDisfraz;
-        miDisfraz = nuevoDisfraz;
-        GameManager.instance.CambioDisfrazJugador(miDisfraz);
-        //si llevaba anteriormente algún disfraz, este se instancia al lado de player
-
-
-       
         Debug.Log("aaaa " + anim.GetInteger("Disfraz"));
 
         switch (disfrazAnterior)
@@ -129,7 +128,6 @@ public class CambioDisfraz : MonoBehaviour {
 
             }
         Debug.Log("cccc " + anim.GetInteger("Disfraz"));
-
 
 
     }

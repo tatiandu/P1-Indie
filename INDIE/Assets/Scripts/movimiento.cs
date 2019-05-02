@@ -57,7 +57,6 @@ public class movimiento : MonoBehaviour
             direc = mov;
             anim.SetBool("IsMoving", true);
 
-
         }
 
         mov = new Vector2(horizontal, vertical) * speed;

@@ -124171,6 +124171,30 @@ Prefab:
       propertyPath: offset
       value: 
       objectReference: {fileID: 1367969735}
+    - target: {fileID: 114013853230293186, guid: a330ecaf99fa279488ecc4270712e80b,
+        type: 2}
+      propertyPath: artistaBoton
+      value: 
+      objectReference: {fileID: 1268734313817870, guid: c223a129fffeb934d9d05cc60a23a166,
+        type: 2}
+    - target: {fileID: 114013853230293186, guid: a330ecaf99fa279488ecc4270712e80b,
+        type: 2}
+      propertyPath: programadorBoton
+      value: 
+      objectReference: {fileID: 1582593234019144, guid: cd4a28ba019bb4342b07867687266f85,
+        type: 2}
+    - target: {fileID: 114013853230293186, guid: a330ecaf99fa279488ecc4270712e80b,
+        type: 2}
+      propertyPath: personalBoton
+      value: 
+      objectReference: {fileID: 1065040197773394, guid: 06594f51c7e2aa646a7c7aa64fd7bf93,
+        type: 2}
+    - target: {fileID: 114013853230293186, guid: a330ecaf99fa279488ecc4270712e80b,
+        type: 2}
+      propertyPath: "dise\xF1adorBoton"
+      value: 
+      objectReference: {fileID: 1512543901553356, guid: 85bd9a1a918509b4791bd97cfdacf480,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a330ecaf99fa279488ecc4270712e80b, type: 2}
   m_IsPrefabAsset: 0
