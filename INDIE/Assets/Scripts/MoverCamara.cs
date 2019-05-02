@@ -7,6 +7,7 @@ public class MoverCamara : MonoBehaviour
     public CinemachineCameraOffset offset;
     public float offsetX, offsetY, maxOffset;
     float valor;
+
     public float EjeX;
     public float EjeY;
 
@@ -62,8 +63,24 @@ public class MoverCamara : MonoBehaviour
             }
         }
         else
-        {
-            offset.m_Offset = Vector2.zero;
+        {           
+            if (offset.m_Offset.x < 0)
+            {
+                offset.m_Offset.x += offsetX;
+            }
+            if (offset.m_Offset.x > 0)
+            {
+                offset.m_Offset.x -= offsetX;
+            }
+            if (offset.m_Offset.y < 0)
+            {
+                offset.m_Offset.y += offsetY;
+            }
+            if (offset.m_Offset.y > 0)
+            {
+                offset.m_Offset.y -= offsetY;
+            }
+
         }
 
 
