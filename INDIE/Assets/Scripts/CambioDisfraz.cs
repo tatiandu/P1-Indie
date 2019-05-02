@@ -54,6 +54,8 @@ public class CambioDisfraz : MonoBehaviour {
                 anim.SetInteger("Disfraz", 4);
 
                 break;
+          
+
 
         }
     }

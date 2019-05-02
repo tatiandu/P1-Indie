@@ -42,6 +42,7 @@ public class UIManager : MonoBehaviour
     /*Este método activa y desactiva los iconoc de aquellos npcs que te detectan t de los que no, lo hace teniendo en cuenta el disfraz que le llega como parámetro*/
     public void Detección(Disfraz disfrazActual)
     {
+        Debug.Log("Disfrazinterfaz " + disfrazActual);
         if (disfrazActual == Disfraz.ninguno)
         {
             artistas.enabled = artistasBrilli.enabled = true;
