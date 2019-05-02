@@ -6139,9 +6139,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1185872624743686, guid: 81a9dd2ea1596d140940f2328c32c76e,
     type: 2}
   m_PrefabInternal: {fileID: 1478089561}
-<<<<<<< HEAD
->>>>>>> parent of d5fe20c... Disfraces con el tamaño adecuado
-=======
 >>>>>>> parent of d5fe20c... Disfraces con el tamaño adecuado
 --- !u!43 &660886839
 Mesh:
@@ -6355,7 +6352,6 @@ Transform:
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
 --- !u!1001 &676473766
 Prefab:
   m_ObjectHideFlags: 0
@@ -6510,8 +6506,6 @@ Prefab:
   m_SourcePrefab: {fileID: 100100000, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
   m_IsPrefabAsset: 0
 =======
-=======
->>>>>>> parent of d5fe20c... Disfraces con el tamaño adecuado
 --- !u!1 &677264306
 GameObject:
   m_ObjectHideFlags: 0
@@ -8669,10 +8663,7 @@ Transform:
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
-<<<<<<< HEAD
 =======
-=======
->>>>>>> parent of d5fe20c... Disfraces con el tamaño adecuado
 --- !u!1 &881235366
 GameObject:
   m_ObjectHideFlags: 0
@@ -122585,9 +122576,6 @@ Prefab:
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 81a9dd2ea1596d140940f2328c32c76e, type: 2}
   m_IsPrefabAsset: 0
-<<<<<<< HEAD
->>>>>>> parent of d5fe20c... Disfraces con el tamaño adecuado
-=======
 >>>>>>> parent of d5fe20c... Disfraces con el tamaño adecuado
 --- !u!1 &1483316929
 GameObject:
