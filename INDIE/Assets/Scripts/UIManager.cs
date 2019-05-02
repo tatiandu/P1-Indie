@@ -44,39 +44,38 @@ public class UIManager : MonoBehaviour
     {
         if (disfrazActual == Disfraz.ninguno)
         {
-            artistas.enabled = true;
-            diseñadores.enabled = true;
-            programadores.enabled = true;
-            personal.enabled = true;
+            artistas.enabled = artistasBrilli.enabled = true;
+            diseñadores.enabled = diseñadores.enabled = true;
+            programadores.enabled = programadoresBrilli.enabled = true;
+            personal.enabled = personalBrilli.enabled = true;
         }
         else if (disfrazActual == Disfraz.programador)
         {
-            artistas.enabled = false;
-            diseñadores.enabled = true;
-            programadores.enabled = true;
-            personal.enabled = true;
+            artistas.enabled = artistasBrilli.enabled = false;
+            diseñadores.enabled =diseñadoresBrilli.enabled = true;
+            programadores.enabled = programadoresBrilli.enabled = true;
+            personal.enabled = personal.enabled = true;
         }
         else if (disfrazActual == Disfraz.artista)
         {
-
-            artistas.enabled = true;
-            diseñadores.enabled = true;
-            programadores.enabled = false;
-            personal.enabled = true;
+            artistas.enabled = artistasBrilli.enabled = true;
+            diseñadores.enabled = diseñadoresBrilli.enabled = true;
+            programadores.enabled = programadoresBrilli.enabled = false;
+            personal.enabled = personalBrilli.enabled = true;
         }
         else if (disfrazActual == Disfraz.diseñador)
         {
-            artistas.enabled = true;
-            diseñadores.enabled = true;
-            programadores.enabled = false;
-            personal.enabled = true;
+            artistas.enabled = artistasBrilli.enabled = true;
+            diseñadores.enabled = diseñadoresBrilli.enabled = true;
+            programadores.enabled = programadoresBrilli.enabled = false;
+            personal.enabled = personalBrilli.enabled = true;
         }
         else if (disfrazActual == Disfraz.personal)
         {
-            artistas.enabled = false;
-            diseñadores.enabled = false;
-            programadores.enabled = false;
-            personal.enabled = true;
+            artistas.enabled = artistasBrilli.enabled = false;
+            diseñadores.enabled = diseñadoresBrilli.enabled = false;
+            programadores.enabled = programadoresBrilli.enabled = false;
+            personal.enabled = personalBrilli.enabled = true;
         }
     }
     private void Update()
