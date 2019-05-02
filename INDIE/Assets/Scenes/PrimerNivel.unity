@@ -137838,7 +137838,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6398620bd77f26a43ad2ff42ea66075e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 452784129}
+  ascensor: {fileID: 452784129}
+  tarjeta: {fileID: 1560704331}
   flecha: {fileID: 1119763539}
 --- !u!1 &1494452945
 GameObject:
