@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
 
     public Image[] RolesPausa;
     int tarjetasAdquiridas = 2;//debería ir en el GM
-    public Image camara, artistas, diseñadores, programadores, personal, barraInteraccion, caosRelleno, x;
+    public Image camara, camaraBrilli, artistas, artistasBrilli, diseñadores, programadoresBrilli, programadores, personal, personalBrilli, barraInteraccion, caosRelleno, x;
     public Text coleccionables;
     float activacionPuertas;
     bool notifPuertas = false;
