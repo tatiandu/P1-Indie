@@ -9,6 +9,7 @@ public class DisfrazJugador : MonoBehaviour
     public GameObject parent;
     GameObject player;
 
+
     
     public void OnEnable()
     {
@@ -16,6 +17,7 @@ public class DisfrazJugador : MonoBehaviour
         //solo se cambia de disfraz el player
             cambioDisfraz = player.GetComponent<CambioDisfraz>();
             cambioDisfraz.MeCambio(disfrazNuevo);
+        GameManager.instance.ReproducirPitchAleatorio("Cremallera");
             Destroy(parent.gameObject);
     }
 }

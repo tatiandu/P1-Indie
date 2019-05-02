@@ -27,6 +27,7 @@ public class DeteccionCamara : MonoBehaviour {
                     GameObject poolSombras = GameObject.Find("SombrasPool");
                     GameObject silueta = Instantiate<GameObject>(sombra, other.transform.position, other.transform.rotation, poolSombras.transform);
                     Transform aux = silueta.transform;
+                GameManager.instance.ReproducirSonido("Seguridad");
 
                     Transform[] rutaNueva = new Transform[rutaPatrulla.Length + 1];
                     for (int i = 0; i < rutaPatrulla.Length; i++)

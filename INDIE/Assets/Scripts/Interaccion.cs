@@ -7,7 +7,7 @@ public class Interaccion : MonoBehaviour
 {
 
     public GameObject trazo;
-    bool rangoInteraccion, interactuable, interactuando;
+    bool rangoInteraccion, interactuable;
     float cargaInteraccion = 0;
     public float tiempoInteraccion;
     public bool sePuedeInteractuarMasDeUnaVez;
@@ -20,7 +20,7 @@ public class Interaccion : MonoBehaviour
     {
         rangoInteraccion = false;
         interactuable = true;
-        interactuando = false;
+        
     }
     //Cuando entra en el trigger el jugador el objeto se convierte en interactuable
     private void OnTriggerEnter2D(Collider2D other)

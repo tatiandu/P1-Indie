@@ -6,7 +6,6 @@ public class ConoDeVision : MonoBehaviour {
 
     MovimientoEnemigo movEnemigo;
     TipoEnemigo tipoEnemigo;
-    SpriteRenderer render;
     RaycastHit2D ray;
     GameObject playerGO;
 
@@ -14,46 +13,55 @@ public class ConoDeVision : MonoBehaviour {
     {
         movEnemigo = GetComponentInParent<MovimientoEnemigo>();
         tipoEnemigo = GetComponentInParent<TipoEnemigo>();
-        render = GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && collision.GetComponent<Perder>().enabled)
         {
             playerGO = collision.gameObject;
             ray = Physics2D.Raycast(transform.position, playerGO.transform.position - transform.position, Vector2.Distance(playerGO.transform.position, transform.position));  //Raycast
             Debug.DrawRay(transform.position, playerGO.transform.position - transform.position, Color.red);    //Debug del raycast
 
-            if (ray.collider.tag == "Player" && tipoEnemigo.TipoDeEnemigo() == Disfraz.programador && (GameManager.instance.DisfrazJugador() == Disfraz.programador || GameManager.instance.DisfrazJugador() == Disfraz.ninguno)
-            || tipoEnemigo.TipoDeEnemigo() == Disfraz.artista && (GameManager.instance.DisfrazJugador() == Disfraz.artista || GameManager.instance.DisfrazJugador() == Disfraz.diseñador || GameManager.instance.DisfrazJugador() == Disfraz.ninguno)
-            || tipoEnemigo.TipoDeEnemigo() == Disfraz.diseñador && (GameManager.instance.DisfrazJugador() == Disfraz.diseñador || GameManager.instance.DisfrazJugador() == Disfraz.programador || GameManager.instance.DisfrazJugador() == Disfraz.artista || GameManager.instance.DisfrazJugador() == Disfraz.ninguno)
-            || tipoEnemigo.TipoDeEnemigo() == Disfraz.personal || tipoEnemigo.TipoDeEnemigo() == Disfraz.lead)
+            if (ray.collider.tag == "Player" && CompruebaDeteccion()&& !movEnemigo.fueraZona)
+            {
+                Debug.Log("Player detected");
+                movEnemigo.CambiaEstado(Estados.persecucion);
+                GameManager.instance.ReproducirSonido("Exclamacion");
+            }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Player" && collision.GetComponent<Perder>().enabled)
+        {
+            playerGO = collision.gameObject;
+            ray = Physics2D.Raycast(transform.position, playerGO.transform.position - transform.position, Vector2.Distance(playerGO.transform.position, transform.position));  //Raycast
+            Debug.DrawRay(transform.position, playerGO.transform.position - transform.position, Color.red);    //Debug del raycast
+
+            if (ray.collider.tag == "Player" && CompruebaDeteccion())
             {
                 Debug.Log("Player detected");
                 movEnemigo.CambiaEstado(Estados.persecucion);
             }
         }
     }
-    
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.tag == "Player" && collision.GetComponent<Perder>().enabled)
         {
             Debug.Log("Player lost");
             movEnemigo.PlayerPerdido();
         }
     }
 
-    //// Activa el sprite
-    //public void ActivarRender()
-    //{
-    //    render.enabled = true;
-    //}
-
-    //// Desactiva el sprite
-    //public void DesactivarRender()
-    //{
-    //    render.enabled = false;
-    //}
+    public bool CompruebaDeteccion()
+    {
+        return tipoEnemigo.TipoDeEnemigo() == Disfraz.programador && (GameManager.instance.DisfrazJugador() == Disfraz.programador || GameManager.instance.DisfrazJugador() == Disfraz.ninguno)
+            || tipoEnemigo.TipoDeEnemigo() == Disfraz.artista && (GameManager.instance.DisfrazJugador() == Disfraz.artista || GameManager.instance.DisfrazJugador() == Disfraz.diseñador || GameManager.instance.DisfrazJugador() == Disfraz.ninguno)
+            || tipoEnemigo.TipoDeEnemigo() == Disfraz.diseñador && (GameManager.instance.DisfrazJugador() == Disfraz.diseñador || GameManager.instance.DisfrazJugador() == Disfraz.programador || GameManager.instance.DisfrazJugador() == Disfraz.artista || GameManager.instance.DisfrazJugador() == Disfraz.ninguno)
+            || tipoEnemigo.TipoDeEnemigo() == Disfraz.personal || tipoEnemigo.TipoDeEnemigo() == Disfraz.lead || tipoEnemigo.TipoDeEnemigo() == Disfraz.guardia;
+    }
 }

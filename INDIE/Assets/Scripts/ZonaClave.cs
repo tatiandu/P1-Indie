@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ZonaClave : MonoBehaviour {
 
     public GameObject enemy;
+    MovimientoEnemigo movimiento;
 
 	void Start ()
     {
@@ -16,7 +18,23 @@ public class ZonaClave : MonoBehaviour {
     {
         if (other.gameObject == enemy)
         {
-            enemy.GetComponent<MovimientoEnemigo>().AbandonoZona();
+            Debug.Log("abandono");
+            movimiento = other.GetComponent<MovimientoEnemigo>();
+            movimiento.AbandonoZona();
+            movimiento.fueraZona = true;
+
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject == enemy)
+        {
+            for (float i = 0; i < 2; i = (i + (1 * Time.deltaTime))){ }
+
+            movimiento = other.GetComponent<MovimientoEnemigo>();
+            movimiento.fueraZona = false;
+
         }
     }
 }

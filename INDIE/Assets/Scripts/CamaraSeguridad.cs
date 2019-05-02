@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class CamaraSeguridad : MonoBehaviour {
     public float velocidad;
+    public float periodoDeGiro;
     Vector3 rotacionInicial;
     float rotacionBase;
 
     
     void Start ()
     {
-        InvokeRepeating("CambioSentido", 1, 2);
+        InvokeRepeating("CambioSentido", 1,periodoDeGiro);
     }
 	
 	

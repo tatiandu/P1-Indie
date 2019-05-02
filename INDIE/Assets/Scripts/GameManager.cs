@@ -6,16 +6,22 @@ using System.IO;
 
 public class GameManager : MonoBehaviour
 {
+    //constante por si queremos añadir más niveles
+    const int TOTAL_NIVELES = 3;
     public static GameManager instance = null;
     float volumen;
-   public float Caos, maxCaos;
+    public float Caos, maxCaos;
     bool subirAscensor;
-   public Disfraz disfrazActual;
+    public bool reproducirAnimacionTarjeta;
+    public Disfraz disfrazActual;
     UIManager uIManager;
     AudioManager audioManager;
-    int coleccionables,coleccionablesNivel;
+
+    int coleccionables;
+    int coleccionablesConLosQueEmpezamos;
+
     //Al pasar de escena se debe sumar 1 a esta variable
-   int CurrentScene;
+    int CurrentScene;
 
     //Discutir solución
     MoveEnemy Lead;
@@ -40,7 +46,10 @@ public class GameManager : MonoBehaviour
         Caos = 0;
         maxCaos = 100;
         subirAscensor = false;
+        reproducirAnimacionTarjeta = true;
         coleccionables = 0;
+        coleccionablesConLosQueEmpezamos = 0;
+
     }
 
     void Update()
@@ -50,6 +59,8 @@ public class GameManager : MonoBehaviour
         {
             uIManager.Pausar();
         }
+
+
     }
     //Es llamado al comienzo de la escena por el AudioManager
     public void AvisoAudioManager(AudioManager audio)
@@ -72,12 +83,14 @@ public class GameManager : MonoBehaviour
     //Llega una nueva cantidad de caos generado, guardamos el valor actual lo mandamos al UIManager para que lo muestre
     public void GenerarCaos(float nuevocaosgenerado)
     {
+        
         Caos = Caos + nuevocaosgenerado;
         uIManager.AumentaCaos(Caos);
         //AJ
         if (Caos >= maxCaos)
         {
             Lead.enabled = true;
+           
         }
     }
 
@@ -91,7 +104,7 @@ public class GameManager : MonoBehaviour
     public void CambioDisfrazJugador(Disfraz jugador)
     {
         disfrazActual = jugador;
-        uIManager.Detección(disfrazActual);
+        uIManager.Detección(jugador);
     }
     //Muestra el trazo, resalta la palabra interactuar y muestra una descripción de lo que hace el objeto
     public void EsInteractuable(bool activarODesactivar, string descripción)
@@ -103,7 +116,20 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(CurrentScene);
         Caos = 0;
+        coleccionables = coleccionablesConLosQueEmpezamos;
         subirAscensor = false;
+        switch (CurrentScene)
+        {
+            case 1:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
+                break;
+            case 2:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.programador);
+                break;
+            case 3:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.artista);
+                break;
+        }
     }
 
     public Disfraz DisfrazJugador()   //Le da al jugador su disfraz actual. Útil para cuando cambias de escena y el jugador ya tenia un disfraz, el GameManager lo guarda entre escenas
@@ -119,7 +145,6 @@ public class GameManager : MonoBehaviour
     public void ReproducirSonido(string nombreSonido)
     {
         audioManager.Play(nombreSonido);
-        Debug.Log(nombreSonido);
     }
 
     /*Hay que avisar al UI de que muestre el panel de objetivo cumplido*/
@@ -135,8 +160,25 @@ public class GameManager : MonoBehaviour
     }
 
     public void CargarEscena(int escenaBuild)
-    {
-        SceneManager.LoadScene(escenaBuild);
+    {   SceneManager.LoadScene(escenaBuild);
+        subirAscensor = false;
+        reproducirAnimacionTarjeta = true;
+        switch (escenaBuild)
+        {
+            case 1:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
+                break;
+            case 2:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.programador);
+                break;
+            case 3:
+                GameManager.instance.CambioDisfrazJugador(Disfraz.artista);
+            
+                break;
+        }
+        Caos = 0;
+        
+
     }
     public void ActualizarEscena(int escena)
     {
@@ -145,7 +187,7 @@ public class GameManager : MonoBehaviour
     }
     public void SubirPlanta()
     {
-        subirAscensor = !subirAscensor;
+        subirAscensor = true;
     }
     public bool HasGanado()
     {
@@ -153,7 +195,6 @@ public class GameManager : MonoBehaviour
     }
     public void MenuGanar()
     {
-        uIManager.FinDemo();
         ReproducirSonido("Ascensor");
         subirAscensor = false;
     }
@@ -173,10 +214,20 @@ public class GameManager : MonoBehaviour
     }
     public void SigNivel()
     {
-        coleccionablesNivel = coleccionables;
+        coleccionablesConLosQueEmpezamos = coleccionables;
+
         CurrentScene++;
         CargarEscena(CurrentScene);
         
+
+    }
+    public void SaltarEscena(int sig)
+    {
+        coleccionablesConLosQueEmpezamos = coleccionables;
+        CurrentScene++;
+        CargarEscena(sig);
+        Caos = 0;
+
     }
     public void ReproducirPitchAleatorio(string sonido)
     {
@@ -189,7 +240,9 @@ public class GameManager : MonoBehaviour
         
         StreamWriter guardado = new StreamWriter("partida.txt");
         guardado.WriteLine(CurrentScene);
-        guardado.WriteLine(coleccionablesNivel);
+
+        guardado.WriteLine(coleccionablesConLosQueEmpezamos);
+
         guardado.Close();
     }
     public void CargarPartida()
@@ -197,13 +250,13 @@ public class GameManager : MonoBehaviour
         StreamReader cargar = new StreamReader("partida.txt");
         //Leemos la escena que debemos cargar
         CurrentScene = int.Parse(cargar.ReadLine());
-        coleccionables = int.Parse(cargar.ReadLine());
+        coleccionables = coleccionablesConLosQueEmpezamos = int.Parse(cargar.ReadLine());
         cargar.Close();
         CargarEscena(CurrentScene);
         //asignamos el disfraz por defecto al inicio de cada escena
         switch (CurrentScene)
         {
-         case 1:
+            case 1:
                 CambioDisfrazJugador(Disfraz.ninguno);
                 break;
             case 2:
@@ -213,5 +266,33 @@ public class GameManager : MonoBehaviour
                 CambioDisfrazJugador(Disfraz.artista);
                 break;
         }
+    }
+
+    public int ColeccionablesTotales()
+    {
+        return coleccionables;
+    }
+    public void AvisoPuertas()
+    {
+        if (!subirAscensor)
+        {
+            uIManager.AvisoPuertas(true);
+        }
+    }
+    public bool ReproducirAnimacionPrincipio()
+    {
+        if (reproducirAnimacionTarjeta)
+        {
+            reproducirAnimacionTarjeta = false;
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void MostrarTextoEnPantalla(float delay, string texto)
+    {
+        uIManager.MostrarTexto(delay, texto);
     }
 }

@@ -5,12 +5,6 @@ using UnityEngine;
 public class sombra : MonoBehaviour
 {
     public float tiempoVida;
-    public float tiempoMaximoVida;
-
-    void Start()
-    {
-        Destroy(this.gameObject,tiempoMaximoVida);
-    }
     
     void OnTriggerEnter2D(Collider2D other)
     {

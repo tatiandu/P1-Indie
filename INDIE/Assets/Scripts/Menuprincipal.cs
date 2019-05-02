@@ -2,59 +2,79 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 using System.IO;
 
-public class Menuprincipal : MonoBehaviour {
-    public GameObject botonesPrincipales;
-    public GameObject niveles;
-    public GameObject ajustes;
-    public GameObject continuar;
+public class Menuprincipal : MonoBehaviour
+{
+    public GameObject botonesPrincipales, niveles, ajustes, continuar, fondo, fondoNiveles;
     public AudioMixer audioMixer;
+    public GameObject nivel1, nivel2, nivel3;
+    int numeroNiveles;
 
-    // Use this for initialization
-    void Start () {
-        if (!File.Exists("partida.txt"))
+    void Start()
+    {
+        
+        if (!File.Exists("partida.txt"))     //Si no existe continuar no debe salir y activo el nivel 1
         {
+            numeroNiveles = 1;
             continuar.SetActive(false);
+            nivel1.SetActive(true);
+            StreamWriter archivo = new StreamWriter("partida.txt");  //Creo el archivo y pongo el nivel 1 pero sin activar el "continuar"
+            archivo.WriteLine("1");
+            archivo.WriteLine("Total " + numeroNiveles);
+            archivo.Close();
         }
+        else
+        {
+            StreamReader cargar = new StreamReader("partida.txt");  // si existe leo la primera linea para ver cuántos niveles tengo que mostrar
+            //Leemos la escena que debemos cargar
+            string[] lectura = new string[1];
+            while (lectura[0] != "Total")
+            {
+                lectura = cargar.ReadLine().Split(' ');
+
+            }
+            numeroNiveles = int.Parse(lectura[1]);
+            print(numeroNiveles);
+            cargar.Close();
+           
+        }
+        
+                nivel1.SetActive(true);
+                nivel2.SetActive(true);
+                nivel3.SetActive(true);
+               
+        
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 
 
 
     public void CargarNivel(int escena)
     {
-        GameManager.instance.ActualizarEscena(escena);
-        GameManager.instance.CargarEscena(escena);
-        switch (escena)
-        {
-            case 1:
-                GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
-                break;
-            case 2:
-                GameManager.instance.CambioDisfrazJugador(Disfraz.programador);
-                break;
-            case 3:
-                GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
-                break;
-        }
         
+        GameManager.instance.CargarEscena(escena);
+        GameManager.instance.ActualizarEscena(escena);
     }
     public void SelecciónNiveles()
     {
+
         botonesPrincipales.SetActive(false);
         niveles.SetActive(true);
+        fondo.SetActive(false);
+        fondoNiveles.SetActive(true);
+
     }
     public void VolverMenu()
     {
         niveles.SetActive(false);
         ajustes.SetActive(false);
         botonesPrincipales.SetActive(true);
-        
+        fondo.SetActive(true);
+        fondoNiveles.SetActive(false);
+
+
     }
     public void SalirJuego()
     {
@@ -71,12 +91,10 @@ public class Menuprincipal : MonoBehaviour {
         Debug.Log(volumen);
         GameManager.instance.AjustarVolumen(volumen);
     }
-    public void PantallaCompleta(bool pantallaCompleta)
-    {
-        Screen.fullScreen = pantallaCompleta;
-    }
-     public void Continuar()
+    public void Continuar()
     {
         GameManager.instance.CargarPartida();
     }
+
+
 }

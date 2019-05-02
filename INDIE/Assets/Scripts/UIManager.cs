@@ -5,22 +5,24 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public GameObject menuPerder;
-    public GameObject Pause;
-    public GameObject finDemo;
+    public GameObject menuPerder, Pause, finDemo, recuadroInstrucciones, objetivoCumplido, Caos,avisoPuertas, panelDesc;
+
     public Image[] RolesPausa;
     int tarjetasAdquiridas = 2;//debería ir en el GM
-    public Image Caos, fondoCaos, camara, artistas, diseñadores, programadores, personal, barraInteraccion;
-    public GameObject interaccion;
-    public GameObject recuadroInstrucciones;
+    public Image camara, artistas, diseñadores, programadores, personal, barraInteraccion, caosRelleno, x;
     public Text coleccionables;
- 
-    public GameObject objetivoCumplido;
+    float activacionPuertas;
+    bool notifPuertas = false;
     bool visualizarcaos = false;
     bool interactuando = false;
     bool objetivoCompletado = false;
     float vicaos,viObjetivoCumplido;
     public float tiempovistacaos;
+
+    public Image recuadroTextos;
+    public Text textos;
+    public Animator animadorRecuadroTextos;
+    public Animator animadorTextos;
     //AJ
     public Text Interactuar, Descripcion;
     //FinAJ
@@ -32,8 +34,9 @@ public class UIManager : MonoBehaviour
         recuadroInstrucciones.SetActive(true);
         GameManager.instance.AvisoUI(this.gameObject.GetComponent<UIManager>());
         //objetivoCumplido.SetActive(false);
-        Caos.enabled = false;
-        fondoCaos.enabled = false;
+        x.gameObject.SetActive(false);
+        Detección(GameManager.instance.DisfrazJugador());
+        ColeccionableRecogido(GameManager.instance.ColeccionablesTotales());
     }
 
     /*Este método activa y desactiva los iconoc de aquellos npcs que te detectan t de los que no, lo hace teniendo en cuenta el disfraz que le llega como parámetro*/
@@ -41,7 +44,6 @@ public class UIManager : MonoBehaviour
     {
         if (disfrazActual == Disfraz.ninguno)
         {
-            camara.enabled = true;
             artistas.enabled = true;
             diseñadores.enabled = true;
             programadores.enabled = true;
@@ -49,7 +51,6 @@ public class UIManager : MonoBehaviour
         }
         else if (disfrazActual == Disfraz.programador)
         {
-            camara.enabled = true;
             artistas.enabled = false;
             diseñadores.enabled = true;
             programadores.enabled = true;
@@ -57,7 +58,7 @@ public class UIManager : MonoBehaviour
         }
         else if (disfrazActual == Disfraz.artista)
         {
-            camara.enabled = true;
+
             artistas.enabled = true;
             diseñadores.enabled = true;
             programadores.enabled = false;
@@ -65,7 +66,6 @@ public class UIManager : MonoBehaviour
         }
         else if (disfrazActual == Disfraz.diseñador)
         {
-            camara.enabled = true;
             artistas.enabled = true;
             diseñadores.enabled = true;
             programadores.enabled = false;
@@ -73,7 +73,6 @@ public class UIManager : MonoBehaviour
         }
         else if (disfrazActual == Disfraz.personal)
         {
-            camara.enabled = false;
             artistas.enabled = false;
             diseñadores.enabled = false;
             programadores.enabled = false;
@@ -82,23 +81,23 @@ public class UIManager : MonoBehaviour
     }
     private void Update()
     {
+        if (Time.time>= activacionPuertas+2 &&avisoPuertas.activeInHierarchy==true)
+        {
+            avisoPuertas.SetActive(false);
+        }
         if (interactuando) //Si se interactúa la barra aumenta lo necesario para llegar al 100% en el tiempo de interaccion maximo
         {
+           
             procesoInteraccion += (1 / maxInteraccion) * Time.deltaTime;
             barraInteraccion.fillAmount = procesoInteraccion;
         }
-        if (visualizarcaos && (vicaos + tiempovistacaos) < Time.time)  // si es true que hay que ver el caos pero ya se ha visualizado "X" segundos verlo pasa a ser false y escondemos la barra
-        {
-            visualizarcaos = false;
-            Caos.enabled = false;
-            fondoCaos.enabled = false;
-
-        }
+       
         if (objetivoCompletado && viObjetivoCumplido + tiempovistacaos < Time.time)  //si es true pero ya han pasado X segundos significa a que ya no hará falta ver más el panel de "Has completado el objetivo, vuelve al ascensor"
         {
             objetivoCompletado = false;
             objetivoCumplido.SetActive(false);
         }
+
     }
 
     public void Interactuando(float tiempoInteraccion, bool interaccion)
@@ -118,10 +117,9 @@ public class UIManager : MonoBehaviour
     public void AumentaCaos(float valorCaos)
     {
         visualizarcaos = true;
-        Caos.enabled = true;
-        fondoCaos.enabled = true;
+        Caos.SetActive(true);
 
-        Caos.fillAmount = valorCaos / 100;
+        caosRelleno.fillAmount = valorCaos / 100;
         vicaos = Time.time;
     }
 
@@ -130,23 +128,29 @@ public class UIManager : MonoBehaviour
     {
         if (activarODesactivar)
         {
-            Interactuar.color = new Color(0.840034f, 0.9528302f, 0.3011303f, 0.9215686f);
             Descripcion.text = descripción;
+            panelDesc.SetActive(true);
         }
         else
         {
-            Interactuar.color = Color.grey;
             Descripcion.text = " ";
+            panelDesc.SetActive(false);
         }
+
+        x.gameObject.SetActive(activarODesactivar);
     }
 
     public void Pausar()
     {//se paran el tiempo, se activa el menú de pausa y se activan los disfraces que tiene el jugador
-        Time.timeScale = 0;
-        Pause.SetActive(true);
-        for (int i = 0; i < tarjetasAdquiridas; i++)
+        if (Pause.activeSelf) FinPausa();
+        else
         {
-            RolesPausa[i].gameObject.SetActive(true);
+            Time.timeScale = 0;
+            Pause.SetActive(true);
+            for (int i = 0; i < tarjetasAdquiridas; i++)
+            {
+                RolesPausa[i].gameObject.SetActive(true);
+            }
         }
     }
     public void Perder()
@@ -214,5 +218,33 @@ public class UIManager : MonoBehaviour
     {
         GameManager.instance.GuardaPartida();
         Cambiaescena(0);
+    }
+    public void AvisoPuertas(bool activate)
+    {
+        avisoPuertas.SetActive(activate);
+        notifPuertas = !notifPuertas;
+        activacionPuertas = Time.time;
+    }
+
+    public void MostrarTexto(float delay, string text)
+    {
+        animadorRecuadroTextos.SetBool("Mostrar", true);
+        animadorTextos.SetBool("Mostrar", true);
+        textos.text = text;
+        Invoke("Escondertexto", delay);
+    }
+    public void Escondertexto()
+    {        
+        animadorRecuadroTextos.SetBool("Esconder", true);
+        animadorTextos.SetBool("Esconder", true);
+        Invoke("PrepararParaNuevoTexto",1f);          //Para que pueda terminar la animación 
+
+    }
+    public void PrepararParaNuevoTexto()
+    {
+        animadorRecuadroTextos.SetBool("Esconder", false);
+        animadorTextos.SetBool("Esconder", false);
+        animadorRecuadroTextos.SetBool("Mostrar", false);
+        animadorTextos.SetBool("Mostrar", false);
     }
 }

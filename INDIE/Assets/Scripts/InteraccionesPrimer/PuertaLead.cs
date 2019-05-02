@@ -9,9 +9,10 @@ public class PuertaLead : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-
+        Debug.Log("colision");
         if (collision.gameObject == Lead)
         {
+            Debug.Log("lead");
             Abierta.SetActive(true);
             Cerrada.SetActive(false);
         }
