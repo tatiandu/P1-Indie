@@ -69,13 +69,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1235786995072588}
   m_LocalRotation: {x: -0, y: -0, z: 0.000008726646, w: 1}
-<<<<<<< HEAD
   m_LocalPosition: {x: -45.43669, y: -39.864185, z: 0.17603718}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
-=======
-  m_LocalPosition: {x: -22.78, y: 11.34, z: 0.17603718}
-  m_LocalScale: {x: 1, y: 1, z: 1}
->>>>>>> parent of 525646f... Intento arreglar bug disfraz
   m_Children:
   - {fileID: 4723571697942298}
   - {fileID: 4383608531261968}
