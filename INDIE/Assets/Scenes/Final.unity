@@ -5367,8 +5367,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Va de una desarrolladora indie que tiene que\nevitar a los trabajadores
-    de la empresa para\nhacerle un pitch al jefe. Ver\xE1s..."
+  m_Text: "Va de una desarrolladora indie que tiene que evitar a los trabajadores
+    de la empresa \npara hacerle un pitch al jefe. Ver\xE1s..."
 --- !u!222 &347631754
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5692,11 +5692,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Me llamo Wendy. He sorteado a tus trabaja-
-
-    dores para poder hacerte un pitch sobre mi
-
-    nuevo juego, Indie.'
+  m_Text: "Me llamo Wendy. He sorteado a tus trabajadores para poder hacerte un pitch
+    sobre \nmi nuevo juego, Indie."
 --- !u!222 &820430273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6489,6 +6486,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Caos: 0
   maxCaos: 0
+  reproducirAnimacionTarjeta: 0
   disfrazActual: 0
 --- !u!4 &1650456236
 Transform:
