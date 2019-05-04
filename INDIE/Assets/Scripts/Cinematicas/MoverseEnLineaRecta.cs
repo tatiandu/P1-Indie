@@ -6,19 +6,21 @@ public class MoverseEnLineaRecta : MonoBehaviour
 {
 
     Rigidbody2D rb;
+    public GameObject fundido;
     public Transform punto;
     public Animator anim;
     public Animator CanvasAnim;
-    public GameObject convBuena, convMala,textoFin,joshua;
+    public GameObject convBuena, convMala, textoFin, joshua;
     public GameObject canvas;
-    public float ColeccionablesMinimos,segundos;
+    public float segundos;
+    public int ColeccionablesMinimos;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Invoke("Final", segundos);
         convMala.SetActive(false);
         convBuena.SetActive(false);
-        
+
 
     }
 
@@ -40,7 +42,7 @@ public class MoverseEnLineaRecta : MonoBehaviour
     }
     void Final()
     {
-        Debug.Log("sa inbokao");
+
         CanvasAnim.enabled = false;
 
         Debug.Log(GameManager.instance.ColeccionablesTotales());
@@ -58,6 +60,13 @@ public class MoverseEnLineaRecta : MonoBehaviour
             textoFin.SetActive(false);
             convMala.SetActive(true);
             convBuena.SetActive(false);
+
         }
+        Invoke("desactivaFundido", 3);
     }
+void desactivaFundido()
+    {
+        fundido.SetActive(true);
+        GameManager.instance.SigNivel();
     }
+}

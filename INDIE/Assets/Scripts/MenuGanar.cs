@@ -5,11 +5,24 @@ using UnityEngine.UI;
 
 public class MenuGanar : MonoBehaviour {
 
-    public Text ContadorColeccionables;
+    public Text ContadorColeccionables,resultados;
 
     private void Start()
     {
-        ContadorColeccionables.text = "" + GameManager.instance.ColeccionablesTotales();
+        int coleccionables = GameManager.instance.ColeccionablesTotales();
+        ContadorColeccionables.text = "" + coleccionables;
+        if (coleccionables>13)
+        {
+            resultados.text = @"Wendy consiguió suficientes 
+coleccionables como para publicar
+su juego";
+        }
+        else
+        {
+            resultados.text = @"Wendy no consiguió suficientes 
+coleccionables como para 
+publicar su juego";
+        }
     }
 
     public void VolverAlMenu()
