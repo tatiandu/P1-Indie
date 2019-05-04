@@ -11,11 +11,14 @@ public class MoverseEnLineaRecta : MonoBehaviour
     public Animator CanvasAnim;
     public GameObject convBuena, convMala,textoFin,joshua;
     public GameObject canvas;
-    public int ColeccionablesMinimos,segundos;
+    public float ColeccionablesMinimos,segundos;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Invoke("Final", segundos);
+        convMala.SetActive(false);
+        convBuena.SetActive(false);
+        
 
     }
 
@@ -38,6 +41,9 @@ public class MoverseEnLineaRecta : MonoBehaviour
     void Final()
     {
         Debug.Log("sa inbokao");
+        CanvasAnim.enabled = false;
+
+        Debug.Log(GameManager.instance.ColeccionablesTotales());
         if (GameManager.instance.ColeccionablesTotales() > ColeccionablesMinimos)
         {
             joshua.SetActive(true);
