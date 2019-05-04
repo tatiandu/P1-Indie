@@ -54,8 +54,9 @@ public class CambioDisfraz : MonoBehaviour {
                 anim.SetInteger("Disfraz", 4);
 
                 break;
-
+          
         }
+        Debug.Log("eeeeeee " + anim.GetInteger("disfraz"));
     }
 
     public void MeCambio(Disfraz nuevoDisfraz)
@@ -72,29 +73,41 @@ public class CambioDisfraz : MonoBehaviour {
             case Disfraz.ninguno:
                 //rend.color = Color.white;
                 anim.SetInteger("Disfraz", 0);
+                Debug.Log("ni");
                 break;
             case Disfraz.artista:
                 //rend.color = Color.red;
                 anim.SetInteger("Disfraz", 1);
+                Debug.Log("art");
+
 
                 break;
             case Disfraz.diseñador:
                 //rend.color = Color.green;
                 anim.SetInteger("Disfraz", 2);
+                Debug.Log("dis");
+
 
                 break;
             case Disfraz.personal:
                 //rend.color = Color.gray;
                 anim.SetInteger("Disfraz", 3);
+                Debug.Log("per");
+
 
                 break;
             case Disfraz.programador:
                 //rend.color = Color.cyan;
                 anim.SetInteger("Disfraz", 4);
+                Debug.Log("pro");
+
 
                 break;
 
+
         }
+        Debug.Log("aaaa " + anim.GetInteger("Disfraz"));
+
         switch (disfrazAnterior)
         {
             case Disfraz.artista:
@@ -114,9 +127,11 @@ public class CambioDisfraz : MonoBehaviour {
                 break;
 
             }
+        Debug.Log("cccc " + anim.GetInteger("Disfraz"));
 
-        }
-        
-        
+
     }
+
+
+}
 

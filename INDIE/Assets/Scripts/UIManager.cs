@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
 
     public Image[] RolesPausa;
     int tarjetasAdquiridas = 2;//debería ir en el GM
-    public Image camara, artistas, diseñadores, programadores, personal, barraInteraccion, caosRelleno, x;
+    public Image artistas, artistasBrilli, diseñadores, diseñadoresBrilli, programadoresBrilli, programadores, personal, personalBrilli, barraInteraccion, caosRelleno, x;
     public Text coleccionables;
     float activacionPuertas;
     bool notifPuertas = false;
@@ -42,41 +42,41 @@ public class UIManager : MonoBehaviour
     /*Este método activa y desactiva los iconoc de aquellos npcs que te detectan t de los que no, lo hace teniendo en cuenta el disfraz que le llega como parámetro*/
     public void Detección(Disfraz disfrazActual)
     {
+        Debug.Log("Disfrazinterfaz " + disfrazActual);
         if (disfrazActual == Disfraz.ninguno)
         {
-            artistas.enabled = true;
-            diseñadores.enabled = true;
-            programadores.enabled = true;
-            personal.enabled = true;
+            artistas.enabled = artistasBrilli.enabled = true;
+            diseñadores.enabled = diseñadores.enabled = true;
+            programadores.enabled = programadoresBrilli.enabled = true;
+            personal.enabled = personalBrilli.enabled = true;
         }
         else if (disfrazActual == Disfraz.programador)
         {
-            artistas.enabled = false;
-            diseñadores.enabled = true;
-            programadores.enabled = true;
-            personal.enabled = true;
+            artistas.enabled = artistasBrilli.enabled = false;
+            diseñadores.enabled =diseñadoresBrilli.enabled = true;
+            programadores.enabled = programadoresBrilli.enabled = true;
+            personal.enabled = personal.enabled = true;
         }
         else if (disfrazActual == Disfraz.artista)
         {
-
-            artistas.enabled = true;
-            diseñadores.enabled = true;
-            programadores.enabled = false;
-            personal.enabled = true;
+            artistas.enabled = artistasBrilli.enabled = true;
+            diseñadores.enabled = diseñadoresBrilli.enabled = true;
+            programadores.enabled = programadoresBrilli.enabled = false;
+            personal.enabled = personalBrilli.enabled = true;
         }
         else if (disfrazActual == Disfraz.diseñador)
         {
-            artistas.enabled = true;
-            diseñadores.enabled = true;
-            programadores.enabled = false;
-            personal.enabled = true;
+            artistas.enabled = artistasBrilli.enabled = true;
+            diseñadores.enabled = diseñadoresBrilli.enabled = true;
+            programadores.enabled = programadoresBrilli.enabled = false;
+            personal.enabled = personalBrilli.enabled = true;
         }
         else if (disfrazActual == Disfraz.personal)
         {
-            artistas.enabled = false;
-            diseñadores.enabled = false;
-            programadores.enabled = false;
-            personal.enabled = true;
+            artistas.enabled = artistasBrilli.enabled = false;
+            diseñadores.enabled = diseñadoresBrilli.enabled = false;
+            programadores.enabled = programadoresBrilli.enabled = false;
+            personal.enabled = personalBrilli.enabled = true;
         }
     }
     private void Update()

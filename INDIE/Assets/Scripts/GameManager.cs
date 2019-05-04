@@ -103,8 +103,12 @@ public class GameManager : MonoBehaviour
     //Le llegá el nuevo disfraz del jugador, se lo guarda y avisa al Uimanager para que cambie los iconos
     public void CambioDisfrazJugador(Disfraz jugador)
     {
+        Debug.Log("llega " + jugador);
         disfrazActual = jugador;
-        uIManager.Detección(jugador);
+        Debug.Log("polla_ " + jugador);
+        Debug.Log("pene_ " + disfrazActual);
+
+        uIManager.Detección(disfrazActual);
     }
     //Muestra el trazo, resalta la palabra interactuar y muestra una descripción de lo que hace el objeto
     public void EsInteractuable(bool activarODesactivar, string descripción)
@@ -163,6 +167,7 @@ public class GameManager : MonoBehaviour
     {   SceneManager.LoadScene(escenaBuild);
         subirAscensor = false;
         reproducirAnimacionTarjeta = true;
+        Debug.Log("original: " + disfrazActual);
         switch (escenaBuild)
         {
             case 1:
@@ -173,11 +178,15 @@ public class GameManager : MonoBehaviour
                 break;
             case 3:
                 GameManager.instance.CambioDisfrazJugador(Disfraz.artista);
-            
+                Debug.Log(disfrazActual);
                 break;
         }
+        Debug.Log("nuevo: " + disfrazActual);
+
         Caos = 0;
-        
+        CurrentScene = escenaBuild;
+
+
 
     }
     public void ActualizarEscena(int escena)
