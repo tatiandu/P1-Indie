@@ -6640,7 +6640,13 @@ MonoBehaviour:
   punto: {fileID: 1105963106}
   anim: {fileID: 1620381887}
   CanvasAnim: {fileID: 1094621899}
+  convBuena: {fileID: 311022645}
+  convMala: {fileID: 631361233}
+  textoFin: {fileID: 1571750165}
+  joshua: {fileID: 802476886}
   canvas: {fileID: 1094621894}
+  ColeccionablesMinimos: 3
+  segundos: 15
 --- !u!114 &1620381893
 MonoBehaviour:
   m_ObjectHideFlags: 0

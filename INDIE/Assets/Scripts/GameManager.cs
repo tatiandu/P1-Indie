@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     UIManager uIManager;
     AudioManager audioManager;
 
-    int coleccionables;
+   public int coleccionables;
     int coleccionablesConLosQueEmpezamos;
 
     //Al pasar de escena se debe sumar 1 a esta variable
