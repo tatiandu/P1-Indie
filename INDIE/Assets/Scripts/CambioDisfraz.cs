@@ -56,7 +56,6 @@ public class CambioDisfraz : MonoBehaviour {
                 break;
           
         }
-        Debug.Log("eeeeeee " + anim.GetInteger("disfraz"));
     }
 
     public void MeCambio(Disfraz nuevoDisfraz)
