@@ -43,21 +43,21 @@ public class MoverCamara : MonoBehaviour
         //{
         //    offset.m_Offset = Vector2.zero;
         //}
-        if((Input.GetAxis("Mouse X") > 0 || Input.GetAxis("Mouse X") < 0) || (Input.GetAxis("Mouse Y") < 0 || Input.GetAxis("Mouse Y") > 0))
+        if(((Input.GetAxis("Mouse X") > 0 || Input.GetAxis("Mouse X") < 0)|| (Input.GetAxis("Mouse X Teclado") > 0 || Input.GetAxis("Mouse X Teclado") < 0)) || ((Input.GetAxis("Mouse Y") < 0 || Input.GetAxis("Mouse Y") > 0) || (Input.GetAxis("Mouse Y Teclado") > 0 || Input.GetAxis("Mouse Y Teclado") < 0)))
         {
-            if(Input.GetAxis("Mouse X") > 0 && Mathf.Abs(offset.m_Offset.x)<maxOffset)
+            if((Input.GetAxis("Mouse X") > 0  || Input.GetAxis("Mouse X Teclado") > 0) && Mathf.Abs(offset.m_Offset.x)<maxOffset)
             {
                 offset.m_Offset.x += offsetX;
             }
-            else if (Input.GetAxis("Mouse X") < 0 && Mathf.Abs(offset.m_Offset.x) < maxOffset)
+            else if ((Input.GetAxis("Mouse X") < 0  || Input.GetAxis("Mouse X Teclado") < 0) && Mathf.Abs(offset.m_Offset.x) < maxOffset)
             {
                 offset.m_Offset.x -= offsetX;
             }
-            if (Input.GetAxis("Mouse Y") < 0 && Mathf.Abs(offset.m_Offset.y) < maxOffset)
+            if ((Input.GetAxis("Mouse Y") > 0 || Input.GetAxis("Mouse Y Teclado") > 0) && Mathf.Abs(offset.m_Offset.y) < maxOffset)
             {
                 offset.m_Offset.y += offsetY;
             }
-            else if (Input.GetAxis("Mouse Y") > 0 && Mathf.Abs(offset.m_Offset.y) < maxOffset)
+            else if ((Input.GetAxis("Mouse Y") < 0 || Input.GetAxis("Mouse Y Teclado") < 0) && Mathf.Abs(offset.m_Offset.y) < maxOffset)
             {
                 offset.m_Offset.y -= offsetY;
             }
