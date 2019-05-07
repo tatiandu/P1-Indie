@@ -224,9 +224,9 @@ public class GameManager : MonoBehaviour
     public void SigNivel()
     {
         coleccionablesConLosQueEmpezamos = coleccionables;
+
         CurrentScene++;
         CargarEscena(CurrentScene);
-        
         
 
     }
