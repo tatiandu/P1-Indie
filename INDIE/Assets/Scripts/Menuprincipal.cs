@@ -10,33 +10,27 @@ public class Menuprincipal : MonoBehaviour
     public GameObject botonesPrincipales, niveles, ajustes, continuar, fondo, fondoNiveles;
     public AudioMixer audioMixer;
     public GameObject nivel1, nivel2, nivel3;
-    int numeroNiveles;
+    int Escena;
 
     void Start()
     {
         
         if (!File.Exists("partida.txt"))     //Si no existe continuar no debe salir y activo el nivel 1
         {
-            numeroNiveles = 1;
+            Escena = 1;
             continuar.SetActive(false);
             nivel1.SetActive(true);
             StreamWriter archivo = new StreamWriter("partida.txt");  //Creo el archivo y pongo el nivel 1 pero sin activar el "continuar"
             archivo.WriteLine("1");
-            archivo.WriteLine("Total " + numeroNiveles);
+            archivo.WriteLine(0);
             archivo.Close();
         }
         else
         {
             StreamReader cargar = new StreamReader("partida.txt");  // si existe leo la primera linea para ver cuántos niveles tengo que mostrar
-            //Leemos la escena que debemos cargar
-            string[] lectura = new string[1];
-            while (lectura[0] != "Total")
-            {
-                lectura = cargar.ReadLine().Split(' ');
-
-            }
-            numeroNiveles = int.Parse(lectura[1]);
-            print(numeroNiveles);
+           
+            Escena = int.Parse(cargar.ReadLine());
+            print(Escena);
             cargar.Close();
            
         }
