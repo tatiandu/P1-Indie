@@ -11,7 +11,6 @@ public class Puerta : MonoBehaviour {
     {
         if (Player.GetComponent<CambioDisfraz>().miDisfraz == necesario)
         {
-
             Abierta.SetActive(true);
             Cerrada.SetActive(false);
         }
