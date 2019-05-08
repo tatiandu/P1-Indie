@@ -105,8 +105,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("llega " + jugador);
         disfrazActual = jugador;
-        Debug.Log("polla_ " + jugador);
-        Debug.Log("pene_ " + disfrazActual);
+       
 
         uIManager.Detección(disfrazActual);
     }
@@ -165,13 +164,19 @@ public class GameManager : MonoBehaviour
 
     public void CargarEscena(int escenaBuild)
     {   SceneManager.LoadScene(escenaBuild);
+        CurrentScene = escenaBuild;
+    
         subirAscensor = false;
         reproducirAnimacionTarjeta = true;
         Debug.Log("original: " + disfrazActual);
+        Debug.Log("escena: " + CurrentScene);
+
+
         switch (escenaBuild)
         {
             case 1:
                 GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
+
                 break;
             case 2:
                 GameManager.instance.CambioDisfrazJugador(Disfraz.programador);
@@ -183,8 +188,10 @@ public class GameManager : MonoBehaviour
         }
         Debug.Log("nuevo: " + disfrazActual);
 
+        Debug.Log("escena: " + CurrentScene);
+
+
         Caos = 0;
-        CurrentScene = escenaBuild;
 
 
 
@@ -224,7 +231,10 @@ public class GameManager : MonoBehaviour
     public void SigNivel()
     {
         coleccionablesConLosQueEmpezamos = coleccionables;
+        Debug.Log("original" + CurrentScene);
         CurrentScene++;
+        Debug.Log("nueva" + CurrentScene);
+
         CargarEscena(CurrentScene);
     }
     public void SaltarEscena(int sig)
