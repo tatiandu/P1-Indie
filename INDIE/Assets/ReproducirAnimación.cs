@@ -17,9 +17,11 @@ public class ReproducirAnimación : MonoBehaviour
     public float tiempoSegundaAnimacion;
     public float tiempoInvulnerabilidad;
     public float alpha;
+    public GameObject A;
     // Use this for initialization
     void Start()
     {
+        
         saltadaPrimeraAnimacion = false;
         saltadaSegundaAnimacion = false;
         if (GameManager.instance.ReproducirAnimacionPrincipio() ==true)
@@ -33,20 +35,22 @@ public class ReproducirAnimación : MonoBehaviour
             segundaAnimacion = false;
             player.GetComponent<Perder>().enabled = false;
             player.GetComponent<movimiento>().enabled = false;
+            A.SetActive(true);
         }
         else
         {            
             primeraAnimacion = true;
             horaPrimeraAnimacion = Time.time;
             segundaAnimacion = false;
-           
+            A.SetActive(false);
+
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!saltadaPrimeraAnimacion && primeraAnimacion && Time.time < horaPrimeraAnimacion + tiempoPrimeraAnimacion && animacionInicial.activeSelf && (Mathf.Abs(Input.GetAxis("Vertical"))>0 || Mathf.Abs(Input.GetAxis("Horizontal"))>0))  //en caso de saltarte la primera animacion
+        if(!saltadaPrimeraAnimacion && primeraAnimacion && Time.time < horaPrimeraAnimacion + tiempoPrimeraAnimacion && animacionInicial.activeSelf && (Input.GetButtonDown("Interaccion")))  //en caso de saltarte la primera animacion
         {
             saltadaPrimeraAnimacion = true;
             animacionInicial.SetActive(false);
@@ -56,6 +60,7 @@ public class ReproducirAnimación : MonoBehaviour
             //player.GetComponent<Perder>().enabled = true;
             player.GetComponent<movimiento>().enabled = true;
             Invoke("TiempoInvulnerabilidad", tiempoInvulnerabilidad);
+            A.SetActive(false);
         }
         if (GameManager.instance.CaosActual() >= 100 && !segundaAnimacion)   //activacion de la animacion del caos
         {
@@ -68,14 +73,16 @@ public class ReproducirAnimación : MonoBehaviour
             player.GetComponent<Perder>().enabled = false;
             player.GetComponent<movimiento>().enabled = false;
             GameManager.instance.MostrarTextoEnPantalla(4f, "Coje la tarjeta y vuelve al ascensor para subir al siguiente piso");
+            A.SetActive(true);
         }
         if (!saltadaPrimeraAnimacion && primeraAnimacion && !segundaAnimacion && Time.time > horaPrimeraAnimacion + tiempoPrimeraAnimacion)   //en caso de que no te hayas saltado la primera animacion
         {
             //player.GetComponent<Perder>().enabled = true;
             player.GetComponent<movimiento>().enabled = true;
             Invoke("TiempoInvulnerabilidad", tiempoInvulnerabilidad);
+            A.SetActive(false);
         }
-        if (!saltadaSegundaAnimacion && segundaAnimacion && Time.time < horaSegundaAnimacion + tiempoSegundaAnimacion && animacionCaos.activeSelf && (Mathf.Abs(Input.GetAxis("Vertical")) > 0 || Mathf.Abs(Input.GetAxis("Horizontal")) > 0))
+        if (!saltadaSegundaAnimacion && segundaAnimacion && Time.time < horaSegundaAnimacion + tiempoSegundaAnimacion && animacionCaos.activeSelf && (Input.GetButtonDown("Interaccion")))
         {
             saltadaSegundaAnimacion = true;
             animacionCaos.SetActive(false);
@@ -85,12 +92,15 @@ public class ReproducirAnimación : MonoBehaviour
             //player.GetComponent<Perder>().enabled = true;
             player.GetComponent<movimiento>().enabled = true;
             Invoke("TiempoInvulnerabilidad", tiempoInvulnerabilidad);
+            A.SetActive(false);
         }
             if (!saltadaSegundaAnimacion && segundaAnimacion && Time.time > horaSegundaAnimacion + tiempoSegundaAnimacion/* && Input.GetKey(KeyCode.W)*/)    //en caso de que no te hayas saltado la segunda animacion
         {
            //player.GetComponent<Perder>().enabled = true;
             player.GetComponent<movimiento>().enabled = true;
+            A.SetActive(false);
             Invoke("TiempoInvulnerabilidad", tiempoInvulnerabilidad);
+            A.SetActive(false);
         }
 
     }

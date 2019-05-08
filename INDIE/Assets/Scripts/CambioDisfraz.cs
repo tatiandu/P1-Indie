@@ -77,6 +77,7 @@ public class CambioDisfraz : MonoBehaviour {
             case Disfraz.artista:
                 //rend.color = Color.red;
                 anim.SetInteger("Disfraz", 1);
+                anim.SetInteger("Disfraz", 1);
                 Debug.Log("art");
 
 
