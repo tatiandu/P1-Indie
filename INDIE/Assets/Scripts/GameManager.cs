@@ -168,11 +168,22 @@ public class GameManager : MonoBehaviour
     
         subirAscensor = false;
         reproducirAnimacionTarjeta = true;
-        Debug.Log("original: " + disfrazActual);
+       
+
         Debug.Log("escena: " + CurrentScene);
 
 
-        switch (escenaBuild)
+        Caos = 0;
+
+
+
+    }
+    public void ActualizarDisfraz()
+    {
+        Debug.Log("original: " + disfrazActual);
+
+
+        switch (CurrentScene)
         {
             case 1:
                 GameManager.instance.CambioDisfrazJugador(Disfraz.ninguno);
@@ -187,14 +198,6 @@ public class GameManager : MonoBehaviour
                 break;
         }
         Debug.Log("nuevo: " + disfrazActual);
-
-        Debug.Log("escena: " + CurrentScene);
-
-
-        Caos = 0;
-
-
-
     }
     public void ActualizarEscena(int escena)
     {
@@ -234,6 +237,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("original" + CurrentScene);
         CurrentScene++;
         Debug.Log("nueva" + CurrentScene);
+        ActualizarDisfraz();
 
         CargarEscena(CurrentScene);
     }
