@@ -237,6 +237,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("original" + CurrentScene);
         CurrentScene++;
         Debug.Log("nueva" + CurrentScene);
+        ActualizarDisfraz();
 
         CargarEscena(CurrentScene);
     }
