@@ -107,10 +107,12 @@ public class ReproducirAnimación : MonoBehaviour
 
     public void TiempoInvulnerabilidad()
     {
-        player.GetComponent<Perder>().enabled = true;
-        Color tmp = player.GetComponent<SpriteRenderer>().color;
-        tmp.a = 1;
-        player.GetComponent<SpriteRenderer>().color = tmp;
+        
+            player.GetComponent<Perder>().enabled = true;
+            Color tmp = player.GetComponent<SpriteRenderer>().color;
+            tmp.a = 1;
+            player.GetComponent<SpriteRenderer>().color = tmp;
+        
 
     }
 }
