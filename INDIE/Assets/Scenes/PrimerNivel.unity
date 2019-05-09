@@ -29713,6 +29713,7 @@ MonoBehaviour:
   tiempoSegundaAnimacion: 4
   tiempoInvulnerabilidad: 2
   alpha: 0.5
+  A: {fileID: 1694500139}
 --- !u!4 &407410575
 Transform:
   m_ObjectHideFlags: 0
@@ -136058,6 +136059,11 @@ Mesh:
   m_MeshMetrics[0]: 1
   m_MeshMetrics[1]: 1
   m_MeshOptimized: 0
+--- !u!1 &1694500139 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1479471653396994, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
+    type: 2}
+  m_PrefabInternal: {fileID: 1555269136}
 --- !u!1 &1700416709
 GameObject:
   m_ObjectHideFlags: 0
