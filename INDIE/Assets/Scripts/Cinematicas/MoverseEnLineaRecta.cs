@@ -10,7 +10,7 @@ public class MoverseEnLineaRecta : MonoBehaviour
     public Transform punto;
     public Animator anim;
     public Animator CanvasAnim;
-    public GameObject convBuena, convMala, textoFin, joshua;
+    public GameObject convBuena, convMala, textoFin, joshua, Wendy;
     public GameObject canvas;
     public float segundos;
     public int ColeccionablesMinimos;
@@ -44,7 +44,7 @@ public class MoverseEnLineaRecta : MonoBehaviour
     {
 
         CanvasAnim.enabled = false;
-
+        Wendy.SetActive(false);
         Debug.Log(GameManager.instance.ColeccionablesTotales());
         if (GameManager.instance.ColeccionablesTotales() > ColeccionablesMinimos)
         {
@@ -67,6 +67,10 @@ public class MoverseEnLineaRecta : MonoBehaviour
 void desactivaFundido()
     {
         fundido.SetActive(true);
+        Invoke("PasarEscena", 1);
+    }
+    void PasarEscena()
+    {
         GameManager.instance.SigNivel();
     }
 }
