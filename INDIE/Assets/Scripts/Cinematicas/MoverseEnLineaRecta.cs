@@ -46,7 +46,7 @@ public class MoverseEnLineaRecta : MonoBehaviour
         CanvasAnim.enabled = false;
         Wendy.SetActive(false);
         Debug.Log(GameManager.instance.ColeccionablesTotales());
-        if (GameManager.instance.ColeccionablesTotales() > ColeccionablesMinimos)
+        if (GameManager.instance.ColeccionablesTotales() >= ColeccionablesMinimos)
         {
             joshua.SetActive(true);
             textoFin.SetActive(false);
@@ -62,7 +62,7 @@ public class MoverseEnLineaRecta : MonoBehaviour
             convBuena.SetActive(false);
 
         }
-        Invoke("desactivaFundido", 3);
+        Invoke("desactivaFundido", 5);
     }
 void desactivaFundido()
     {
