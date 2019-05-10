@@ -27,6 +27,7 @@ public class AudioManager : MonoBehaviour {
         AudioListener.volume = GameManager.instance.DameVolumen();
         Play("Ascensor");
         Play("Liszt");
+        Play("GenteHablando");
 	}
 	
 	
