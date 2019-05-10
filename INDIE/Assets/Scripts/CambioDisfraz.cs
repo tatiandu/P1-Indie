@@ -63,7 +63,7 @@ public class CambioDisfraz : MonoBehaviour {
         //el disfraz que llevaba puesto pasa a ser el anterior, el del suelo pasa a ser el actual(ahora lo lleva puesto)
         disfrazAnterior = miDisfraz;
         miDisfraz = nuevoDisfraz;
-        GameManager.instance.CambioDisfrazJugador(miDisfraz);
+        GameManager.instance.CambioDisfrazJugador(nuevoDisfraz);
         //si llevaba anteriormente algún disfraz, este se instancia al lado de player
 
 

@@ -107,7 +107,7 @@ public class GameManager : MonoBehaviour
         disfrazActual = jugador;
        
 
-        //uIManager.Detección(disfrazActual);
+        uIManager.Detección(disfrazActual);
     }
     //Muestra el trazo, resalta la palabra interactuar y muestra una descripción de lo que hace el objeto
     public void EsInteractuable(bool activarODesactivar, string descripción)
