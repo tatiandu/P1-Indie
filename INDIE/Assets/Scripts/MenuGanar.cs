@@ -11,7 +11,7 @@ public class MenuGanar : MonoBehaviour {
     {
         int coleccionables = GameManager.instance.ColeccionablesTotales();
         ContadorColeccionables.text = "" + coleccionables;
-        if (coleccionables>13)
+        if (coleccionables>=13)
         {
             resultados.text = @"Wendy consiguió suficientes 
 coleccionables como para publicar
