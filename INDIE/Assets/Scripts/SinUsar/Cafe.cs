@@ -10,6 +10,6 @@ public class Cafe : MonoBehaviour {
     {
         GameManager.instance.GenerarCaos(caos);
         GameManager.instance.ReproducirSonido(sonido);
-        Destroy(this.gameObject);
+
     }
 }
