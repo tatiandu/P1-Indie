@@ -7,8 +7,7 @@ using System.IO;
 
 public class Menuprincipal : MonoBehaviour
 {
-    public GameObject botonesPrincipales, niveles, ajustes, continuar, fondo, fondoNiveles;
-    public AudioMixer audioMixer;
+    public GameObject botonesPrincipales, niveles, ajustes, continuar, fondo, fondoNiveles,mandoImagen,mandoTexto, creditos;
     public GameObject nivel1, nivel2, nivel3;
     int Escena;
 
@@ -57,12 +56,16 @@ public class Menuprincipal : MonoBehaviour
         niveles.SetActive(true);
         fondo.SetActive(false);
         fondoNiveles.SetActive(true);
-
+        mandoImagen.SetActive(false);
+        mandoTexto.SetActive(false);
     }
     public void VolverMenu()
     {
         niveles.SetActive(false);
         ajustes.SetActive(false);
+        mandoImagen.SetActive(true);
+        mandoTexto.SetActive(true);
+        creditos.SetActive(false);
         botonesPrincipales.SetActive(true);
         fondo.SetActive(true);
         fondoNiveles.SetActive(false);
@@ -77,6 +80,18 @@ public class Menuprincipal : MonoBehaviour
     {
         botonesPrincipales.SetActive(false);
         ajustes.SetActive(true);
+        mandoImagen.SetActive(false);
+        mandoTexto.SetActive(false);
+    }
+
+    public void Creditos()
+    {
+        fondo.SetActive(false);
+        fondoNiveles.SetActive(true);
+        mandoImagen.SetActive(false);
+        mandoTexto.SetActive(false);
+        botonesPrincipales.SetActive(false);
+        creditos.SetActive(true);
     }
     public void AjustarVolumen(float volumen)
     {
