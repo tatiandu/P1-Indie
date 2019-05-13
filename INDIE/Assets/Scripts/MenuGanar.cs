@@ -19,7 +19,7 @@ su juego";
         }
         else
         {
-            resultados.text = @"Wendy no consiguió suficientes 
+            resultados.text = @"Wendy no consiguio suficientes 
 coleccionables como para 
 publicar su juego";
         }

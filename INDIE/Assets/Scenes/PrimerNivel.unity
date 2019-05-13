@@ -414,7 +414,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (10)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4194,7 +4194,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4433,7 +4433,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino4 (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5150,7 +5150,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino2 (4)
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5531,7 +5531,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino1
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6663,7 +6663,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino2 (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -6691,7 +6691,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (6)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29397,7 +29397,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino1 (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29454,7 +29454,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29487,7 +29487,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (6)
   m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29515,7 +29515,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29639,7 +29639,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino2 (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29667,7 +29667,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29745,7 +29745,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29915,7 +29915,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29943,7 +29943,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (7)
   m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -29971,7 +29971,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -30128,7 +30128,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino1 (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -31407,7 +31407,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (7)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -31658,7 +31658,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino4 (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -31852,7 +31852,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino2 (2)
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -32181,7 +32181,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino1 (2)
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -32974,7 +32974,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino2 (5)
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -33681,7 +33681,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino2
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -33775,7 +33775,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 694263831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.7, y: -41.5, z: -10}
+  m_LocalPosition: {x: -4.6126156, y: -74.698074, z: -9.950691}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -34278,7 +34278,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -34373,7 +34373,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (3)
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -34556,7 +34556,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -34774,7 +34774,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (8)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -36681,7 +36681,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (8)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -36709,7 +36709,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino3 (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -36842,7 +36842,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (8)
   m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -113810,7 +113810,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino1 (1)
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -114232,7 +114232,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -120534,7 +120534,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -121747,7 +121747,7 @@ GameObject:
   m_Layer: 0
   m_Name: PaseoF
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -121803,7 +121803,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (9)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -121831,7 +121831,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -122106,7 +122106,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino3
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -122134,7 +122134,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -123314,7 +123314,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (11)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -124290,7 +124290,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -125367,7 +125367,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -125541,7 +125541,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (7)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -126128,7 +126128,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -133818,7 +133818,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (6)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -134026,7 +134026,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino2 (1)
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -134318,7 +134318,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (7)
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -134600,7 +134600,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino2
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -134958,7 +134958,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (4)
   m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -135093,42 +135093,82 @@ Prefab:
     - target: {fileID: 224389662485504280, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -14.901348
+      value: -74.81001
       objectReference: {fileID: 0}
     - target: {fileID: 224861055018626942, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 6.16865
+      value: -53.74001
       objectReference: {fileID: 0}
     - target: {fileID: 224638400462998654, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 6.16865
+      value: -53.74001
       objectReference: {fileID: 0}
     - target: {fileID: 224562514436759886, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -14.902349
+      value: -74.81101
       objectReference: {fileID: 0}
     - target: {fileID: 224405223197538078, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 6.16865
+      value: -53.74001
       objectReference: {fileID: 0}
     - target: {fileID: 224230486872311078, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 6.16865
+      value: -53.74001
       objectReference: {fileID: 0}
     - target: {fileID: 224324115378938984, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -14.901348
+      value: -74.81001
       objectReference: {fileID: 0}
     - target: {fileID: 224606583592509822, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -14.901348
+      value: -74.81001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527935368825970, guid: 606b0c5ca78f21e469bd97b6eb47fa83, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224927401561509472, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 114150802934985780, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
+        type: 2}
+      propertyPath: m_Text
+      value: 'Necesitas la tarjeta del Lead para abrir esta puerta
+
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1500913460241812, guid: 606b0c5ca78f21e469bd97b6eb47fa83, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1130242550299780, guid: 606b0c5ca78f21e469bd97b6eb47fa83, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114875358168284644, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
+        type: 2}
+      propertyPath: m_Text
+      value: NIVEL 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428984937511956, guid: 606b0c5ca78f21e469bd97b6eb47fa83,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a,
+        type: 3}
+    - target: {fileID: 1773661406781120, guid: 606b0c5ca78f21e469bd97b6eb47fa83, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 606b0c5ca78f21e469bd97b6eb47fa83, type: 2}
@@ -135184,7 +135224,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino3 (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -136223,7 +136263,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (8)
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -137758,7 +137798,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino4
   m_TagString: Untagged
-  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -138043,7 +138083,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -139746,7 +139786,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino2 (3)
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -140188,7 +140228,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -140784,7 +140824,7 @@ GameObject:
   m_Layer: 0
   m_Name: Camino1
   m_TagString: Untagged
-  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -141415,7 +141455,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (6)
   m_TagString: Untagged
-  m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -141510,7 +141550,7 @@ GameObject:
   m_Layer: 0
   m_Name: PrimerPunto (5)
   m_TagString: Untagged
-  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
